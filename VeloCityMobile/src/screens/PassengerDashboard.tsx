@@ -16,7 +16,7 @@ interface PassengerDashboardProps {
 const PassengerDashboard = ({ navigation }: PassengerDashboardProps) => {
   const { user } = useAuthStore();
   const [balance, setBalance] = useState<string>('0.00');
-  const [activeTicket, setActiveTicket] = useState<TicketDto | null>(null);
+  const [activeTicket, setActiveTicket] = useState<TicketDto[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const isFocused = useIsFocused();
@@ -29,14 +29,12 @@ const PassengerDashboard = ({ navigation }: PassengerDashboardProps) => {
         setBalance(Number(walletResponse.balance).toFixed(2));
 
         const ticketResponse = await apiService.getActiveTicket();
-        if (ticketResponse && ticketResponse.length > 0) {
-          setActiveTicket(ticketResponse[0]);
-        } else {
-          setActiveTicket(null);
-        }
+        if (ticketResponse && ticketResponse.length > 0)
+          setActiveTicket(ticketResponse ?? []);
+        
       } catch (error) {
         console.error('Błąd podczas pobierania danych pulpitu:', error);
-        setActiveTicket(null);
+        setActiveTicket([]);
       } finally {
         setIsLoading(false);
       }
@@ -78,39 +76,58 @@ const PassengerDashboard = ({ navigation }: PassengerDashboardProps) => {
 
         <View style={styles.actionSection}>
           <View style={styles.authContent}>
-            <Text style={styles.sectionTitle}>Twój aktywny bilet</Text>
+            <Text style={styles.sectionTitle}>Twój aktywne bilety</Text>
             
-            {activeTicket ? (
-              <View style={[styles.activeTicketCard, styles.hasTicketCard]}>
-                <Text style={styles.ticketLine}>{activeTicket.ticketTypeName}</Text>
-                
-                {activeTicket.vehicleId !== null && activeTicket.vehicleId !== undefined ? (
-                  <Text style={styles.ticketType}>Pojazd: #{activeTicket.vehicleId}</Text>
-                ) : (
-                  <Text style={styles.ticketType}>Bilet sieciowy</Text>
-                )}
-                
-                <Text style={styles.ticketTime}>
-                  {activeTicket.validTo 
-                    ? `Ważny do: ${new Date(activeTicket.validTo).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`
-                    : 'Ważność: Czeka na skasowanie'}
-                </Text>
-                
-                <View style={styles.qrContainer}>
-                  <Text style={styles.qrPlaceholder}>
-                    {activeTicket.isValidated ? '📷 Bilet skasowany' : '⚠️ Wymaga skasowania'}
+            
+            {activeTicket.length > 0 ? (
+              activeTicket.map((ticket) => (
+                <View
+                  key={ticket.id}
+                  style={[styles.activeTicketCard, styles.hasTicketCard]}
+                >
+                  <Text style={styles.ticketLine}>
+                    {ticket.ticketTypeName}
                   </Text>
-                  
-                  {activeTicket.isValidated && (
-                    <Text style={styles.ticketIdText}>ID: Velo-{activeTicket.id}</Text>
+
+                  {ticket.vehicleId !== null && ticket.vehicleId !== undefined ? (
+                    <Text style={styles.ticketType}>
+                      Pojazd: #{ticket.vehicleId}
+                    </Text>
+                  ) : (
+                    <Text style={styles.ticketType}>
+                      Bilet sieciowy
+                    </Text>
                   )}
+
+                  <Text style={styles.ticketTime}>
+                    {ticket.validTo
+                      ? `Ważny do: ${new Date(ticket.validTo).toLocaleString('pl-PL')}`
+                      : ticket.isValidated
+                        ? 'Bilet aktywowany — bez określonej daty końcowej'
+                        : 'Ważność: Czeka na skasowanie'}
+                  </Text>
+
+                  <View style={styles.qrContainer}>
+                    <Text style={styles.qrPlaceholder}>
+                      {ticket.isValidated
+                        ? '📷 Bilet skasowany'
+                        : '⚠️ Wymaga skasowania'}
+                    </Text>
+
+                    <Text style={styles.ticketIdText}>
+                      ID: Velo-{ticket.id}
+                    </Text>
+                  </View>
                 </View>
-              </View>
+              ))
             ) : (
               <View style={styles.activeTicketCard}>
-                <Text style={styles.noTicketText}>Brak aktywnych biletów w tej chwili.</Text>
+                <Text style={styles.noTicketText}>
+                  Brak aktywnych biletów w tej chwili.
+                </Text>
               </View>
             )}
+
 
             <TouchableOpacity 
               style={styles.primaryButton}
