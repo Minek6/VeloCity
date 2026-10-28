@@ -37,7 +37,7 @@ public class VehiclesController(IMediator mediator) : ControllerBase
     }
 
     // ADMIN ONLY: get all vehicles
-    [Authorize(Roles = nameof(UserRole.Admin))]
+    [Authorize]
     [HttpGet]
     [ProducesResponseType(typeof(IEnumerable<VehicleDto>), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetAll()
