@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Logo from '../assets/logo.png';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Image, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Image, ActivityIndicator, Modal, Alert,} from 'react-native';
 import { useIsFocused } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useAuthStore } from '../store/useAuthStore';
@@ -8,6 +8,7 @@ import apiService from '../api/apiService';
 import { TicketDto } from '../types/ticket';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/types';
+import { Vehicle } from '../types';
 
 interface PassengerDashboardProps {
   navigation: NativeStackNavigationProp<RootStackParamList>; 
@@ -18,6 +19,12 @@ const PassengerDashboard = ({ navigation }: PassengerDashboardProps) => {
   const [balance, setBalance] = useState<string>('0.00');
   const [activeTicket, setActiveTicket] = useState<TicketDto[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [vehicles, setVehicles] = useState<Vehicle[]>([]);
+  const [purchasedTickets, setPurchasedTickets] = useState<TicketDto[]>([]);
+  const [selectedTicketId, setSelectedTicketId] = useState<number | null>(null);
+  const [selectedVehicleId, setSelectedVehicleId] = useState<number | null>(null);
+  const [showVehiclePicker, setShowVehiclePicker] = useState(false);
+  const [isActivating, setIsActivating] = useState(false);
 
   const isFocused = useIsFocused();
 
@@ -29,8 +36,13 @@ const PassengerDashboard = ({ navigation }: PassengerDashboardProps) => {
         setBalance(Number(walletResponse.balance).toFixed(2));
 
         const ticketResponse = await apiService.getActiveTicket();
-        if (ticketResponse && ticketResponse.length > 0)
-          setActiveTicket(ticketResponse ?? []);
+        setActiveTicket(ticketResponse ?? []);
+
+        const vehiclesResponse = await apiService.getVehicles();
+        setVehicles(vehiclesResponse ?? []);
+
+        const historyResponse = await apiService.getTicketHistory(1, 100);
+        setPurchasedTickets(historyResponse.items.filter(ticket => !ticket.isValidated));
         
       } catch (error) {
         console.error('Błąd podczas pobierania danych pulpitu:', error);
@@ -42,6 +54,51 @@ const PassengerDashboard = ({ navigation }: PassengerDashboardProps) => {
 
     if(isFocused) fetchDashboardData();
   }, [isFocused]);
+
+const handleActivateTicket = async () => {
+  if (selectedTicketId === null || selectedVehicleId === null) {
+    Alert.alert('Błąd', 'Wybierz pojazd.');
+    return;
+  }
+
+  if (isActivating) return;
+
+  const ticketId = selectedTicketId;
+  const vehicleId = selectedVehicleId;
+
+  setIsActivating(true);
+
+  try {
+    await apiService.validateTicket(ticketId, vehicleId);
+
+    const [historyResponse, activeResponse] = await Promise.all([
+      apiService.getTicketHistory(1, 100),
+      apiService.getActiveTicket(),
+    ]);
+
+    setPurchasedTickets(
+      historyResponse.items.filter(ticket => !ticket.isValidated)
+    );
+    setActiveTicket(activeResponse ?? []);
+
+    setShowVehiclePicker(false);
+    setSelectedTicketId(null);
+    setSelectedVehicleId(null);
+
+    Alert.alert('Sukces', 'Bilet został aktywowany!');
+  } catch (error) {
+    console.error('Błąd aktywacji biletu:', error);
+
+    Alert.alert(
+      'Błąd',
+      error instanceof Error
+        ? error.message
+        : 'Nie udało się aktywować biletu.'
+    );
+  } finally {
+    setIsActivating(false);
+  }
+};
 
   return (
     <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
@@ -76,9 +133,54 @@ const PassengerDashboard = ({ navigation }: PassengerDashboardProps) => {
 
         <View style={styles.actionSection}>
           <View style={styles.authContent}>
-            <Text style={styles.sectionTitle}>Twój aktywne bilety</Text>
+            <Text style={styles.sectionTitle}>Twoje bilety</Text>
+            <Text style={styles.sectionTitle}>
+              Bilety do aktywacji
+            </Text>
+
+            {purchasedTickets.length > 0 ? (
+              purchasedTickets.map((ticket) => (
+                <View
+                  key={ticket.id}
+                  style={styles.activeTicketCard}
+                >
+                  <Text style={styles.ticketLine}>
+                    {ticket.ticketTypeName}
+                  </Text>
+
+                  <Text style={styles.ticketTime}>
+                    Status: Nieaktywowany
+                  </Text>
+
+                  <Text style={styles.ticketTime}>
+                    Kupiono: {new Date(ticket.purchasedAt).toLocaleString('pl-PL')}
+                  </Text>
+
+                  <Text style={styles.ticketTime}>
+                    Cena: {ticket.price.toFixed(2)} zł
+                  </Text>
+
+                  <TouchableOpacity
+                    style={styles.primaryButton}
+                    onPress={() => {
+                      setSelectedTicketId(ticket.id);
+                      setSelectedVehicleId(null);
+                      setShowVehiclePicker(true);
+                    }}
+                  >
+                    <Text style={styles.buttonText}>
+                      Aktywuj bilet
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+              ))
+            ) : (
+              <Text style={styles.noTicketText}>
+                Nie masz biletów oczekujących na aktywację.
+              </Text>
+            )}
             
-            
+            <Text style={styles.sectionTitle}>Twoje aktywne bilety</Text>
             {activeTicket.length > 0 ? (
               activeTicket.map((ticket) => (
                 <View
@@ -99,13 +201,38 @@ const PassengerDashboard = ({ navigation }: PassengerDashboardProps) => {
                     </Text>
                   )}
 
-                  <Text style={styles.ticketTime}>
-                    {ticket.validTo
-                      ? `Ważny do: ${new Date(ticket.validTo).toLocaleString('pl-PL')}`
-                      : ticket.isValidated
-                        ? 'Bilet aktywowany — bez określonej daty końcowej'
-                        : 'Ważność: Czeka na skasowanie'}
-                  </Text>
+                  {ticket.isValidated ? (
+                    <View>
+                      <Text style={styles.ticketTime}>
+                        Status: Bilet aktywowany
+                      </Text>
+
+                      <Text style={styles.ticketTime}>
+                        {ticket.validTo
+                          ? `Ważny do: ${new Date(ticket.validTo).toLocaleString('pl-PL')}`
+                          : 'Brak określonej daty końcowej'}
+                      </Text>
+                    </View>
+                  ) : (
+                    <View>
+                      <Text style={styles.ticketTime}>
+                        Status: Bilet nieaktywny
+                      </Text>
+
+                      <TouchableOpacity
+                        style={styles.primaryButton}
+                        onPress={() =>
+                          navigation.navigate('ValidateTicket', {
+                            ticketId: ticket.id,
+                          })
+                        }
+                      >
+                        <Text style={styles.buttonText}>
+                          Aktywuj bilet
+                        </Text>
+                      </TouchableOpacity>
+                    </View>
+                  )}
 
                   <View style={styles.qrContainer}>
                     <Text style={styles.qrPlaceholder}>
@@ -114,10 +241,13 @@ const PassengerDashboard = ({ navigation }: PassengerDashboardProps) => {
                         : '⚠️ Wymaga skasowania'}
                     </Text>
 
-                    <Text style={styles.ticketIdText}>
-                      ID: Velo-{ticket.id}
-                    </Text>
+                    {ticket.isValidated && (
+                      <Text style={styles.ticketIdText}>
+                        ID: Velo-{ticket.id}
+                      </Text>
+                    )}
                   </View>
+
                 </View>
               ))
             ) : (
@@ -139,6 +269,72 @@ const PassengerDashboard = ({ navigation }: PassengerDashboardProps) => {
         </View>
 
       </ScrollView>
+      <Modal
+        visible={showVehiclePicker}
+        transparent
+        animationType="slide"
+        onRequestClose={() => setShowVehiclePicker(false)}
+      >
+  <View style={styles.modalOverlay}>
+    <View style={styles.modalContent}>
+      <Text style={styles.sectionTitle}>
+        Wybierz pojazd
+      </Text>
+
+      <Text style={styles.ticketTime}>
+        Wybierz pojazd, w którym chcesz aktywować bilet.
+      </Text>
+
+      <ScrollView style={{ maxHeight: 300 }}>
+        {vehicles.length > 0 ? (
+          vehicles.map((vehicle) => (
+            <TouchableOpacity
+              key={vehicle.id}
+              style={[
+                styles.vehicleOption,
+                selectedVehicleId === vehicle.id &&
+                  styles.selectedVehicle,
+              ]}
+              onPress={() => setSelectedVehicleId(vehicle.id)}
+            >
+              <Text>
+                Pojazd #{vehicle.id}
+              </Text>
+            </TouchableOpacity>
+          ))
+        ) : (
+          <Text>Brak dostępnych pojazdów.</Text>
+        )}
+      </ScrollView>
+
+      <TouchableOpacity
+        style={[
+          styles.primaryButton,
+          (selectedVehicleId === null || isActivating) && { opacity: 0.5 },
+        ]}
+        disabled={selectedVehicleId === null || isActivating}
+        onPress={handleActivateTicket}
+      >
+        {isActivating ? (
+          <ActivityIndicator color="#FFF" />
+        ) : (
+          <Text style={styles.buttonText}>
+            Potwierdź wybór
+          </Text>
+        )}
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() => setShowVehiclePicker(false)}
+        style={{ marginTop: 16 }}
+      >
+        <Text style={{ textAlign: 'center' }}>
+          Anuluj
+        </Text>
+      </TouchableOpacity>
+    </View>
+  </View>
+</Modal>
     </SafeAreaView>
   );
 };
@@ -312,6 +508,28 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontSize: 16,
     fontWeight: 'bold',
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  modalContent: {
+    backgroundColor: '#FFF',
+    borderRadius: 16,
+    padding: 24,
+  },
+  vehicleOption: {
+    padding: 16,
+    borderWidth: 1,
+    borderColor: '#DDD',
+    borderRadius: 10,
+    marginVertical: 5,
+  },
+  selectedVehicle: {
+    borderColor: '#346699',
+    backgroundColor: '#EAF2FA',
   },
 });
 

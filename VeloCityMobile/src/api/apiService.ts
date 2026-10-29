@@ -11,6 +11,7 @@ import type {
   TicketDto,
   TicketTypeDto,
   PurchaseTicketCommand,
+  ValidateTicketCommand,
   TicketDtoPaginatedList,
   Vehicle,
   VehicleCommand,
@@ -67,6 +68,9 @@ class ApiService {
 
       if (!response.ok) {
         const errorText = await response.text();
+        console.log('API ERROR STATUS:', response.status);
+        console.log('API ERROR URL:', url);
+        console.log('API ERROR BODY:', errorText);
         let extractedMessage = errorText || response.statusText;
 
         try {
@@ -160,6 +164,12 @@ class ApiService {
     return await this.request<number>('/tickets/purchase', {
       method: 'POST',
       body: JSON.stringify(command),
+    });
+  }
+  async validateTicket(ticketId: number, vehicleId: number): Promise<void> {
+    await this.request<void>(`/tickets/${ticketId}/validate`, {
+      method: 'PATCH',
+      body: JSON.stringify({ticketId, vehicleId}),
     });
   }
 

@@ -21,6 +21,10 @@ export interface PurchaseTicketCommand {
   ticketTypeId: number;
 }
 
+export interface ValidateTicketCommand {
+  ticketId: number;
+}
+
 export interface TicketDtoPaginatedList {
   items: TicketDto[];
   pageNumber: number;

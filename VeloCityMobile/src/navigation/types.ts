@@ -9,6 +9,7 @@ export type RootStackParamList = {
   };
   PurchaseTicket: undefined;
   TicketHistory: undefined;
+  ValidateTicket: {ticketId: number};
 };
 
 export type MainTabParamList = {
