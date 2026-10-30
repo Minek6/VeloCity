@@ -20,6 +20,7 @@ import type {
   Stop,
   LineDetailsDto, 
   PaginatedList, 
+  TicketVerificationResponse,
 } from '../types';
 
 class ApiService {
@@ -148,14 +149,14 @@ class ApiService {
       method: 'GET',
     });
   }
-
+  // --- BILETY ---
   async getActiveTicket(): Promise<TicketDto[]> {
     return await this.request<TicketDto[]>('/tickets/my/active', {
       method: 'GET',
     });
   }
 
-  // --- BILETY ---
+
   async getTicketTypes(): Promise<TicketTypeDto[]> {
     return await this.request<TicketTypeDto[]>('/tickets/types', { method: 'GET' });
   }
@@ -171,6 +172,18 @@ class ApiService {
       method: 'PATCH',
       body: JSON.stringify({ticketId, vehicleId}),
     });
+  }
+
+  async verifyTicket(
+    ticketId: number,
+    vehicleId: number,
+  ): Promise<TicketVerificationResponse> {
+    return await this.request<TicketVerificationResponse>(
+      `/tickets/${ticketId}/verify?vehicleId=${vehicleId}`,
+      {
+        method: 'GET',
+      },
+    );
   }
 
   async createTicket(data: TicketTypeDto): Promise<TicketTypeDto> {

@@ -77,30 +77,30 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
                 Id = 1,
                 Name = "Piotr",
                 Surname = "Kierowca",
-                Email = "driver@velocity.pl",
-                PasswordHash = "$2a$12$mVyskPgOLm8Ih5RumTF8xeXH1.B20XqSVu8SxcIOEV0F6EFmdNKMq", //admin123
+                Email = "driver@driver.com",
+                PasswordHash = "$2a$12$3s7iX0hZX00hn6JFwKJ06elVcg0A5mw9LVx4QHvaZW.Q3MWEyrPA2", //admin123
                 Role = UserRole.Driver,
-                Balance = 0.00m
+                Balance = 100.00m
             },
             new User
             {
                 Id = 2,
                 Name = "Piotr",
                 Surname = "Bołoz",
-                Email = "piboloz@student.wsb-nlu.edu.pl",
+                Email = "user@user.com",
                 PasswordHash = "$2a$12$3s7iX0hZX00hn6JFwKJ06elVcg0A5mw9LVx4QHvaZW.Q3MWEyrPA2", //user123
                 Role = UserRole.Passenger,
-                Balance = 50.00m
+                Balance = 150.00m
             },
             new User
             {
                 Id = 3,
                 Name = "Dominik",
                 Surname = "Florek",
-                Email = "dkflorek@student.wsb-nlu.edu.pl",
+                Email = "admin@admin.com",
                 PasswordHash = "$2a$12$3s7iX0hZX00hn6JFwKJ06elVcg0A5mw9LVx4QHvaZW.Q3MWEyrPA2", //user123
                 Role = UserRole.Admin,
-                Balance = 0.00m
+                Balance = 100.00m
             }
         );
     }

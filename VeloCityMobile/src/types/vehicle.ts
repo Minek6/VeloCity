@@ -1,8 +1,8 @@
 export interface Vehicle {
   id: number;
-  name: string;
-  registrationNumber: string;
-  capacity: number;
+  sideNumber: string;
+  model: string;
+  isActive: boolean;
 }
 
 export interface VehicleCommand {

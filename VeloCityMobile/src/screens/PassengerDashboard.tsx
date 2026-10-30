@@ -9,6 +9,7 @@ import { TicketDto } from '../types/ticket';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/types';
 import { Vehicle } from '../types';
+import QRCode from 'react-native-qrcode-svg';
 
 interface PassengerDashboardProps {
   navigation: NativeStackNavigationProp<RootStackParamList>; 
@@ -248,6 +249,29 @@ const handleActivateTicket = async () => {
                     )}
                   </View>
 
+                  <View style={{ alignItems: 'center', marginTop: 20, marginBottom: 20 }}>
+                    <Text
+                      style={{
+                        fontSize: 16,
+                        fontWeight: 'bold',
+                        marginBottom: 12,
+                        color: '#1A1C1E',
+                      }}
+                    >
+                      Kod QR biletu
+                    </Text>
+
+                    <QRCode
+                      value={`velocity:ticket:${ticket.id}`}
+                      size={180}
+                      backgroundColor="white"
+                      color="black"
+                    />
+
+                    <Text style={{ marginTop: 10, fontSize: 12, color: '#666' }}>
+                      Pokaż kod kierowcy podczas kontroli
+                    </Text>
+                  </View>
                 </View>
               ))
             ) : (
@@ -257,7 +281,6 @@ const handleActivateTicket = async () => {
                 </Text>
               </View>
             )}
-
 
             <TouchableOpacity 
               style={styles.primaryButton}

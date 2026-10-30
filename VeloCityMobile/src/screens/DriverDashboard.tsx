@@ -1,19 +1,71 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
+import React, { useEffect, useState, useRef } from 'react';
+import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, Alert, Pressable } from 'react-native';
 import { useAuthStore } from '../store/useAuthStore';
+import apiService from '../api/apiService';
+import { Vehicle } from '../types';
+import { useCameraPermission} from 'react-native-vision-camera';
+import { Camera as CameraKitCamera } from 'react-native-camera-kit';
 
 const DriverDashboard = ({ navigation }: any) => {
   const { user } = useAuthStore();
   const [isDriving, setIsDriving] = useState(false);
+  const { hasPermission, requestPermission } = useCameraPermission();
+  const [isScannerOpen, setIsScannerOpen] = useState(false);
+  const [vehicles, setVehicles] = useState<Vehicle[]>([]);
+  const [selectedVehicleId, setSelectedVehicleId] = useState<number | null>(null);
+  const [vehicleDropdownOpen, setVehicleDropdownOpen] = useState(false);
 
-  // Funkcja przełączająca stan kursu
-  const handleToggleRoute = () => {
-    setIsDriving(!isDriving);
+  const isProcessingQr = useRef(false);
+
+  useEffect(() => {
+    const fetchVehicles = async () => {
+      try {
+        const response = await apiService.getVehicles();
+        console.log('POJAZDY Z API:', JSON.stringify(response, null, 2));
+        setVehicles(response ?? []);
+      } catch (error) {
+        console.error('Błąd pobierania pojazdów:', error);
+        Alert.alert('Błąd', 'Nie udało się pobrać listy pojazdów.');
+      }
+    };
+
+    fetchVehicles();
+  }, []);
+
+    // Funkcja przełączająca stan kursu
+    const handleToggleRoute = () => {
+      setIsDriving(!isDriving);
+    };
+
+  const handleVerifyTicket = async () => {
+    try {
+      if (!hasPermission) {
+        const granted = await requestPermission();
+
+        if (!granted) {
+          Alert.alert(
+            'Brak dostępu do aparatu',
+            'Zezwól aplikacji na korzystanie z aparatu.',
+          );
+          return;
+        }
+      }
+
+      setIsScannerOpen(true);
+    } catch (error) {
+      console.error('Błąd uruchamiania aparatu:', error);
+      Alert.alert('Błąd', 'Nie udało się uruchomić aparatu.');
+    }
   };
+
+  const selectedVehicle = vehicles.find(
+    vehicle => vehicle.id === selectedVehicleId,
+  );
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.padding} showsVerticalScrollIndicator={false}>
+        
         
         {/* --- NAGŁÓWEK --- */}
         <View style={styles.header}>
@@ -29,11 +81,87 @@ const DriverDashboard = ({ navigation }: any) => {
           </Text>
         </View>
 
+        <View style={{marginVertical: 16}}>
+          <Text style={{fontSize: 18, fontWeight: 'bold', marginBottom: 12}}>
+            Wybierz pojazd
+          </Text>
+
+          <Pressable
+            disabled={isDriving}
+            onPress={() => setVehicleDropdownOpen(!vehicleDropdownOpen)}
+            style={{
+              padding: 14,
+              borderRadius: 10,
+              borderWidth: 1,
+              borderColor: '#cccccc',
+              backgroundColor: '#ffffff',
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}>
+            <Text style={{color: '#111827', fontSize: 16}}>
+              {selectedVehicleId !== null
+                ? (() => {
+                    const vehicle = vehicles.find(
+                      v => v.id === selectedVehicleId,
+                    );
+
+                    return vehicle
+                      ? `${vehicle.sideNumber} — ${vehicle.model}`
+                      : 'Wybierz pojazd';
+                  })()
+                : 'Wybierz pojazd'}
+            </Text>
+
+            <Text style={{color: '#111827'}}>
+              {vehicleDropdownOpen ? '▲' : '▼'}
+            </Text>
+          </Pressable>
+
+          {vehicleDropdownOpen && !isDriving && (
+            <ScrollView
+              nestedScrollEnabled
+              style={{
+                maxHeight: 240,
+                borderWidth: 1,
+                borderColor: '#cccccc',
+                borderRadius: 10,
+                backgroundColor: '#ffffff',
+                marginTop: 4,
+              }}>
+              {vehicles
+                .filter(vehicle => vehicle.isActive)
+                .map(vehicle => (
+                  <Pressable
+                    key={vehicle.id}
+                    onPress={() => {
+                      setSelectedVehicleId(vehicle.id);
+                      setVehicleDropdownOpen(false);
+                    }}
+                    style={{
+                      padding: 14,
+                      borderBottomWidth: 1,
+                      borderBottomColor: '#eeeeee',
+                      backgroundColor:
+                        selectedVehicleId === vehicle.id
+                          ? '#dbeafe'
+                          : '#ffffff',
+                    }}>
+                    <Text style={{color: '#111827', fontSize: 15}}>
+                      {vehicle.sideNumber} — {vehicle.model}
+                    </Text>
+                  </Pressable>
+                ))}
+            </ScrollView>
+          )}
+        </View>
+
         {/* --- KARTA BIEŻĄCEGO KORSU --- */}
         <View style={styles.routeCard}>
           <Text style={styles.cardLabel}>PRZYPISANY KURS</Text>
+
           <Text style={styles.lineText}>Linia 502</Text>
-          
+
           <View style={styles.routeRow}>
             <Text style={styles.stationText}>Centrum</Text>
             <Text style={styles.arrowText}>➔</Text>
@@ -46,9 +174,14 @@ const DriverDashboard = ({ navigation }: any) => {
             <Text style={styles.infoLabel}>Planowany odjazd:</Text>
             <Text style={styles.infoValue}>16:45</Text>
           </View>
+
           <View style={styles.infoRow}>
             <Text style={styles.infoLabel}>Pojazd:</Text>
-            <Text style={styles.infoValue}>Autobus Solaris #1042</Text>
+            <Text style={styles.infoValue}>
+              {selectedVehicle
+                ? `${selectedVehicle.sideNumber} — ${selectedVehicle.model}`
+                : 'Nie wybrano pojazdu'}
+            </Text>
           </View>
         </View>
 
@@ -59,10 +192,82 @@ const DriverDashboard = ({ navigation }: any) => {
         >
           <Text style={styles.buttonText}>
             {isDriving ? '🛑 Zakończ bieżący kurs' : '▶ Rozpocznij kurs'}
-          </Text>
+          </Text>          
         </TouchableOpacity>
-
+        
         {/* --- SZYBKIE INFORMACJE O ZMIANIE --- */}
+
+        {/* --- KONTROLA BILETÓW --- */}
+        <View style={styles.ticketVerificationCard}>
+          <Text style={styles.cardLabel}>
+            KONTROLA BILETÓW
+          </Text>
+
+          <Text style={styles.verificationTitle}>
+            Weryfikacja biletu
+          </Text>
+
+          <Text style={styles.verificationDescription}>
+            Zeskanuj kod QR pasażera, aby sprawdzić
+            ważność biletu.
+          </Text>
+
+          <TouchableOpacity
+            style={styles.verifyButton}
+            onPress={handleVerifyTicket}
+          >
+            <Text style={styles.buttonText}>
+              📷 Sprawdź bilet
+            </Text>
+          </TouchableOpacity>
+        </View>
+
+        {isScannerOpen && (
+          <View style={styles.scannerContainer}>
+            <Text style={styles.verificationTitle}>
+              Skaner biletów QR
+            </Text>
+
+            <CameraKitCamera
+              style={styles.cameraPreview}
+              
+              scanBarcode={true}
+              onReadCode={(event) => {
+                const qrValue = event.nativeEvent.codeStringValue;
+
+                if (!qrValue || isProcessingQr.current) {
+                  return;
+                }
+
+                isProcessingQr.current = true;
+                setIsScannerOpen(false);
+
+                Alert.alert(
+                  'Zeskanowano kod QR',
+                  `Odczytana wartość: ${qrValue}`,
+                  [
+                    {
+                      text: 'OK',
+                      onPress: () => {
+                        isProcessingQr.current = false;
+                      },
+                    },
+                  ],
+                );
+              }}
+            />
+
+            <TouchableOpacity
+              style={styles.closeScannerButton}
+              onPress={() => setIsScannerOpen(false)}
+            >
+              <Text style={styles.buttonText}>
+                Zamknij aparat
+              </Text>
+            </TouchableOpacity>
+          </View>
+        )}
+
         <View style={styles.shiftSummary}>
           <Text style={styles.summaryTitle}>Podsumowanie dzisiejszej zmiany</Text>
           <View style={styles.summaryRow}>
@@ -231,6 +436,51 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: 'bold',
     color: '#1A1C1E',
+  },
+  ticketVerificationCard: {
+    backgroundColor: '#FFF',
+    borderRadius: 16,
+    padding: 20,
+    marginBottom: 24,
+    elevation: 3,
+  },
+  verificationTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#1A1C1E',
+    marginTop: 8,
+    marginBottom: 8,
+  },
+  verificationDescription: {
+    fontSize: 14,
+    color: '#666',
+    lineHeight: 21,
+    marginBottom: 16,
+  },
+  verifyButton: {
+    backgroundColor: '#346699',
+    padding: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+  },
+  scannerContainer: {
+  backgroundColor: '#FFF',
+  borderRadius: 16,
+  padding: 16,
+  marginBottom: 24,
+  },
+  cameraPreview: {
+    width: '100%',
+    height: 350,
+    borderRadius: 12,
+    overflow: 'hidden',
+  },
+  closeScannerButton: {
+    backgroundColor: '#E74C3C',
+    padding: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginTop: 16,
   },
 });
 

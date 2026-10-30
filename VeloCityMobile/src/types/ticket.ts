@@ -34,3 +34,10 @@ export interface TicketDtoPaginatedList {
   hasPreviousPage: boolean;
   hasNextPage: boolean;
 }
+
+export interface TicketVerificationResponse {
+  isValid: boolean;
+  message: string;
+  ticketTypeName: string | null;
+  validTo: string | null;
+}
