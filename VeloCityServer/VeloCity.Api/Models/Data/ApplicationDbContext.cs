@@ -14,7 +14,13 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<TicketType> TicketTypes => Set<TicketType>();
     public DbSet<Payment> Payments => Set<Payment>();
     public DbSet<Trip> Trips => Set<Trip>();
-    public DbSet<Timetable> Timetables => Set<Timetable>();
+    public DbSet<Timetable> Timetables => Set<Timetable>(); 
+    public DbSet<Route> Routes => Set<Route>();
+    public DbSet<ServiceCalendar> ServiceCalendars => Set<ServiceCalendar>();
+    public DbSet<ScheduledTrip> ScheduledTrips => Set<ScheduledTrip>();
+    public DbSet<ScheduledStopTime> ScheduledStopTimes => Set<ScheduledStopTime>();
+
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -40,6 +46,63 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
             .HasIndex(u => u.Email)
             .IsUnique();
 
+        modelBuilder.Entity<Route>(entity =>
+        {
+            entity.HasOne(r => r.Line)
+                .WithMany()
+                .HasForeignKey(r => r.LineId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            entity.Property(r => r.Name)
+                .IsRequired()
+                .HasMaxLength(150);
+        });
+        
+        modelBuilder.Entity<ServiceCalendar>(entity =>
+        {
+            entity.Property(sc => sc.Name)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            entity.HasCheckConstraint(
+                "CK_ServiceCalendar_ValidDates",
+                "\"ValidFrom\" <= \"ValidTo\""
+            );
+        });
+
+        modelBuilder.Entity<ScheduledStopTime>(entity =>
+        {
+            entity.HasOne(sst => sst.ScheduledTrip)
+                .WithMany(st => st.StopTimes)
+                .HasForeignKey(sst => sst.ScheduledTripId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasOne(sst => sst.RouteStop)
+                .WithMany()
+                .HasForeignKey(sst => sst.RouteStopId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasIndex(sst => new
+            {
+                sst.ScheduledTripId,
+                sst.RouteStopId
+            }).IsUnique();
+        });
+
+        modelBuilder.Entity<ScheduledTrip>(entity =>
+        {
+            entity.HasOne(st => st.Route)
+                .WithMany()
+                .HasForeignKey(st => st.RouteId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasOne(st => st.ServiceCalendar)
+                .WithMany(sc => sc.ScheduledTrips)
+                .HasForeignKey(st => st.ServiceCalendarId)
+                .OnDelete(DeleteBehavior.Restrict);
+        });
+
+
         modelBuilder.Entity<RouteStop>(entity =>
         {
             entity.HasOne(rs => rs.Line)
@@ -49,6 +112,21 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
             entity.HasOne(rs => rs.Stop)
                 .WithMany(s => s.RouteStops)
                 .HasForeignKey(rs => rs.StopId);
+
+            // Nowa relacja z wariantem trasy
+            entity.HasOne(rs => rs.Route)
+                .WithMany(r => r.RouteStops)
+                .HasForeignKey(rs => rs.RouteId)
+                .OnDelete(DeleteBehavior.Restrict);
+            
+            entity.HasIndex(rs => new
+            {
+                rs.RouteId,
+                rs.Sequence
+            })
+            .IsUnique()
+            .HasFilter("\"RouteId\" IS NOT NULL");
+
         });
 
         modelBuilder.Entity<Vehicle>()

@@ -120,6 +120,35 @@ namespace VeloCity.Api.Migrations
                         });
                 });
 
+            modelBuilder.Entity("VeloCity.Api.Models.Route", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Direction")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<int>("LineId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("character varying(150)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LineId");
+
+                    b.ToTable("Routes");
+                });
+
             modelBuilder.Entity("VeloCity.Api.Models.RouteStop", b =>
                 {
                     b.Property<int>("Id")
@@ -134,6 +163,9 @@ namespace VeloCity.Api.Migrations
                     b.Property<int>("LineId")
                         .HasColumnType("integer");
 
+                    b.Property<int?>("RouteId")
+                        .HasColumnType("integer");
+
                     b.Property<int>("Sequence")
                         .HasColumnType("integer");
 
@@ -146,7 +178,112 @@ namespace VeloCity.Api.Migrations
 
                     b.HasIndex("StopId");
 
+                    b.HasIndex("RouteId", "Sequence")
+                        .IsUnique()
+                        .HasFilter("\"RouteId\" IS NOT NULL");
+
                     b.ToTable("RouteStops");
+                });
+
+            modelBuilder.Entity("VeloCity.Api.Models.ScheduledStopTime", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<TimeSpan>("ArrivalTime")
+                        .HasColumnType("interval");
+
+                    b.Property<TimeSpan>("DepartureTime")
+                        .HasColumnType("interval");
+
+                    b.Property<int>("RouteStopId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("ScheduledTripId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RouteStopId");
+
+                    b.HasIndex("ScheduledTripId", "RouteStopId")
+                        .IsUnique();
+
+                    b.ToTable("ScheduledStopTimes");
+                });
+
+            modelBuilder.Entity("VeloCity.Api.Models.ScheduledTrip", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("RouteId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("ServiceCalendarId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RouteId");
+
+                    b.HasIndex("ServiceCalendarId");
+
+                    b.ToTable("ScheduledTrips");
+                });
+
+            modelBuilder.Entity("VeloCity.Api.Models.ServiceCalendar", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("Friday")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("Monday")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<bool>("Saturday")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("Sunday")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("Thursday")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("Tuesday")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateOnly>("ValidFrom")
+                        .HasColumnType("date");
+
+                    b.Property<DateOnly>("ValidTo")
+                        .HasColumnType("date");
+
+                    b.Property<bool>("Wednesday")
+                        .HasColumnType("boolean");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ServiceCalendars", t =>
+                        {
+                            t.HasCheckConstraint("CK_ServiceCalendar_ValidDates", "\"ValidFrom\" <= \"ValidTo\"");
+                        });
                 });
 
             modelBuilder.Entity("VeloCity.Api.Models.Stop", b =>
@@ -511,6 +648,9 @@ namespace VeloCity.Api.Migrations
                     b.Property<int>("LineId")
                         .HasColumnType("integer");
 
+                    b.Property<int?>("ScheduledTripId")
+                        .HasColumnType("integer");
+
                     b.Property<int>("Status")
                         .HasColumnType("integer");
 
@@ -522,6 +662,8 @@ namespace VeloCity.Api.Migrations
                     b.HasIndex("DriverId");
 
                     b.HasIndex("LineId");
+
+                    b.HasIndex("ScheduledTripId");
 
                     b.HasIndex("VehicleId");
 
@@ -573,19 +715,19 @@ namespace VeloCity.Api.Migrations
                         new
                         {
                             Id = 1,
-                            Balance = 0.00m,
-                            Email = "driver@velocity.pl",
+                            Balance = 100.00m,
+                            Email = "driver@driver.com",
                             IsActive = true,
                             Name = "Piotr",
-                            PasswordHash = "$2a$12$mVyskPgOLm8Ih5RumTF8xeXH1.B20XqSVu8SxcIOEV0F6EFmdNKMq",
+                            PasswordHash = "$2a$12$3s7iX0hZX00hn6JFwKJ06elVcg0A5mw9LVx4QHvaZW.Q3MWEyrPA2",
                             Role = 2,
                             Surname = "Kierowca"
                         },
                         new
                         {
                             Id = 2,
-                            Balance = 50.00m,
-                            Email = "piboloz@student.wsb-nlu.edu.pl",
+                            Balance = 150.00m,
+                            Email = "user@user.com",
                             IsActive = true,
                             Name = "Piotr",
                             PasswordHash = "$2a$12$3s7iX0hZX00hn6JFwKJ06elVcg0A5mw9LVx4QHvaZW.Q3MWEyrPA2",
@@ -595,8 +737,8 @@ namespace VeloCity.Api.Migrations
                         new
                         {
                             Id = 3,
-                            Balance = 0.00m,
-                            Email = "dkflorek@student.wsb-nlu.edu.pl",
+                            Balance = 100.00m,
+                            Email = "admin@admin.com",
                             IsActive = true,
                             Name = "Dominik",
                             PasswordHash = "$2a$12$3s7iX0hZX00hn6JFwKJ06elVcg0A5mw9LVx4QHvaZW.Q3MWEyrPA2",
@@ -764,6 +906,17 @@ namespace VeloCity.Api.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("VeloCity.Api.Models.Route", b =>
+                {
+                    b.HasOne("VeloCity.Api.Models.Line", "Line")
+                        .WithMany()
+                        .HasForeignKey("LineId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Line");
+                });
+
             modelBuilder.Entity("VeloCity.Api.Models.RouteStop", b =>
                 {
                     b.HasOne("VeloCity.Api.Models.Line", "Line")
@@ -771,6 +924,11 @@ namespace VeloCity.Api.Migrations
                         .HasForeignKey("LineId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("VeloCity.Api.Models.Route", "Route")
+                        .WithMany("RouteStops")
+                        .HasForeignKey("RouteId")
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("VeloCity.Api.Models.Stop", "Stop")
                         .WithMany("RouteStops")
@@ -780,7 +938,47 @@ namespace VeloCity.Api.Migrations
 
                     b.Navigation("Line");
 
+                    b.Navigation("Route");
+
                     b.Navigation("Stop");
+                });
+
+            modelBuilder.Entity("VeloCity.Api.Models.ScheduledStopTime", b =>
+                {
+                    b.HasOne("VeloCity.Api.Models.RouteStop", "RouteStop")
+                        .WithMany()
+                        .HasForeignKey("RouteStopId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("VeloCity.Api.Models.ScheduledTrip", "ScheduledTrip")
+                        .WithMany("StopTimes")
+                        .HasForeignKey("ScheduledTripId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("RouteStop");
+
+                    b.Navigation("ScheduledTrip");
+                });
+
+            modelBuilder.Entity("VeloCity.Api.Models.ScheduledTrip", b =>
+                {
+                    b.HasOne("VeloCity.Api.Models.Route", "Route")
+                        .WithMany()
+                        .HasForeignKey("RouteId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("VeloCity.Api.Models.ServiceCalendar", "ServiceCalendar")
+                        .WithMany("ScheduledTrips")
+                        .HasForeignKey("ServiceCalendarId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Route");
+
+                    b.Navigation("ServiceCalendar");
                 });
 
             modelBuilder.Entity("VeloCity.Api.Models.Ticket", b =>
@@ -841,6 +1039,10 @@ namespace VeloCity.Api.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("VeloCity.Api.Models.ScheduledTrip", null)
+                        .WithMany("Trips")
+                        .HasForeignKey("ScheduledTripId");
+
                     b.HasOne("VeloCity.Api.Models.Vehicle", "Vehicle")
                         .WithMany()
                         .HasForeignKey("VehicleId")
@@ -859,6 +1061,23 @@ namespace VeloCity.Api.Migrations
                     b.Navigation("RouteStops");
 
                     b.Navigation("Trips");
+                });
+
+            modelBuilder.Entity("VeloCity.Api.Models.Route", b =>
+                {
+                    b.Navigation("RouteStops");
+                });
+
+            modelBuilder.Entity("VeloCity.Api.Models.ScheduledTrip", b =>
+                {
+                    b.Navigation("StopTimes");
+
+                    b.Navigation("Trips");
+                });
+
+            modelBuilder.Entity("VeloCity.Api.Models.ServiceCalendar", b =>
+                {
+                    b.Navigation("ScheduledTrips");
                 });
 
             modelBuilder.Entity("VeloCity.Api.Models.Stop", b =>
