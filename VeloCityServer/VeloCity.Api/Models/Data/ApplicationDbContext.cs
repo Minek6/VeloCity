@@ -17,6 +17,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<Timetable> Timetables => Set<Timetable>(); 
     public DbSet<Route> Routes => Set<Route>();
     public DbSet<ServiceCalendar> ServiceCalendars => Set<ServiceCalendar>();
+    public DbSet<ServiceCalendarException> ServiceCalendarExceptions=> Set<ServiceCalendarException>();
     public DbSet<ScheduledTrip> ScheduledTrips => Set<ScheduledTrip>();
     public DbSet<ScheduledStopTime> ScheduledStopTimes => Set<ScheduledStopTime>();
 
@@ -68,6 +69,22 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
                 "CK_ServiceCalendar_ValidDates",
                 "\"ValidFrom\" <= \"ValidTo\""
             );
+        });
+
+        modelBuilder.Entity<ServiceCalendarException>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.HasOne(e => e.ServiceCalendar)
+                .WithMany(sc => sc.Exceptions)
+                .HasForeignKey(e => e.ServiceCalendarId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasIndex(e => new
+            {
+                e.ServiceCalendarId,
+                e.Date
+            }).IsUnique();
         });
 
         modelBuilder.Entity<ScheduledStopTime>(entity =>

@@ -286,6 +286,31 @@ namespace VeloCity.Api.Migrations
                         });
                 });
 
+            modelBuilder.Entity("VeloCity.Api.Models.ServiceCalendarException", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("date");
+
+                    b.Property<bool>("IsAdded")
+                        .HasColumnType("boolean");
+
+                    b.Property<int>("ServiceCalendarId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ServiceCalendarId", "Date")
+                        .IsUnique();
+
+                    b.ToTable("ServiceCalendarExceptions");
+                });
+
             modelBuilder.Entity("VeloCity.Api.Models.Stop", b =>
                 {
                     b.Property<int>("Id")
@@ -981,6 +1006,17 @@ namespace VeloCity.Api.Migrations
                     b.Navigation("ServiceCalendar");
                 });
 
+            modelBuilder.Entity("VeloCity.Api.Models.ServiceCalendarException", b =>
+                {
+                    b.HasOne("VeloCity.Api.Models.ServiceCalendar", "ServiceCalendar")
+                        .WithMany("Exceptions")
+                        .HasForeignKey("ServiceCalendarId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("ServiceCalendar");
+                });
+
             modelBuilder.Entity("VeloCity.Api.Models.Ticket", b =>
                 {
                     b.HasOne("VeloCity.Api.Models.TicketType", "TicketType")
@@ -1077,6 +1113,8 @@ namespace VeloCity.Api.Migrations
 
             modelBuilder.Entity("VeloCity.Api.Models.ServiceCalendar", b =>
                 {
+                    b.Navigation("Exceptions");
+
                     b.Navigation("ScheduledTrips");
                 });
 

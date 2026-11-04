@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using VeloCity.Api.Features.ScheduledTrips.DTOs;
 using VeloCity.Api.Features.ScheduledTrips.Queries.GetScheduledTripDetails;
 using VeloCity.Api.Features.ScheduledTrips.Queries.GetScheduledTrips;
+using Microsoft.AspNetCore.Authorization;
+using VeloCity.Api.Features.ScheduledTrips.Commands.CreateScheduledTrip;
+using VeloCity.Api.Models;
 
 namespace VeloCity.Api.Controllers;
 
@@ -11,12 +14,8 @@ namespace VeloCity.Api.Controllers;
 public class ScheduledTripsController(IMediator mediator) : ControllerBase
 {
     [HttpGet("{id:int}")]
-    [ProducesResponseType(
-        typeof(ScheduledTripDetailsDto),
-        StatusCodes.Status200OK)]
-    [ProducesResponseType(
-        typeof(ProblemDetails),
-        StatusCodes.Status404NotFound)]
+    [ProducesResponseType(typeof(ScheduledTripDetailsDto),StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ProblemDetails),StatusCodes.Status404NotFound)]
     public async Task<IActionResult> GetScheduledTripDetails(
         int id,
         CancellationToken ct)
@@ -28,9 +27,7 @@ public class ScheduledTripsController(IMediator mediator) : ControllerBase
     }
 
     [HttpGet]
-    [ProducesResponseType(
-        typeof(List<ScheduledTripListItemDto>),
-        StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(List<ScheduledTripListItemDto>),StatusCodes.Status200OK)]
     public async Task<IActionResult> GetScheduledTrips(
         [FromQuery] DateOnly date,
         [FromQuery] int? lineId,
@@ -42,6 +39,25 @@ public class ScheduledTripsController(IMediator mediator) : ControllerBase
         );
 
         return Ok(response);
+    }
+
+    //[Authorize(Roles = nameof(UserRole.Admin))]
+    [HttpPost]
+    [ProducesResponseType(typeof(int), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status409Conflict)]
+    public async Task<IActionResult> Create(
+        [FromBody] CreateScheduledTripCommand command,
+        CancellationToken cancellationToken)
+    {
+        var scheduledTripId = await mediator.Send(
+            command,
+            cancellationToken);
+
+        return StatusCode(
+            StatusCodes.Status201Created,
+            scheduledTripId);
     }
 
 }

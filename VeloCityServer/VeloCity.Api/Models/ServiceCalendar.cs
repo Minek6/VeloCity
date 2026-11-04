@@ -19,4 +19,8 @@ public class ServiceCalendar
 
     public virtual ICollection<ScheduledTrip> ScheduledTrips
     { get; set; } = new List<ScheduledTrip>();
+
+    public virtual ICollection<ServiceCalendarException> Exceptions { get; set; }
+        = new List<ServiceCalendarException>();
+
 }

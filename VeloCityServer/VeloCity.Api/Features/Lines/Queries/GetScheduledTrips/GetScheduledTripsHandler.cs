@@ -18,35 +18,38 @@ public class GetScheduledTripsHandler(ApplicationDbContext context)
             .AsNoTracking()
             .Where(st =>
                 st.Route.IsActive &&
-                st.Route.Line.IsActive &&
+                st.Route.Line.IsActive);
+
+        query = query.Where(st =>
+            // Wyjątek dodający kursowanie ma pierwszeństwo.
+            st.ServiceCalendar.Exceptions.Any(e =>
+                e.Date == request.Date && e.IsAdded)
+
+            ||
+
+            (
+                // Standardowy zakres ważności kalendarza.
                 st.ServiceCalendar.ValidFrom <= request.Date &&
-                st.ServiceCalendar.ValidTo >= request.Date);
+                st.ServiceCalendar.ValidTo >= request.Date &&
 
-        query = dayOfWeek switch
-        {
-            DayOfWeek.Monday =>
-                query.Where(st => st.ServiceCalendar.Monday),
+                // Standardowe dni tygodnia.
+                (
+                    (dayOfWeek == DayOfWeek.Monday && st.ServiceCalendar.Monday) ||
+                    (dayOfWeek == DayOfWeek.Tuesday && st.ServiceCalendar.Tuesday) ||
+                    (dayOfWeek == DayOfWeek.Wednesday && st.ServiceCalendar.Wednesday) ||
+                    (dayOfWeek == DayOfWeek.Thursday && st.ServiceCalendar.Thursday) ||
+                    (dayOfWeek == DayOfWeek.Friday && st.ServiceCalendar.Friday) ||
+                    (dayOfWeek == DayOfWeek.Saturday && st.ServiceCalendar.Saturday) ||
+                    (dayOfWeek == DayOfWeek.Sunday && st.ServiceCalendar.Sunday)
+                )
 
-            DayOfWeek.Tuesday =>
-                query.Where(st => st.ServiceCalendar.Tuesday),
+                // Wyjątek wyłączający kursowanie.
+                &&
+                !st.ServiceCalendar.Exceptions.Any(e =>
+                    e.Date == request.Date && !e.IsAdded)
+            )
+        );
 
-            DayOfWeek.Wednesday =>
-                query.Where(st => st.ServiceCalendar.Wednesday),
-
-            DayOfWeek.Thursday =>
-                query.Where(st => st.ServiceCalendar.Thursday),
-
-            DayOfWeek.Friday =>
-                query.Where(st => st.ServiceCalendar.Friday),
-
-            DayOfWeek.Saturday =>
-                query.Where(st => st.ServiceCalendar.Saturday),
-
-            DayOfWeek.Sunday =>
-                query.Where(st => st.ServiceCalendar.Sunday),
-
-            _ => query
-        };
 
         if (request.LineId.HasValue)
         {
