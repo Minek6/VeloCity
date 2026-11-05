@@ -21,6 +21,7 @@ import type {
   LineDetailsDto, 
   PaginatedList, 
   TicketVerificationResponse,
+  MapStopDto,
 } from '../types';
 
 class ApiService {
@@ -263,12 +264,12 @@ class ApiService {
   }
 
   async getLineDetail(id: number): Promise<LineDetailsDto> {
-  return await this.request<LineDetailsDto>(`/lines/${id}`, { method: 'GET' });
-}
+    return await this.request<LineDetailsDto>(`/lines/${id}`, { method: 'GET' });
+  }
 
-async getLineStops(id: number): Promise<Stop[]> {
-  return await this.request<Stop[]>(`/lines/${id}/stops`, { method: 'GET' });
-}
+  async getLineStops(id: number): Promise<Stop[]> {
+    return await this.request<Stop[]>(`/lines/${id}/stops`, { method: 'GET' });
+  }
 
   async getTicketHistory(pageNumber: number = 1, pageSize: number = 10): Promise<TicketDtoPaginatedList> {
     return await this.request<TicketDtoPaginatedList>(
@@ -276,6 +277,13 @@ async getLineStops(id: number): Promise<Stop[]> {
       { method: 'GET' }
     );
   }
+
+  async getMapStops(): Promise<MapStopDto[]> {
+    return await this.request<MapStopDto[]>('/stops/map', {
+      method: 'GET',
+    });
+  }
+
 }
 
 export default new ApiService();

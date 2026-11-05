@@ -5,6 +5,7 @@ import DashboardScreen from '../screens/DashboardScreen';
 import RoutesScreen from '../screens/RoutesScreen';
 import WalletTabNavigator from '../navigation/WalletTabNavigator'; 
 import ProfileScreen from '../screens/ProfileScreen';
+import MapScreen from '../screens/MapScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -19,7 +20,8 @@ const MainTabNavigator = () => {
           var iconName: IoniconsIconName = 'home-outline';
 
           if (route.name === 'Dashboard') iconName = 'home-outline';
-          else if (route.name === 'Routes') iconName = 'map-outline';
+          else if (route.name === 'Routes') iconName = 'git-branch-outline';
+          else if (route.name === 'Map') iconName = 'map-outline';
           else if (route.name === 'PaymentHistory') iconName = 'wallet-outline';
           else if (route.name === 'Profile') iconName = 'person-outline';
 
@@ -37,7 +39,13 @@ const MainTabNavigator = () => {
         component={RoutesScreen}
         options={{ title: 'Trasy' }}
       />
-      
+          
+      <Tab.Screen
+        name="Map"
+        component={MapScreen}
+        options={{ title: 'Mapa' }}
+      />
+
       <Tab.Screen
         name="PaymentHistory"
         component={WalletTabNavigator}

@@ -9,6 +9,7 @@ using VeloCity.Api.Features.Stops.Commands.UpdateStop;
 using VeloCity.Api.Features.Stops.DTOs;
 using VeloCity.Api.Features.Stops.Queries.GetStop;
 using VeloCity.Api.Features.Stops.Queries.GetStops;
+using VeloCity.Api.Features.Stops.Queries.GetMapStops;
 using VeloCity.Api.Models.Enums;
 
 namespace VeloCity.Api.Controllers;
@@ -27,12 +28,27 @@ public class StopsController(IMediator mediator) : ControllerBase
     }
 
     // no auth, get single stop
-    [HttpGet("{id}")]
+    [HttpGet("{id:int}")]
     [ProducesResponseType(typeof(StopDto), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
     public async Task<IActionResult> GetStop(int id)
     {
         var result = await mediator.Send(new GetStopQuery(id));
+        return Ok(result);
+    }
+
+    // no auth get map stops
+    [HttpGet("map")]
+    [ProducesResponseType(
+        typeof(List<MapStopDto>),
+        StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetMapStops(
+        CancellationToken cancellationToken)
+    {
+        var result = await mediator.Send(
+            new GetMapStopsQuery(),
+            cancellationToken);
+
         return Ok(result);
     }
 
@@ -66,4 +82,5 @@ public class StopsController(IMediator mediator) : ControllerBase
         await mediator.Send(new DeleteStopCommand(id));
         return NoContent();
     }
+
 }
