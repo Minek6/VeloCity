@@ -38,10 +38,26 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
         modelBuilder.Entity<Payment>()
             .Property(p => p.Amount)
             .HasPrecision(18, 2);
+        
+        modelBuilder.Entity<Stop>(entity =>
+        {
+            // Istniejący unikalny identyfikator zewnętrzny
+            entity.HasIndex(s => s.ExternalId)
+                .IsUnique();
 
-        modelBuilder.Entity<Stop>()
-            .HasIndex(s => s.ExternalId)
-            .IsUnique();
+            // Typ obiektu OpenStreetMap: node, way, relation
+            entity.Property(s => s.OsmType)
+                .HasMaxLength(10);
+
+            // Unikalny identyfikator obiektu OpenStreetMap
+            entity.HasIndex(s => new
+            {
+                s.OsmType,
+                s.OsmId
+            })
+            .IsUnique()
+            .HasFilter("\"OsmId\" IS NOT NULL AND \"OsmType\" IS NOT NULL");
+        });
 
         modelBuilder.Entity<User>()
             .HasIndex(u => u.Email)
@@ -57,6 +73,11 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
             entity.Property(r => r.Name)
                 .IsRequired()
                 .HasMaxLength(150);
+
+            // Unikalny identyfikator wariantu MPK
+            entity.HasIndex(r => r.ExternalVariantId)
+                .IsUnique()
+                .HasFilter("\"ExternalVariantId\" IS NOT NULL");
         });
         
         modelBuilder.Entity<ServiceCalendar>(entity =>
@@ -117,8 +138,12 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
                 .WithMany(sc => sc.ScheduledTrips)
                 .HasForeignKey(st => st.ServiceCalendarId)
                 .OnDelete(DeleteBehavior.Restrict);
-        });
 
+            // Unikalny identyfikator kursu MPK
+            entity.HasIndex(st => st.ExternalRunId)
+                .IsUnique()
+                .HasFilter("\"ExternalRunId\" IS NOT NULL");
+        });
 
         modelBuilder.Entity<RouteStop>(entity =>
         {

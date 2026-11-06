@@ -1,0 +1,4797 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-06T07:11:30Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "relation",
+      "id": 15079739,
+      "members": [
+        {
+          "type": "node",
+          "ref": 3454350234,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 10180904257,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 10176016372,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 3608505109,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 10176019889,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 10176019890,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 10186331547,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 10186327161,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 8922658552,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 548147208,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 8922654275,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 10116365183,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 10116365184,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 10301254772,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 10180937996,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 10180937997,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 10300695417,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 10183377917,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 10116396836,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 10183362094,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 6261839890,
+          "role": ""
+        },
+        {
+          "type": "node",
+          "ref": 8922658553,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1529481890,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1529481891,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 73318946,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 319635418,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 319635419,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1135621644,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1126243619,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1135621649,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1135621645,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1126243620,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 815724340,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 26366727,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 319635420,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1288915483,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 887467106,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1288915487,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 887467107,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 576010346,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 844779675,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1126498115,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1135621643,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1126498116,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 556807046,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1051132201,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 844779659,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 26366729,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 73402194,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 74565137,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1244011996,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1244011992,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1153699021,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1244011991,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1155370868,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 73402203,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 299528096,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1246828039,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 73318963,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 28867403,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 101643446,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1198468905,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 28829834,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 35912314,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 289951893,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1327842448,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1316322729,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1322463990,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 289951891,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 802213024,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 802213023,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 802213022,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1194675215,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 28538702,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 290993813,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 73365419,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 290993811,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 37866991,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1177610057,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 348339145,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 429807642,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1126565072,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1126243627,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1177293439,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 74343217,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1126498123,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1177293350,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 391960870,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1177293349,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1126538947,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1126498120,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 96820045,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1377418671,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 445437139,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1177610074,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 40726019,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 405400248,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1322481045,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1322481044,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1322481047,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1322481046,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 43399954,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 40725068,
+          "role": ""
+        }
+      ],
+      "tags": {
+        "from": "Sucharskiego - Westerplatte",
+        "name": "Linia 6 (Sucharskiego - Westerplatte → 29 Listopada)",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "ref": "6",
+        "route": "bus",
+        "to": "29 Listopada",
+        "type": "route",
+        "via": "Dw. Aut. MPK st. 3"
+      }
+    },
+    {
+      "type": "node",
+      "id": 313493274,
+      "lat": 49.6000121,
+      "lon": 20.7042037
+    },
+    {
+      "type": "node",
+      "id": 881167045,
+      "lat": 49.600512,
+      "lon": 20.703733
+    },
+    {
+      "type": "node",
+      "id": 881167070,
+      "lat": 49.6009062,
+      "lon": 20.7071063
+    },
+    {
+      "type": "node",
+      "id": 881167236,
+      "lat": 49.6001223,
+      "lon": 20.7041046
+    },
+    {
+      "type": "node",
+      "id": 881167372,
+      "lat": 49.6001051,
+      "lon": 20.7045093
+    },
+    {
+      "type": "node",
+      "id": 2684195783,
+      "lat": 49.6007783,
+      "lon": 20.7066917
+    },
+    {
+      "type": "node",
+      "id": 2941863620,
+      "lat": 49.6001808,
+      "lon": 20.7040468
+    },
+    {
+      "type": "node",
+      "id": 2941863622,
+      "lat": 49.6002106,
+      "lon": 20.7048493
+    },
+    {
+      "type": "node",
+      "id": 2941863626,
+      "lat": 49.6003534,
+      "lon": 20.7038819
+    },
+    {
+      "type": "node",
+      "id": 2941863629,
+      "lat": 49.6004117,
+      "lon": 20.7055056
+    },
+    {
+      "type": "node",
+      "id": 2941863637,
+      "lat": 49.6006929,
+      "lon": 20.7035645
+    },
+    {
+      "type": "node",
+      "id": 3402312355,
+      "lat": 49.6002435,
+      "lon": 20.7049543
+    },
+    {
+      "type": "node",
+      "id": 3424532073,
+      "lat": 49.6007263,
+      "lon": 20.7065217,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3610869475,
+      "lat": 49.6008162,
+      "lon": 20.7068165
+    },
+    {
+      "type": "node",
+      "id": 6261839890,
+      "lat": 49.6008945,
+      "lon": 20.707356,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "29 listopada",
+        "public_transport": "platform",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10183362094,
+      "lat": 49.6007344,
+      "lon": 20.7034585,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wyspiańskiego - Nowa Kolonia",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10964368357,
+      "lat": 49.6008216,
+      "lon": 20.7034403
+    },
+    {
+      "type": "node",
+      "id": 13358192010,
+      "lat": 49.6000997,
+      "lon": 20.7041249
+    },
+    {
+      "type": "node",
+      "id": 439374917,
+      "lat": 49.6046951,
+      "lon": 20.695834
+    },
+    {
+      "type": "node",
+      "id": 444344670,
+      "lat": 49.6053119,
+      "lon": 20.6960765
+    },
+    {
+      "type": "node",
+      "id": 444344679,
+      "lat": 49.6051102,
+      "lon": 20.6956679
+    },
+    {
+      "type": "node",
+      "id": 444344690,
+      "lat": 49.6048721,
+      "lon": 20.6957177
+    },
+    {
+      "type": "node",
+      "id": 494789492,
+      "lat": 49.6052483,
+      "lon": 20.6958531
+    },
+    {
+      "type": "node",
+      "id": 880965211,
+      "lat": 49.6051892,
+      "lon": 20.6957393
+    },
+    {
+      "type": "node",
+      "id": 880965246,
+      "lat": 49.6049528,
+      "lon": 20.695673
+    },
+    {
+      "type": "node",
+      "id": 880965278,
+      "lat": 49.6052745,
+      "lon": 20.6959315
+    },
+    {
+      "type": "node",
+      "id": 880965386,
+      "lat": 49.6043836,
+      "lon": 20.6960898
+    },
+    {
+      "type": "node",
+      "id": 880965463,
+      "lat": 49.6052218,
+      "lon": 20.6957926
+    },
+    {
+      "type": "node",
+      "id": 880965507,
+      "lat": 49.6051489,
+      "lon": 20.6956959
+    },
+    {
+      "type": "node",
+      "id": 2935104401,
+      "lat": 49.60503,
+      "lon": 20.6956471
+    },
+    {
+      "type": "node",
+      "id": 4076089565,
+      "lat": 49.6042017,
+      "lon": 20.696234
+    },
+    {
+      "type": "node",
+      "id": 4076089566,
+      "lat": 49.6042968,
+      "lon": 20.6961587
+    },
+    {
+      "type": "node",
+      "id": 4076089567,
+      "lat": 49.6046131,
+      "lon": 20.6959013,
+      "tags": {
+        "crossing": "uncontrolled",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10940047739,
+      "lat": 49.6049946,
+      "lon": 20.6956545
+    },
+    {
+      "type": "node",
+      "id": 10940047740,
+      "lat": 49.605072,
+      "lon": 20.6956521
+    },
+    {
+      "type": "node",
+      "id": 10940047798,
+      "lat": 49.6053374,
+      "lon": 20.6961883
+    },
+    {
+      "type": "node",
+      "id": 11384526634,
+      "lat": 49.6045119,
+      "lon": 20.6959844
+    },
+    {
+      "type": "node",
+      "id": 313493280,
+      "lat": 49.6020822,
+      "lon": 20.7023811
+    },
+    {
+      "type": "node",
+      "id": 313493285,
+      "lat": 49.6032839,
+      "lon": 20.700903
+    },
+    {
+      "type": "node",
+      "id": 313493286,
+      "lat": 49.6040543,
+      "lon": 20.6996489
+    },
+    {
+      "type": "node",
+      "id": 313493287,
+      "lat": 49.6041709,
+      "lon": 20.6985204
+    },
+    {
+      "type": "node",
+      "id": 444344662,
+      "lat": 49.6060365,
+      "lon": 20.6991629
+    },
+    {
+      "type": "node",
+      "id": 475589757,
+      "lat": 49.6071529,
+      "lon": 20.7026533
+    },
+    {
+      "type": "node",
+      "id": 541642283,
+      "lat": 49.6053766,
+      "lon": 20.6963671
+    },
+    {
+      "type": "node",
+      "id": 747885330,
+      "lat": 49.6057269,
+      "lon": 20.6978615
+    },
+    {
+      "type": "node",
+      "id": 878825316,
+      "lat": 49.6072101,
+      "lon": 20.7025206
+    },
+    {
+      "type": "node",
+      "id": 878825346,
+      "lat": 49.6074821,
+      "lon": 20.7019487
+    },
+    {
+      "type": "node",
+      "id": 878825368,
+      "lat": 49.6072729,
+      "lon": 20.7023844
+    },
+    {
+      "type": "node",
+      "id": 878825573,
+      "lat": 49.6074614,
+      "lon": 20.7016818
+    },
+    {
+      "type": "node",
+      "id": 880965471,
+      "lat": 49.6061367,
+      "lon": 20.6995621
+    },
+    {
+      "type": "node",
+      "id": 880965522,
+      "lat": 49.6039254,
+      "lon": 20.6964777,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 881166905,
+      "lat": 49.6039614,
+      "lon": 20.6976365
+    },
+    {
+      "type": "node",
+      "id": 881166950,
+      "lat": 49.6027017,
+      "lon": 20.7018246
+    },
+    {
+      "type": "node",
+      "id": 881166972,
+      "lat": 49.6042141,
+      "lon": 20.6991448
+    },
+    {
+      "type": "node",
+      "id": 881167011,
+      "lat": 49.6041443,
+      "lon": 20.6994651
+    },
+    {
+      "type": "node",
+      "id": 881167133,
+      "lat": 49.6042048,
+      "lon": 20.6987444
+    },
+    {
+      "type": "node",
+      "id": 881167160,
+      "lat": 49.6042001,
+      "lon": 20.6992455
+    },
+    {
+      "type": "node",
+      "id": 881167186,
+      "lat": 49.6026165,
+      "lon": 20.7019227
+    },
+    {
+      "type": "node",
+      "id": 881167293,
+      "lat": 49.6028224,
+      "lon": 20.7016597
+    },
+    {
+      "type": "node",
+      "id": 881167449,
+      "lat": 49.604215,
+      "lon": 20.6988889
+    },
+    {
+      "type": "node",
+      "id": 938038440,
+      "lat": 49.6038524,
+      "lon": 20.6971813
+    },
+    {
+      "type": "node",
+      "id": 1121758983,
+      "lat": 49.6058991,
+      "lon": 20.6985814
+    },
+    {
+      "type": "node",
+      "id": 1121759033,
+      "lat": 49.6063296,
+      "lon": 20.7001385
+    },
+    {
+      "type": "node",
+      "id": 1173645036,
+      "lat": 49.606636,
+      "lon": 20.7010034
+    },
+    {
+      "type": "node",
+      "id": 1971478665,
+      "lat": 49.6060756,
+      "lon": 20.6993243
+    },
+    {
+      "type": "node",
+      "id": 1971478687,
+      "lat": 49.6066943,
+      "lon": 20.700952
+    },
+    {
+      "type": "node",
+      "id": 1981769353,
+      "lat": 49.6040369,
+      "lon": 20.6963647
+    },
+    {
+      "type": "node",
+      "id": 2935104100,
+      "lat": 49.603943,
+      "lon": 20.6975607
+    },
+    {
+      "type": "node",
+      "id": 2941863649,
+      "lat": 49.6015622,
+      "lon": 20.7028102
+    },
+    {
+      "type": "node",
+      "id": 2941863650,
+      "lat": 49.6017255,
+      "lon": 20.7026736
+    },
+    {
+      "type": "node",
+      "id": 2941863654,
+      "lat": 49.6023216,
+      "lon": 20.7021797
+    },
+    {
+      "type": "node",
+      "id": 3355808397,
+      "lat": 49.6039157,
+      "lon": 20.6998746
+    },
+    {
+      "type": "node",
+      "id": 3355808450,
+      "lat": 49.6040678,
+      "lon": 20.6980739
+    },
+    {
+      "type": "node",
+      "id": 3355808499,
+      "lat": 49.6041784,
+      "lon": 20.6993425
+    },
+    {
+      "type": "node",
+      "id": 3477183692,
+      "lat": 49.6072901,
+      "lon": 20.7023469,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3503895044,
+      "lat": 49.6039857,
+      "lon": 20.6977393,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3503895064,
+      "lat": 49.6062885,
+      "lon": 20.7000229,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3503895317,
+      "lat": 49.605868,
+      "lon": 20.6984501,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3503895380,
+      "lat": 49.6054172,
+      "lon": 20.696547,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3952364765,
+      "lat": 49.6073861,
+      "lon": 20.7016322,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3952364767,
+      "lat": 49.607373,
+      "lon": 20.7015696
+    },
+    {
+      "type": "node",
+      "id": 3952364768,
+      "lat": 49.6073168,
+      "lon": 20.7015239
+    },
+    {
+      "type": "node",
+      "id": 3952364769,
+      "lat": 49.6067696,
+      "lon": 20.700899
+    },
+    {
+      "type": "node",
+      "id": 3952364786,
+      "lat": 49.607167,
+      "lon": 20.7013539
+    },
+    {
+      "type": "node",
+      "id": 3952364788,
+      "lat": 49.6070678,
+      "lon": 20.7012321
+    },
+    {
+      "type": "node",
+      "id": 7246782113,
+      "lat": 49.6030674,
+      "lon": 20.7012618,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10116396836,
+      "lat": 49.6035479,
+      "lon": 20.7003905,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wyspiańskiego - MPK",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10183377917,
+      "lat": 49.6039557,
+      "lon": 20.6978583,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wyspiańskiego - Zielona",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10300695417,
+      "lat": 49.6070377,
+      "lon": 20.7011522,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dw. Aut. MPK st. 3",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10301058540,
+      "lat": 49.6069144,
+      "lon": 20.7010608
+    },
+    {
+      "type": "node",
+      "id": 10937294192,
+      "lat": 49.6073407,
+      "lon": 20.7015433
+    },
+    {
+      "type": "node",
+      "id": 10937294193,
+      "lat": 49.606994,
+      "lon": 20.7011497
+    },
+    {
+      "type": "node",
+      "id": 10940047759,
+      "lat": 49.6067142,
+      "lon": 20.7009371,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "yes",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10940047760,
+      "lat": 49.6067421,
+      "lon": 20.7009161
+    },
+    {
+      "type": "node",
+      "id": 10940047794,
+      "lat": 49.6061941,
+      "lon": 20.6997479
+    },
+    {
+      "type": "node",
+      "id": 10964368340,
+      "lat": 49.6038381,
+      "lon": 20.696958
+    },
+    {
+      "type": "node",
+      "id": 10964368358,
+      "lat": 49.6024747,
+      "lon": 20.7020552
+    },
+    {
+      "type": "node",
+      "id": 10964368377,
+      "lat": 49.6030024,
+      "lon": 20.7013661
+    },
+    {
+      "type": "node",
+      "id": 10964368381,
+      "lat": 49.6031564,
+      "lon": 20.7011179
+    },
+    {
+      "type": "node",
+      "id": 10964368389,
+      "lat": 49.6027521,
+      "lon": 20.7017605
+    },
+    {
+      "type": "node",
+      "id": 10964369418,
+      "lat": 49.604102,
+      "lon": 20.6995631
+    },
+    {
+      "type": "node",
+      "id": 10964369419,
+      "lat": 49.6042195,
+      "lon": 20.6990194
+    },
+    {
+      "type": "node",
+      "id": 11397956218,
+      "lat": 49.6016266,
+      "lon": 20.7027543,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12237501268,
+      "lat": 49.6039157,
+      "lon": 20.6965378
+    },
+    {
+      "type": "node",
+      "id": 12237501269,
+      "lat": 49.6038812,
+      "lon": 20.6964642
+    },
+    {
+      "type": "node",
+      "id": 12237501270,
+      "lat": 49.6038735,
+      "lon": 20.6965934
+    },
+    {
+      "type": "node",
+      "id": 12237501271,
+      "lat": 49.6037966,
+      "lon": 20.6965084
+    },
+    {
+      "type": "node",
+      "id": 12237501272,
+      "lat": 49.6038426,
+      "lon": 20.6964951
+    },
+    {
+      "type": "node",
+      "id": 12237501273,
+      "lat": 49.6038507,
+      "lon": 20.6970878
+    },
+    {
+      "type": "node",
+      "id": 12237501274,
+      "lat": 49.6038206,
+      "lon": 20.6970882
+    },
+    {
+      "type": "node",
+      "id": 12237501276,
+      "lat": 49.6037851,
+      "lon": 20.6969186
+    },
+    {
+      "type": "node",
+      "id": 12237501279,
+      "lat": 49.6038539,
+      "lon": 20.6966345
+    },
+    {
+      "type": "node",
+      "id": 12237501281,
+      "lat": 49.6038347,
+      "lon": 20.6967303
+    },
+    {
+      "type": "node",
+      "id": 12237501291,
+      "lat": 49.6037298,
+      "lon": 20.696764
+    },
+    {
+      "type": "node",
+      "id": 12754079669,
+      "lat": 49.6055424,
+      "lon": 20.6970737
+    },
+    {
+      "type": "node",
+      "id": 13357740091,
+      "lat": 49.6038355,
+      "lon": 20.6967837,
+      "tags": {
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2445903270,
+      "lat": 49.6072271,
+      "lon": 20.7029417
+    },
+    {
+      "type": "node",
+      "id": 2941863643,
+      "lat": 49.6010285,
+      "lon": 20.7032529
+    },
+    {
+      "type": "node",
+      "id": 2941863647,
+      "lat": 49.6012122,
+      "lon": 20.7030996
+    },
+    {
+      "type": "node",
+      "id": 3477234526,
+      "lat": 49.607267,
+      "lon": 20.7030859,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3610869465,
+      "lat": 49.6009837,
+      "lon": 20.7073603
+    },
+    {
+      "type": "node",
+      "id": 10937323302,
+      "lat": 49.6072438,
+      "lon": 20.703008
+    },
+    {
+      "type": "node",
+      "id": 475584035,
+      "lat": 49.6075287,
+      "lon": 20.7018797
+    },
+    {
+      "type": "node",
+      "id": 313493207,
+      "lat": 49.6108397,
+      "lon": 20.7065183,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 419804226,
+      "lat": 49.6132753,
+      "lon": 20.7038974
+    },
+    {
+      "type": "node",
+      "id": 419804228,
+      "lat": 49.6123634,
+      "lon": 20.7050777
+    },
+    {
+      "type": "node",
+      "id": 419804229,
+      "lat": 49.6117192,
+      "lon": 20.705677
+    },
+    {
+      "type": "node",
+      "id": 444344621,
+      "lat": 49.6091738,
+      "lon": 20.7083502,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 588394253,
+      "lat": 49.6085125,
+      "lon": 20.7066517
+    },
+    {
+      "type": "node",
+      "id": 870091832,
+      "lat": 49.6103553,
+      "lon": 20.7071004
+    },
+    {
+      "type": "node",
+      "id": 879665898,
+      "lat": 49.6121053,
+      "lon": 20.7053219
+    },
+    {
+      "type": "node",
+      "id": 879665920,
+      "lat": 49.6128071,
+      "lon": 20.7045539
+    },
+    {
+      "type": "node",
+      "id": 879665929,
+      "lat": 49.6125999,
+      "lon": 20.7048247
+    },
+    {
+      "type": "node",
+      "id": 880965172,
+      "lat": 49.6076535,
+      "lon": 20.7042001
+    },
+    {
+      "type": "node",
+      "id": 880965390,
+      "lat": 49.6088981,
+      "lon": 20.7076424
+    },
+    {
+      "type": "node",
+      "id": 880965419,
+      "lat": 49.6082342,
+      "lon": 20.7058719
+    },
+    {
+      "type": "node",
+      "id": 1036620402,
+      "lat": 49.6111498,
+      "lon": 20.7062077
+    },
+    {
+      "type": "node",
+      "id": 1981709331,
+      "lat": 49.6128887,
+      "lon": 20.7044526
+    },
+    {
+      "type": "node",
+      "id": 2934759857,
+      "lat": 49.6131227,
+      "lon": 20.7041199
+    },
+    {
+      "type": "node",
+      "id": 2934835511,
+      "lat": 49.6130033,
+      "lon": 20.7043007
+    },
+    {
+      "type": "node",
+      "id": 2934835529,
+      "lat": 49.6138047,
+      "lon": 20.7031063
+    },
+    {
+      "type": "node",
+      "id": 2944656173,
+      "lat": 49.6105684,
+      "lon": 20.7068126
+    },
+    {
+      "type": "node",
+      "id": 2944656182,
+      "lat": 49.6114506,
+      "lon": 20.705955
+    },
+    {
+      "type": "node",
+      "id": 3355809182,
+      "lat": 49.6091099,
+      "lon": 20.708183,
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "highway": "crossing",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3355809200,
+      "lat": 49.6093003,
+      "lon": 20.7082193,
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "highway": "crossing",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3448074344,
+      "lat": 49.611,
+      "lon": 20.7063612,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3448074352,
+      "lat": 49.6107052,
+      "lon": 20.7066624,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5550633008,
+      "lat": 49.6105462,
+      "lon": 20.7068426
+    },
+    {
+      "type": "node",
+      "id": 10180937996,
+      "lat": 49.6096977,
+      "lon": 20.7076817,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Kolejowa",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10180937997,
+      "lat": 49.6097361,
+      "lon": 20.7077571,
+      "tags": {
+        "bus": "yes",
+        "name": "Nawojowska - Kolejowa",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10180937998,
+      "lat": 49.6096546,
+      "lon": 20.7078435,
+      "tags": {
+        "bus": "yes",
+        "name": "Nawojowska - Kolejowa",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10301254772,
+      "lat": 49.6136616,
+      "lon": 20.7031647,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Os. Millenium",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10940047751,
+      "lat": 49.6087411,
+      "lon": 20.7072374
+    },
+    {
+      "type": "node",
+      "id": 10940047752,
+      "lat": 49.6084197,
+      "lon": 20.7064036
+    },
+    {
+      "type": "node",
+      "id": 12743325025,
+      "lat": 49.6093376,
+      "lon": 20.7081797,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12743325067,
+      "lat": 49.6090928,
+      "lon": 20.7081393,
+      "tags": {
+        "highway": "traffic_signals"
+      }
+    },
+    {
+      "type": "node",
+      "id": 419804225,
+      "lat": 49.614384,
+      "lon": 20.7023079
+    },
+    {
+      "type": "node",
+      "id": 870335625,
+      "lat": 49.6202887,
+      "lon": 20.7018485
+    },
+    {
+      "type": "node",
+      "id": 879665967,
+      "lat": 49.6141869,
+      "lon": 20.7025488
+    },
+    {
+      "type": "node",
+      "id": 2934835532,
+      "lat": 49.6141616,
+      "lon": 20.7025807
+    },
+    {
+      "type": "node",
+      "id": 3454309713,
+      "lat": 49.6201017,
+      "lon": 20.70263,
+      "tags": {
+        "bicycle": "yes",
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "highway": "crossing",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3461727927,
+      "lat": 49.6144622,
+      "lon": 20.7024748,
+      "tags": {
+        "button_operated": "yes",
+        "crossing": "traffic_signals",
+        "crossing_ref": "zebra",
+        "highway": "crossing",
+        "tactile_paving": "yes",
+        "traffic_signals:sound": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3461727930,
+      "lat": 49.6142771,
+      "lon": 20.7024326,
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing_ref": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5550637999,
+      "lat": 49.6142487,
+      "lon": 20.7024688,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "backward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5550638002,
+      "lat": 49.6144812,
+      "lon": 20.7025269,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10729392796,
+      "lat": 49.6203968,
+      "lon": 20.7019558
+    },
+    {
+      "type": "node",
+      "id": 10729392798,
+      "lat": 49.6204438,
+      "lon": 20.7021582
+    },
+    {
+      "type": "node",
+      "id": 10729392799,
+      "lat": 49.6201302,
+      "lon": 20.7024064
+    },
+    {
+      "type": "node",
+      "id": 10729392800,
+      "lat": 49.6200432,
+      "lon": 20.7021613
+    },
+    {
+      "type": "node",
+      "id": 10729392802,
+      "lat": 49.6200835,
+      "lon": 20.701966
+    },
+    {
+      "type": "node",
+      "id": 10729418605,
+      "lat": 49.6202272,
+      "lon": 20.7018446
+    },
+    {
+      "type": "node",
+      "id": 10729418606,
+      "lat": 49.6201725,
+      "lon": 20.7018634
+    },
+    {
+      "type": "node",
+      "id": 10729418607,
+      "lat": 49.6201233,
+      "lon": 20.701905
+    },
+    {
+      "type": "node",
+      "id": 10729418608,
+      "lat": 49.6200548,
+      "lon": 20.7022559
+    },
+    {
+      "type": "node",
+      "id": 10729418609,
+      "lat": 49.6200848,
+      "lon": 20.7023403
+    },
+    {
+      "type": "node",
+      "id": 10729418611,
+      "lat": 49.6200525,
+      "lon": 20.7020583
+    },
+    {
+      "type": "node",
+      "id": 10729418615,
+      "lat": 49.6204378,
+      "lon": 20.7020858
+    },
+    {
+      "type": "node",
+      "id": 10729418616,
+      "lat": 49.6204223,
+      "lon": 20.7020171
+    },
+    {
+      "type": "node",
+      "id": 10729418617,
+      "lat": 49.6203459,
+      "lon": 20.7018879
+    },
+    {
+      "type": "node",
+      "id": 46708077,
+      "lat": 49.6195335,
+      "lon": 20.7073914
+    },
+    {
+      "type": "node",
+      "id": 46708083,
+      "lat": 49.6200012,
+      "lon": 20.7037283
+    },
+    {
+      "type": "node",
+      "id": 316961902,
+      "lat": 49.6169923,
+      "lon": 20.7088264
+    },
+    {
+      "type": "node",
+      "id": 316961907,
+      "lat": 49.6168503,
+      "lon": 20.7086026
+    },
+    {
+      "type": "node",
+      "id": 316961909,
+      "lat": 49.6165252,
+      "lon": 20.7078646
+    },
+    {
+      "type": "node",
+      "id": 316961910,
+      "lat": 49.6152017,
+      "lon": 20.7043634
+    },
+    {
+      "type": "node",
+      "id": 419804230,
+      "lat": 49.6146712,
+      "lon": 20.7030138
+    },
+    {
+      "type": "node",
+      "id": 432648466,
+      "lat": 49.6167187,
+      "lon": 20.7083501
+    },
+    {
+      "type": "node",
+      "id": 548112233,
+      "lat": 49.6150103,
+      "lon": 20.7038705
+    },
+    {
+      "type": "node",
+      "id": 548147208,
+      "lat": 49.6165208,
+      "lon": 20.707626,
+      "tags": {
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Rejtana",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu;Szwagropol",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303;Q59688724",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:wikidata": "Q11780303",
+        "public_transport": "platform",
+        "ref:kmal": "2414",
+        "request_stop": "yes",
+        "route_ref": "MLD – A22"
+      }
+    },
+    {
+      "type": "node",
+      "id": 548205572,
+      "lat": 49.6198292,
+      "lon": 20.7050414
+    },
+    {
+      "type": "node",
+      "id": 595439873,
+      "lat": 49.6154769,
+      "lon": 20.7050815
+    },
+    {
+      "type": "node",
+      "id": 870335512,
+      "lat": 49.620037,
+      "lon": 20.7031833
+    },
+    {
+      "type": "node",
+      "id": 870335545,
+      "lat": 49.619477,
+      "lon": 20.7078283
+    },
+    {
+      "type": "node",
+      "id": 1173646735,
+      "lat": 49.6193412,
+      "lon": 20.7089004
+    },
+    {
+      "type": "node",
+      "id": 1971396720,
+      "lat": 49.6196034,
+      "lon": 20.7068473
+    },
+    {
+      "type": "node",
+      "id": 1971396746,
+      "lat": 49.6196224,
+      "lon": 20.7066837
+    },
+    {
+      "type": "node",
+      "id": 2870804029,
+      "lat": 49.6152244,
+      "lon": 20.7044219
+    },
+    {
+      "type": "node",
+      "id": 2934835568,
+      "lat": 49.6149061,
+      "lon": 20.7036116
+    },
+    {
+      "type": "node",
+      "id": 2934835572,
+      "lat": 49.6149701,
+      "lon": 20.7037737
+    },
+    {
+      "type": "node",
+      "id": 2934835573,
+      "lat": 49.6150886,
+      "lon": 20.7040679
+    },
+    {
+      "type": "node",
+      "id": 2934835750,
+      "lat": 49.6199637,
+      "lon": 20.7039945
+    },
+    {
+      "type": "node",
+      "id": 3445274418,
+      "lat": 49.6197978,
+      "lon": 20.7052768,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3461729848,
+      "lat": 49.6151796,
+      "lon": 20.7043096,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "dots",
+        "highway": "crossing",
+        "kerb": "lowered",
+        "supervised": "no",
+        "tactile_paving": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3461729850,
+      "lat": 49.615542,
+      "lon": 20.7052595,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "dots",
+        "highway": "crossing",
+        "kerb": "lowered",
+        "supervised": "no",
+        "tactile_paving": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3461729851,
+      "lat": 49.6163326,
+      "lon": 20.7073543,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "dots",
+        "highway": "crossing",
+        "kerb": "lowered",
+        "supervised": "no",
+        "tactile_paving": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4298883747,
+      "lat": 49.619765,
+      "lon": 20.7055455,
+      "tags": {
+        "bus": "yes",
+        "direction": "forward",
+        "name": "Kilińskiego - Stadion",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "public_transport": "stop_position",
+        "ref:kmal": "2410",
+        "request_stop": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6654951784,
+      "lat": 49.616515,
+      "lon": 20.7078379
+    },
+    {
+      "type": "node",
+      "id": 8922654275,
+      "lat": 49.6164527,
+      "lon": 20.707673,
+      "tags": {
+        "bus": "yes",
+        "direction": "forward",
+        "name": "Rejtana",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu;Szwagropol",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303;Q59688724",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:wikidata": "Q11780303",
+        "public_transport": "stop_position",
+        "ref:kmal": "2414",
+        "request_stop": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8922654276,
+      "lat": 49.6153243,
+      "lon": 20.7046756,
+      "tags": {
+        "bus": "yes",
+        "direction": "backward",
+        "name": "Rejtana",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu;Szwagropol",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303;Q59688724",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:wikidata": "Q11780303",
+        "public_transport": "stop_position",
+        "ref:kmal": "2409",
+        "request_stop": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8922658552,
+      "lat": 49.6196897,
+      "lon": 20.7061443,
+      "tags": {
+        "bus": "yes",
+        "direction": "backward",
+        "name": "Kilińskiego - Stadion",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "public_transport": "stop_position",
+        "ref:kmal": "2412",
+        "request_stop": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8922658553,
+      "lat": 49.6196462,
+      "lon": 20.7060852,
+      "tags": {
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Kilińskiego - Stadion",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:kmal": "2412",
+        "request_stop": "yes",
+        "route_ref": "MLD – A22",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10116365183,
+      "lat": 49.6148213,
+      "lon": 20.7033971,
+      "tags": {
+        "bus": "yes",
+        "name": "Rejtana - Śniadeckich",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10116365184,
+      "lat": 49.6148582,
+      "lon": 20.703334,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Rejtana - Śniadeckich",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10574346373,
+      "lat": 49.6196711,
+      "lon": 20.7062896
+    },
+    {
+      "type": "node",
+      "id": 11783940507,
+      "lat": 49.6162026,
+      "lon": 20.7070079
+    },
+    {
+      "type": "node",
+      "id": 11783940513,
+      "lat": 49.6163775,
+      "lon": 20.7074716
+    },
+    {
+      "type": "node",
+      "id": 11783940551,
+      "lat": 49.6160305,
+      "lon": 20.7065475
+    },
+    {
+      "type": "node",
+      "id": 13458641463,
+      "lat": 49.6166071,
+      "lon": 20.7080828
+    },
+    {
+      "type": "node",
+      "id": 13458641464,
+      "lat": 49.6166613,
+      "lon": 20.7082162
+    },
+    {
+      "type": "node",
+      "id": 881166930,
+      "lat": 49.6211468,
+      "lon": 20.7026872
+    },
+    {
+      "type": "node",
+      "id": 881167157,
+      "lat": 49.620957,
+      "lon": 20.702535
+    },
+    {
+      "type": "node",
+      "id": 881167488,
+      "lat": 49.6208458,
+      "lon": 20.7024416
+    },
+    {
+      "type": "node",
+      "id": 1971457625,
+      "lat": 49.6206695,
+      "lon": 20.7023292
+    },
+    {
+      "type": "node",
+      "id": 3445274427,
+      "lat": 49.6205959,
+      "lon": 20.7022809,
+      "tags": {
+        "bicycle": "yes",
+        "crossing": "uncontrolled",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 288873549,
+      "lat": 49.6215968,
+      "lon": 20.7028935
+    },
+    {
+      "type": "node",
+      "id": 288873550,
+      "lat": 49.6222934,
+      "lon": 20.7032078
+    },
+    {
+      "type": "node",
+      "id": 317345029,
+      "lat": 49.6266965,
+      "lon": 20.7069079
+    },
+    {
+      "type": "node",
+      "id": 438417923,
+      "lat": 49.6230931,
+      "lon": 20.7037118
+    },
+    {
+      "type": "node",
+      "id": 881166965,
+      "lat": 49.6265873,
+      "lon": 20.7072095
+    },
+    {
+      "type": "node",
+      "id": 884220805,
+      "lat": 49.6237914,
+      "lon": 20.7043103
+    },
+    {
+      "type": "node",
+      "id": 884220826,
+      "lat": 49.6242675,
+      "lon": 20.7047368
+    },
+    {
+      "type": "node",
+      "id": 884272353,
+      "lat": 49.6254327,
+      "lon": 20.7058127
+    },
+    {
+      "type": "node",
+      "id": 2597658306,
+      "lat": 49.6245854,
+      "lon": 20.7048936
+    },
+    {
+      "type": "node",
+      "id": 2597658308,
+      "lat": 49.6246181,
+      "lon": 20.704853
+    },
+    {
+      "type": "node",
+      "id": 2597658311,
+      "lat": 49.6246571,
+      "lon": 20.7048296
+    },
+    {
+      "type": "node",
+      "id": 2597658316,
+      "lat": 49.6246989,
+      "lon": 20.7048255
+    },
+    {
+      "type": "node",
+      "id": 2597658317,
+      "lat": 49.6247402,
+      "lon": 20.7048415
+    },
+    {
+      "type": "node",
+      "id": 2597658321,
+      "lat": 49.6247763,
+      "lon": 20.7048763
+    },
+    {
+      "type": "node",
+      "id": 2597658323,
+      "lat": 49.6248037,
+      "lon": 20.7049265
+    },
+    {
+      "type": "node",
+      "id": 2597658324,
+      "lat": 49.6248198,
+      "lon": 20.7049873
+    },
+    {
+      "type": "node",
+      "id": 2597658325,
+      "lat": 49.6248231,
+      "lon": 20.7050527
+    },
+    {
+      "type": "node",
+      "id": 2597658329,
+      "lat": 49.6252005,
+      "lon": 20.7055987
+    },
+    {
+      "type": "node",
+      "id": 3533785019,
+      "lat": 49.6232164,
+      "lon": 20.7038187,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5410476920,
+      "lat": 49.6228741,
+      "lon": 20.7035519
+    },
+    {
+      "type": "node",
+      "id": 5410477621,
+      "lat": 49.6226403,
+      "lon": 20.7033979
+    },
+    {
+      "type": "node",
+      "id": 7881310331,
+      "lat": 49.6246451,
+      "lon": 20.7048368
+    },
+    {
+      "type": "node",
+      "id": 7881310332,
+      "lat": 49.6244056,
+      "lon": 20.7048254
+    },
+    {
+      "type": "node",
+      "id": 7881310333,
+      "lat": 49.6245034,
+      "lon": 20.7048843
+    },
+    {
+      "type": "node",
+      "id": 7881310334,
+      "lat": 49.6245784,
+      "lon": 20.70491
+    },
+    {
+      "type": "node",
+      "id": 7881335331,
+      "lat": 49.6249935,
+      "lon": 20.7053729
+    },
+    {
+      "type": "node",
+      "id": 7881335332,
+      "lat": 49.6249085,
+      "lon": 20.7052052
+    },
+    {
+      "type": "node",
+      "id": 7881335333,
+      "lat": 49.6248161,
+      "lon": 20.7050981
+    },
+    {
+      "type": "node",
+      "id": 7881335336,
+      "lat": 49.6248753,
+      "lon": 20.7051682,
+      "tags": {
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8251213448,
+      "lat": 49.626569,
+      "lon": 20.7069704
+    },
+    {
+      "type": "node",
+      "id": 8251213449,
+      "lat": 49.6265932,
+      "lon": 20.7069331
+    },
+    {
+      "type": "node",
+      "id": 8251213452,
+      "lat": 49.6267742,
+      "lon": 20.7070597
+    },
+    {
+      "type": "node",
+      "id": 8251213455,
+      "lat": 49.626621,
+      "lon": 20.7072398
+    },
+    {
+      "type": "node",
+      "id": 8251213465,
+      "lat": 49.6267723,
+      "lon": 20.7071107
+    },
+    {
+      "type": "node",
+      "id": 9297478786,
+      "lat": 49.6229896,
+      "lon": 20.7036362,
+      "tags": {
+        "crossing": "marked",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10186327161,
+      "lat": 49.6257631,
+      "lon": 20.7060384,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Lwowska",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10301254771,
+      "lat": 49.6264228,
+      "lon": 20.7067063
+    },
+    {
+      "type": "node",
+      "id": 10729680084,
+      "lat": 49.6266594,
+      "lon": 20.7072508
+    },
+    {
+      "type": "node",
+      "id": 10729680085,
+      "lat": 49.6266979,
+      "lon": 20.7072412
+    },
+    {
+      "type": "node",
+      "id": 10729680086,
+      "lat": 49.6267321,
+      "lon": 20.707212
+    },
+    {
+      "type": "node",
+      "id": 10729680087,
+      "lat": 49.6267579,
+      "lon": 20.7071667
+    },
+    {
+      "type": "node",
+      "id": 10729680088,
+      "lat": 49.6267666,
+      "lon": 20.70701
+    },
+    {
+      "type": "node",
+      "id": 10729680089,
+      "lat": 49.6267501,
+      "lon": 20.7069658
+    },
+    {
+      "type": "node",
+      "id": 10729680090,
+      "lat": 49.626726,
+      "lon": 20.7069308
+    },
+    {
+      "type": "node",
+      "id": 10729680091,
+      "lat": 49.6266609,
+      "lon": 20.7068989
+    },
+    {
+      "type": "node",
+      "id": 10729680092,
+      "lat": 49.6266253,
+      "lon": 20.7069076
+    },
+    {
+      "type": "node",
+      "id": 10729680093,
+      "lat": 49.626553,
+      "lon": 20.7070171
+    },
+    {
+      "type": "node",
+      "id": 10729680094,
+      "lat": 49.6265468,
+      "lon": 20.707069
+    },
+    {
+      "type": "node",
+      "id": 10729680095,
+      "lat": 49.6265508,
+      "lon": 20.7071215
+    },
+    {
+      "type": "node",
+      "id": 10729680096,
+      "lat": 49.6265647,
+      "lon": 20.7071698
+    },
+    {
+      "type": "node",
+      "id": 11868045297,
+      "lat": 49.6240652,
+      "lon": 20.7045556
+    },
+    {
+      "type": "node",
+      "id": 11951931881,
+      "lat": 49.6267731,
+      "lon": 20.7070525
+    },
+    {
+      "type": "node",
+      "id": 11951931882,
+      "lat": 49.6268573,
+      "lon": 20.707094,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11951931884,
+      "lat": 49.6267524,
+      "lon": 20.7071763
+    },
+    {
+      "type": "node",
+      "id": 11951931887,
+      "lat": 49.6265509,
+      "lon": 20.7068145,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11951931888,
+      "lat": 49.626562,
+      "lon": 20.7069909
+    },
+    {
+      "type": "node",
+      "id": 11951931892,
+      "lat": 49.626747,
+      "lon": 20.7069612
+    },
+    {
+      "type": "node",
+      "id": 11951931893,
+      "lat": 49.6269524,
+      "lon": 20.7071764
+    },
+    {
+      "type": "node",
+      "id": 11951931894,
+      "lat": 49.6264442,
+      "lon": 20.7067353
+    },
+    {
+      "type": "node",
+      "id": 13029475055,
+      "lat": 49.6248355,
+      "lon": 20.705121,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 884272762,
+      "lat": 49.6286315,
+      "lon": 20.708537
+    },
+    {
+      "type": "node",
+      "id": 884273043,
+      "lat": 49.6273037,
+      "lon": 20.7074554
+    },
+    {
+      "type": "node",
+      "id": 3259864612,
+      "lat": 49.6289546,
+      "lon": 20.70882
+    },
+    {
+      "type": "node",
+      "id": 3260746087,
+      "lat": 49.6290789,
+      "lon": 20.7089289
+    },
+    {
+      "type": "node",
+      "id": 3459658465,
+      "lat": 49.6295381,
+      "lon": 20.7092643,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5132609932,
+      "lat": 49.6296954,
+      "lon": 20.7093093
+    },
+    {
+      "type": "node",
+      "id": 5132609935,
+      "lat": 49.6296449,
+      "lon": 20.7093098
+    },
+    {
+      "type": "node",
+      "id": 5132609936,
+      "lat": 49.6296727,
+      "lon": 20.7093042
+    },
+    {
+      "type": "node",
+      "id": 5132609938,
+      "lat": 49.6297402,
+      "lon": 20.7093513
+    },
+    {
+      "type": "node",
+      "id": 5132609943,
+      "lat": 49.6297167,
+      "lon": 20.7093226
+    },
+    {
+      "type": "node",
+      "id": 7618341233,
+      "lat": 49.6296303,
+      "lon": 20.7093201
+    },
+    {
+      "type": "node",
+      "id": 7618341236,
+      "lat": 49.6294474,
+      "lon": 20.7092095
+    },
+    {
+      "type": "node",
+      "id": 10186331547,
+      "lat": 49.6279921,
+      "lon": 20.7078709,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Szkoła",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 316961897,
+      "lat": 49.6184681,
+      "lon": 20.7109655
+    },
+    {
+      "type": "node",
+      "id": 316961901,
+      "lat": 49.6177891,
+      "lon": 20.7099767
+    },
+    {
+      "type": "node",
+      "id": 870335705,
+      "lat": 49.6192301,
+      "lon": 20.7097309
+    },
+    {
+      "type": "node",
+      "id": 1173535671,
+      "lat": 49.6185879,
+      "lon": 20.711145
+    },
+    {
+      "type": "node",
+      "id": 1173536722,
+      "lat": 49.6187096,
+      "lon": 20.7111658,
+      "tags": {
+        "crossing": "traffic_signals",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1173646313,
+      "lat": 49.6187594,
+      "lon": 20.7111563
+    },
+    {
+      "type": "node",
+      "id": 2934835710,
+      "lat": 49.6189164,
+      "lon": 20.7110305,
+      "tags": {
+        "highway": "traffic_signals",
+        "traffic_signals": "signal",
+        "traffic_signals:direction": "forward"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2934835711,
+      "lat": 49.6189762,
+      "lon": 20.7108114
+    },
+    {
+      "type": "node",
+      "id": 3448463856,
+      "lat": 49.6177091,
+      "lon": 20.7098613,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4068759206,
+      "lat": 49.6191846,
+      "lon": 20.7099761
+    },
+    {
+      "type": "node",
+      "id": 10115906841,
+      "lat": 49.6192695,
+      "lon": 20.70946
+    },
+    {
+      "type": "node",
+      "id": 11117616857,
+      "lat": 49.6190848,
+      "lon": 20.7104091
+    },
+    {
+      "type": "node",
+      "id": 11117616859,
+      "lat": 49.6187977,
+      "lon": 20.7111364
+    },
+    {
+      "type": "node",
+      "id": 11117616860,
+      "lat": 49.6188482,
+      "lon": 20.7110989
+    },
+    {
+      "type": "node",
+      "id": 884272305,
+      "lat": 49.6270223,
+      "lon": 20.7174329
+    },
+    {
+      "type": "node",
+      "id": 884272626,
+      "lat": 49.627044,
+      "lon": 20.7173303
+    },
+    {
+      "type": "node",
+      "id": 884272727,
+      "lat": 49.626949,
+      "lon": 20.718126
+    },
+    {
+      "type": "node",
+      "id": 884272871,
+      "lat": 49.6271407,
+      "lon": 20.7169914
+    },
+    {
+      "type": "node",
+      "id": 884272997,
+      "lat": 49.6269922,
+      "lon": 20.7176357
+    },
+    {
+      "type": "node",
+      "id": 1173646319,
+      "lat": 49.627087,
+      "lon": 20.7171733
+    },
+    {
+      "type": "node",
+      "id": 3454350210,
+      "lat": 49.6269652,
+      "lon": 20.7178971,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3454350234,
+      "lat": 49.6270167,
+      "lon": 20.7183873,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sucharskiego - Westerplatte",
+        "network": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "ref": "01682"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10180904257,
+      "lat": 49.6269337,
+      "lon": 20.7183738,
+      "tags": {
+        "bus": "yes",
+        "name": "Sucharskiego - Westerplatte",
+        "network": "MPK Nowy Sącz",
+        "public_transport": "stop_position",
+        "ref": "01682"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13939263143,
+      "lat": 49.6269779,
+      "lon": 20.7177647
+    },
+    {
+      "type": "node",
+      "id": 13939263144,
+      "lat": 49.6270078,
+      "lon": 20.7175206
+    },
+    {
+      "type": "node",
+      "id": 884272384,
+      "lat": 49.6295664,
+      "lon": 20.7099656
+    },
+    {
+      "type": "node",
+      "id": 884272472,
+      "lat": 49.6280338,
+      "lon": 20.7144272
+    },
+    {
+      "type": "node",
+      "id": 884272929,
+      "lat": 49.6282428,
+      "lon": 20.7138319
+    },
+    {
+      "type": "node",
+      "id": 884272935,
+      "lat": 49.6287888,
+      "lon": 20.7122711
+    },
+    {
+      "type": "node",
+      "id": 884273053,
+      "lat": 49.6294514,
+      "lon": 20.7103638
+    },
+    {
+      "type": "node",
+      "id": 2597658330,
+      "lat": 49.6296571,
+      "lon": 20.7095939
+    },
+    {
+      "type": "node",
+      "id": 3260746075,
+      "lat": 49.6275719,
+      "lon": 20.7157554
+    },
+    {
+      "type": "node",
+      "id": 3260746089,
+      "lat": 49.6291262,
+      "lon": 20.7113041
+    },
+    {
+      "type": "node",
+      "id": 3260746091,
+      "lat": 49.6293268,
+      "lon": 20.7107243
+    },
+    {
+      "type": "node",
+      "id": 3454350184,
+      "lat": 49.6280882,
+      "lon": 20.7142717,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3454350185,
+      "lat": 49.6279864,
+      "lon": 20.7145637,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3454350191,
+      "lat": 49.6277101,
+      "lon": 20.7153581,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3459621040,
+      "lat": 49.6292595,
+      "lon": 20.7109187,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3459621066,
+      "lat": 49.6287239,
+      "lon": 20.7124567,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3459658463,
+      "lat": 49.6296182,
+      "lon": 20.7097545,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3608505109,
+      "lat": 49.6279135,
+      "lon": 20.7151019,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sucharskiego - Batalianów Chłopskich",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5132609939,
+      "lat": 49.6297645,
+      "lon": 20.7094346
+    },
+    {
+      "type": "node",
+      "id": 5132609940,
+      "lat": 49.6297115,
+      "lon": 20.7095811
+    },
+    {
+      "type": "node",
+      "id": 5228163500,
+      "lat": 49.6296849,
+      "lon": 20.7095937
+    },
+    {
+      "type": "node",
+      "id": 5228163501,
+      "lat": 49.6297345,
+      "lon": 20.7095571
+    },
+    {
+      "type": "node",
+      "id": 5228163503,
+      "lat": 49.6297567,
+      "lon": 20.7093899
+    },
+    {
+      "type": "node",
+      "id": 5228163504,
+      "lat": 49.6297629,
+      "lon": 20.7094808
+    },
+    {
+      "type": "node",
+      "id": 7618341239,
+      "lat": 49.629752,
+      "lon": 20.7095238
+    },
+    {
+      "type": "node",
+      "id": 10176016372,
+      "lat": 49.6278185,
+      "lon": 20.7150462,
+      "tags": {
+        "bus": "yes",
+        "name": "Sucharskiego - Batalianów Chłopskich",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10176019889,
+      "lat": 49.629413,
+      "lon": 20.7104749,
+      "tags": {
+        "bus": "yes",
+        "name": "Sucharskiego - Barska",
+        "public_transport": "stop_position"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10176019890,
+      "lat": 49.6294604,
+      "lon": 20.710523,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sucharskiego - Barska",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "node",
+      "id": 884272637,
+      "lat": 49.6273303,
+      "lon": 20.7164501
+    },
+    {
+      "type": "node",
+      "id": 3454350202,
+      "lat": 49.6271516,
+      "lon": 20.7169602,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "way",
+      "id": 40725068,
+      "nodes": [
+        3610869465,
+        881167070,
+        3610869475,
+        2684195783,
+        3424532073,
+        2941863629,
+        3402312355,
+        2941863622,
+        881167372,
+        313493274
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "name": "29 Listopada",
+        "unsigned_ref": "1595K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 43399954,
+      "nodes": [
+        313493274,
+        13358192010,
+        881167236,
+        2941863620,
+        2941863626,
+        881167045,
+        2941863637,
+        10964368357,
+        2941863643,
+        2941863647,
+        2941863649,
+        11397956218,
+        2941863650,
+        313493280,
+        2941863654,
+        10964368358,
+        881167186,
+        881166950,
+        10964368389,
+        881167293,
+        10964368377,
+        7246782113,
+        10964368381,
+        313493285,
+        3355808397,
+        313493286,
+        10964369418,
+        881167011,
+        3355808499,
+        881167160,
+        881166972,
+        10964369419,
+        881167449,
+        881167133,
+        313493287,
+        3355808450,
+        3503895044,
+        881166905,
+        2935104100,
+        938038440
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "name": "Stanisława Wyspiańskiego",
+        "surface": "asphalt",
+        "unsigned_ref": "1595K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 40726019,
+      "nodes": [
+        444344679,
+        10940047740,
+        2935104401,
+        10940047739,
+        880965246,
+        444344690,
+        439374917
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "2",
+        "marked_trail_green": "yes",
+        "name": "Kolejowa",
+        "surface": "asphalt",
+        "unsigned_ref": "1594K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1177610074,
+      "nodes": [
+        880965463,
+        880965211,
+        880965507,
+        444344679
+      ],
+      "tags": {
+        "check_date": "2025-05-12",
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "hiking": "yes",
+        "lanes": "2",
+        "marked_trail_green": "yes",
+        "name": "Kolejowa",
+        "surface": "asphalt",
+        "unsigned_ref": "1594K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 405400248,
+      "nodes": [
+        439374917,
+        4076089567,
+        11384526634,
+        880965386,
+        4076089566,
+        4076089565,
+        1981769353,
+        880965522
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "marked_trail_green": "yes",
+        "maxheight": "3.1",
+        "maxspeed": "50",
+        "name": "Kolejowa",
+        "source:maxspeed": "PL:urban",
+        "unsigned_ref": "1594K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 445437139,
+      "nodes": [
+        541642283,
+        10940047798,
+        444344670,
+        880965278,
+        494789492,
+        880965463
+      ],
+      "tags": {
+        "check_date": "2025-05-12",
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "hiking": "yes",
+        "lanes": "3",
+        "lanes:backward": "2",
+        "lanes:forward": "1",
+        "marked_trail_green": "yes",
+        "name": "Kolejowa",
+        "surface": "asphalt",
+        "turn:lanes:backward": "left|none",
+        "unsigned_ref": "1594K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 96820045,
+      "nodes": [
+        12754079669,
+        747885330,
+        3503895317,
+        1121758983,
+        444344662,
+        1971478665,
+        880965471,
+        10940047794,
+        3503895064,
+        1121759033,
+        1173645036
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "hiking": "yes",
+        "lanes": "2",
+        "marked_trail_blue": "yes",
+        "marked_trail_green": "yes",
+        "name": "Kolejowa",
+        "surface": "asphalt",
+        "unsigned_ref": "1594K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 391960870,
+      "nodes": [
+        10937294192,
+        3952364768,
+        3952364786,
+        3952364788,
+        10937294193
+      ],
+      "tags": {
+        "covered": "yes",
+        "highway": "service",
+        "oneway": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126243627,
+      "nodes": [
+        475589757,
+        878825316,
+        878825368
+      ],
+      "tags": {
+        "dual_carriageway": "yes",
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "2",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Aleja Stefana Batorego",
+        "official_name": "Aleje Stefana Batorego",
+        "oneway": "yes",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1603K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126498120,
+      "nodes": [
+        3952364769,
+        10940047760,
+        10940047759,
+        1971478687,
+        1173645036
+      ],
+      "tags": {
+        "highway": "residential",
+        "name": "1 Maja",
+        "oneway": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126498123,
+      "nodes": [
+        878825573,
+        3952364765,
+        3952364767
+      ],
+      "tags": {
+        "highway": "service",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126538947,
+      "nodes": [
+        10301058540,
+        3952364769
+      ],
+      "tags": {
+        "highway": "service",
+        "oneway": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1177293349,
+      "nodes": [
+        10937294193,
+        10301058540
+      ],
+      "tags": {
+        "highway": "service",
+        "oneway": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1177293350,
+      "nodes": [
+        3952364767,
+        10937294192
+      ],
+      "tags": {
+        "highway": "service",
+        "oneway": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1322481044,
+      "nodes": [
+        880965522,
+        12237501269,
+        12237501272,
+        12237501271
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "marked_trail_green": "yes",
+        "maxheight": "3.1",
+        "maxspeed": "50",
+        "name": "Kolejowa",
+        "oneway": "yes",
+        "source:maxspeed": "PL:urban",
+        "unsigned_ref": "1594K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1322481045,
+      "nodes": [
+        12237501279,
+        12237501270,
+        12237501268,
+        880965522
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "marked_trail_green": "yes",
+        "maxheight": "3.1",
+        "maxspeed": "50",
+        "name": "Kolejowa",
+        "oneway": "yes",
+        "source:maxspeed": "PL:urban",
+        "unsigned_ref": "1594K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1322481046,
+      "nodes": [
+        938038440,
+        12237501273,
+        10964368340,
+        13357740091,
+        12237501281
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "name": "Stanisława Wyspiańskiego",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "unsigned_ref": "1595K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1322481047,
+      "nodes": [
+        12237501291,
+        12237501276,
+        12237501274,
+        938038440
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "name": "Stanisława Wyspiańskiego",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "unsigned_ref": "1595K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1377418671,
+      "nodes": [
+        541642283,
+        3503895380,
+        12754079669
+      ],
+      "tags": {
+        "check_date": "2025-06-03",
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "hiking": "yes",
+        "lanes": "2",
+        "marked_trail_blue": "yes",
+        "marked_trail_green": "yes",
+        "name": "Kolejowa",
+        "surface": "asphalt",
+        "unsigned_ref": "1594K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 74343217,
+      "nodes": [
+        475584035,
+        878825573
+      ],
+      "tags": {
+        "highway": "service",
+        "lanes": "2",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "oneway": "no",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 429807642,
+      "nodes": [
+        880965172,
+        3477234526,
+        10937323302,
+        2445903270
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "hiking": "yes",
+        "lanes": "2",
+        "marked_trail_blue": "yes",
+        "name": "Kolejowa",
+        "surface": "asphalt",
+        "unsigned_ref": "1594K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 802213022,
+      "nodes": [
+        2934835532,
+        2934835529
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "3",
+        "lanes:backward": "2",
+        "name": "Nawojowska",
+        "turn:lanes:backward": "left|through;right",
+        "unsigned_ref": "1597K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126565072,
+      "nodes": [
+        2445903270,
+        475589757
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "hiking": "yes",
+        "lanes": "2",
+        "marked_trail_blue": "yes",
+        "name": "Kolejowa",
+        "surface": "asphalt",
+        "unsigned_ref": "1594K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1177293439,
+      "nodes": [
+        878825368,
+        3477183692,
+        878825346,
+        475584035
+      ],
+      "tags": {
+        "dual_carriageway": "yes",
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "2",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Aleja Stefana Batorego",
+        "official_name": "Aleje Stefana Batorego",
+        "oneway": "yes",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1603K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 28538702,
+      "nodes": [
+        419804226,
+        2934759857,
+        2934835511,
+        1981709331,
+        879665920,
+        879665929,
+        419804228,
+        879665898,
+        419804229,
+        2944656182
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "name": "Nawojowska",
+        "unsigned_ref": "1597K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 37866991,
+      "nodes": [
+        444344621,
+        3355809182,
+        12743325067,
+        880965390,
+        10940047751
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "hiking": "yes",
+        "lanes": "3",
+        "lanes:backward": "1",
+        "lanes:forward": "2",
+        "marked_trail_blue": "yes",
+        "name": "Kolejowa",
+        "surface": "asphalt",
+        "turn:lanes:backward": "through;right",
+        "turn:lanes:forward": "none|merge_to_left",
+        "unsigned_ref": "1594K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 73365419,
+      "nodes": [
+        313493207,
+        3448074352,
+        2944656173,
+        5550633008,
+        870091832
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "name": "Nawojowska",
+        "oneway": "yes",
+        "unsigned_ref": "1597K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 290993811,
+      "nodes": [
+        870091832,
+        10180937997,
+        10180937998,
+        12743325025,
+        3355809200,
+        444344621
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "name": "Nawojowska",
+        "unsigned_ref": "1597K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 290993813,
+      "nodes": [
+        2944656182,
+        1036620402,
+        3448074344,
+        313493207
+      ],
+      "tags": {
+        "destination:lanes": "Brzesko;Kraków;Wadowice;Przemyśl|Krynica|Piwniczna Zdrój;Stary Sącz",
+        "destination:ref:lanes": "75;28|75|87",
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "3",
+        "name": "Nawojowska",
+        "oneway": "yes",
+        "turn:lanes": "left|through|right",
+        "unsigned_ref": "1597K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 348339145,
+      "nodes": [
+        588394253,
+        10940047752,
+        880965419,
+        880965172
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "hiking": "yes",
+        "lanes": "2",
+        "marked_trail_blue": "yes",
+        "name": "Kolejowa",
+        "surface": "asphalt",
+        "unsigned_ref": "1594K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1177610057,
+      "nodes": [
+        10940047751,
+        588394253
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "hiking": "yes",
+        "lanes": "2",
+        "marked_trail_blue": "yes",
+        "name": "Kolejowa",
+        "surface": "asphalt",
+        "unsigned_ref": "1594K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1194675215,
+      "nodes": [
+        2934835529,
+        419804226
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "name": "Nawojowska",
+        "unsigned_ref": "1597K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 802213023,
+      "nodes": [
+        419804225,
+        3461727930,
+        5550637999,
+        879665967,
+        2934835532
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "3",
+        "lanes:backward": "2",
+        "name": "Nawojowska",
+        "turn:lanes:backward": "left|through",
+        "unsigned_ref": "1597K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 802213024,
+      "nodes": [
+        3461727927,
+        419804225
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "3",
+        "name": "Tadeusza Rejtana",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|right",
+        "unsigned_ref": "1597K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1153699021,
+      "nodes": [
+        870335625,
+        10729418605,
+        10729418606,
+        10729418607,
+        10729392802
+      ],
+      "tags": {
+        "highway": "secondary",
+        "junction": "roundabout",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Rondo Sądeckich Żołnierzy Wyklętych",
+        "old_ref": "28;75",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1155370868,
+      "nodes": [
+        10729392800,
+        10729418608,
+        10729418609,
+        10729392799
+      ],
+      "tags": {
+        "highway": "secondary",
+        "junction": "roundabout",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Rondo Sądeckich Żołnierzy Wyklętych",
+        "old_ref": "28;75",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1244011991,
+      "nodes": [
+        10729392802,
+        10729418611,
+        10729392800
+      ],
+      "tags": {
+        "highway": "secondary",
+        "junction": "roundabout",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Rondo Sądeckich Żołnierzy Wyklętych",
+        "old_ref": "28;75",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1244011992,
+      "nodes": [
+        10729392796,
+        10729418617,
+        870335625
+      ],
+      "tags": {
+        "highway": "secondary",
+        "junction": "roundabout",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Rondo Sądeckich Żołnierzy Wyklętych",
+        "old_ref": "28;75",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1244011996,
+      "nodes": [
+        10729392798,
+        10729418615,
+        10729418616,
+        10729392796
+      ],
+      "tags": {
+        "highway": "secondary",
+        "junction": "roundabout",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Rondo Sądeckich Żołnierzy Wyklętych",
+        "old_ref": "28;75",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 35912314,
+      "nodes": [
+        432648466,
+        13458641464,
+        13458641463,
+        316961909
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "name": "Husarska",
+        "unsigned_ref": "1597K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 289951893,
+      "nodes": [
+        316961909,
+        6654951784,
+        8922654275,
+        11783940513,
+        3461729851,
+        11783940507,
+        11783940551,
+        3461729850,
+        595439873
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "name": "Tadeusza Rejtana",
+        "unsigned_ref": "1597K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 299528096,
+      "nodes": [
+        46708077,
+        1971396720,
+        1971396746,
+        10574346373,
+        8922658552,
+        4298883747,
+        3445274418,
+        548205572,
+        2934835750,
+        46708083
+      ],
+      "tags": {
+        "cycleway:both": "lane",
+        "cycleway:both:lane": "exclusive",
+        "highway": "secondary",
+        "maxaxleload": "10",
+        "maxspeed": "50",
+        "name": "Jana Kilińskiego",
+        "old_ref": "28;75",
+        "source": "gps",
+        "source:maxaxleload": "Rozporządzenie Ministra Infrastruktury i Budownictwa z dnia 21 kwietnia 2017 r",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1246828039,
+      "nodes": [
+        870335545,
+        46708077
+      ],
+      "tags": {
+        "cycleway": "lane",
+        "highway": "secondary",
+        "maxaxleload": "10",
+        "maxspeed": "50",
+        "name": "Jana Kilińskiego",
+        "old_ref": "28;75",
+        "source": "gps",
+        "source:maxaxleload": "Rozporządzenie Ministra Infrastruktury i Budownictwa z dnia 21 kwietnia 2017 r",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1316322729,
+      "nodes": [
+        2870804029,
+        316961910,
+        3461729848,
+        2934835573,
+        548112233
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "name": "Tadeusza Rejtana",
+        "unsigned_ref": "1597K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1322463990,
+      "nodes": [
+        548112233,
+        2934835572,
+        2934835568
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "name": "Tadeusza Rejtana",
+        "surface": "asphalt",
+        "unsigned_ref": "1597K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1327842448,
+      "nodes": [
+        595439873,
+        8922654276,
+        2870804029
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "name": "Tadeusza Rejtana",
+        "unsigned_ref": "1597K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 28829834,
+      "nodes": [
+        1173535671,
+        316961897,
+        316961901,
+        3448463856,
+        316961902,
+        316961907,
+        432648466
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "name": "Husarska",
+        "oneway": "no",
+        "unsigned_ref": "1597K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 73318963,
+      "nodes": [
+        870335705,
+        10115906841,
+        1173646735,
+        870335545
+      ],
+      "tags": {
+        "cycleway:left": "no",
+        "cycleway:right": "lane",
+        "highway": "secondary",
+        "maxaxleload": "10",
+        "maxspeed": "50",
+        "name": "Jana Kilińskiego",
+        "old_ref": "28;75",
+        "source": "gps",
+        "source:maxaxleload": "Rozporządzenie Ministra Infrastruktury i Budownictwa z dnia 21 kwietnia 2017 r",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 73402194,
+      "nodes": [
+        288873549,
+        881166930
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Krańcowa",
+        "source:maxspeed": "PL:urban",
+        "unsigned_ref": "1599K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 73402203,
+      "nodes": [
+        10729392799,
+        3454309713,
+        870335512,
+        46708083
+      ],
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxaxleload": "10",
+        "maxspeed": "50",
+        "name": "Jana Kilińskiego",
+        "old_ref": "28;75",
+        "oneway": "yes",
+        "source": "gps",
+        "source:maxaxleload": "Rozporządzenie Ministra Infrastruktury i Budownictwa z dnia 21 kwietnia 2017 r",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 74565137,
+      "nodes": [
+        881166930,
+        881167157,
+        881167488,
+        1971457625,
+        3445274427,
+        10729392798
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "2",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Krańcowa",
+        "oneway": "yes",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "turn:lanes": "left;through|right",
+        "unsigned_ref": "1599K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 289951891,
+      "nodes": [
+        2934835568,
+        10116365183,
+        419804230,
+        5550638002,
+        3461727927
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "3",
+        "name": "Tadeusza Rejtana",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|right",
+        "unsigned_ref": "1597K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 319635420,
+      "nodes": [
+        3260746087,
+        3259864612,
+        884272762,
+        884273043,
+        11951931893
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "2",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Barska",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1599K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 26366729,
+      "nodes": [
+        288873549,
+        288873550
+      ],
+      "tags": {
+        "bridge": "yes",
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "layer": "1",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "maxweight": "20",
+        "name": "Most Generała Bronisława Wilhelma Pierackiego",
+        "source:maxspeed": "PL:urban",
+        "source:maxweight": "sign",
+        "surface": "asphalt",
+        "unsigned_ref": "1599K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 556807046,
+      "nodes": [
+        7881310334,
+        7881310333,
+        7881310332,
+        884220826
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Krańcowa",
+        "oneway": "yes",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1599K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 576010346,
+      "nodes": [
+        2597658329,
+        7881335331
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Barska",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1599K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 844779659,
+      "nodes": [
+        288873550,
+        5410477621,
+        5410476920,
+        9297478786,
+        438417923
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Krańcowa",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1599K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 844779675,
+      "nodes": [
+        7881335331,
+        7881335332,
+        7881335336,
+        13029475055,
+        7881335333
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Barska",
+        "oneway": "yes",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1599K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 887467106,
+      "nodes": [
+        10729680093,
+        10729680094,
+        10729680095,
+        10729680096,
+        881166965,
+        8251213455,
+        10729680084,
+        10729680085,
+        10729680086,
+        11951931884,
+        10729680087,
+        8251213465,
+        8251213452,
+        11951931881,
+        10729680088,
+        10729680089,
+        11951931892,
+        10729680090,
+        317345029,
+        10729680091,
+        10729680092,
+        8251213449,
+        8251213448,
+        11951931888,
+        10729680093
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "junction": "roundabout",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Rondo Księdza Prałata Doktora Stanisława Lisowskiego",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1599K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 887467107,
+      "nodes": [
+        11951931894,
+        10301254771,
+        884272353,
+        2597658329
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Barska",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1599K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1051132201,
+      "nodes": [
+        884220826,
+        11868045297,
+        884220805,
+        3533785019,
+        438417923
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Krańcowa",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1599K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126498115,
+      "nodes": [
+        7881335333,
+        2597658325,
+        2597658324,
+        2597658323,
+        2597658321,
+        2597658317
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "junction": "roundabout",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Rondo Generała Franciszka Gągora",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126498116,
+      "nodes": [
+        7881310331,
+        2597658308,
+        2597658306,
+        7881310334
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "junction": "roundabout",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Rondo Generała Franciszka Gągora",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1135621643,
+      "nodes": [
+        2597658317,
+        2597658316,
+        2597658311,
+        7881310331
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "junction": "roundabout",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Rondo Generała Franciszka Gągora",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1288915483,
+      "nodes": [
+        11951931893,
+        11951931882,
+        11951931881
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "1",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Barska",
+        "oneway": "yes",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1599K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1288915487,
+      "nodes": [
+        10729680092,
+        11951931887,
+        11951931894
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "1",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Barska",
+        "oneway": "yes",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1599K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 26366727,
+      "nodes": [
+        7618341236,
+        3260746087
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "2",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Barska",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1599K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 815724340,
+      "nodes": [
+        7618341233,
+        3459658465,
+        7618341236
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Barska",
+        "oneway": "yes",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1599K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126243620,
+      "nodes": [
+        5132609936,
+        5132609935,
+        7618341233
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "junction": "roundabout",
+        "lanes": "1",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Rondo Carla Mengera",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1601K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1135621645,
+      "nodes": [
+        5132609938,
+        5132609943,
+        5132609932,
+        5132609936
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "junction": "roundabout",
+        "lanes": "1",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Rondo Carla Mengera",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1601K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1135621649,
+      "nodes": [
+        5132609939,
+        5228163503,
+        5132609938
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "junction": "roundabout",
+        "lanes": "1",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Rondo Carla Mengera",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1601K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 28867403,
+      "nodes": [
+        870335705,
+        4068759206,
+        11117616857,
+        2934835711,
+        2934835710
+      ],
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "lanes:backward": "1",
+        "lanes:forward": "2",
+        "maxaxleload": "10",
+        "maxspeed": "50",
+        "name": "Jana Kilińskiego",
+        "old_ref": "28;75",
+        "source": "gps",
+        "source:maxaxleload": "Rozporządzenie Ministra Infrastruktury i Budownictwa z dnia 21 kwietnia 2017 r",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "turn:lanes:backward": "through",
+        "turn:lanes:forward": "through|right"
+      }
+    },
+    {
+      "type": "way",
+      "id": 101643446,
+      "nodes": [
+        2934835710,
+        11117616860,
+        11117616859,
+        1173646313,
+        1173536722
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "name": "Husarska",
+        "oneway": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1198468905,
+      "nodes": [
+        1173536722,
+        1173535671
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "name": "Husarska",
+        "oneway": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 73318946,
+      "nodes": [
+        1173646319,
+        884272871,
+        3454350202,
+        884272637,
+        3260746075,
+        3454350191,
+        10176016372,
+        3454350185,
+        884272472,
+        3454350184,
+        884272929,
+        3459621066,
+        884272935,
+        3260746089,
+        3459621040,
+        3260746091
+      ],
+      "tags": {
+        "dual_carriageway": "yes",
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "2",
+        "name": "Aleja Majora Henryka Sucharskiego",
+        "official_name": "Aleje Majora Henryka Sucharskiego",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "unsigned_ref": "1601K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1529481890,
+      "nodes": [
+        10180904257,
+        884272727,
+        3454350210,
+        13939263143
+      ],
+      "tags": {
+        "dual_carriageway": "yes",
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "2",
+        "name": "Aleja Majora Henryka Sucharskiego",
+        "official_name": "Aleje Majora Henryka Sucharskiego",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "unsigned_ref": "1601K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1529481891,
+      "nodes": [
+        13939263143,
+        884272997,
+        13939263144,
+        884272305,
+        884272626,
+        1173646319
+      ],
+      "tags": {
+        "dual_carriageway": "yes",
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "3",
+        "name": "Aleja Majora Henryka Sucharskiego",
+        "official_name": "Aleje Majora Henryka Sucharskiego",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "turn:lanes": "left||",
+        "unsigned_ref": "1601K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 319635418,
+      "nodes": [
+        3260746091,
+        10176019889,
+        884273053,
+        884272384
+      ],
+      "tags": {
+        "dual_carriageway": "yes",
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "2",
+        "name": "Aleja Majora Henryka Sucharskiego",
+        "official_name": "Aleje Majora Henryka Sucharskiego",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "turn:lanes": "none|merge_to_left",
+        "unsigned_ref": "1601K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 319635419,
+      "nodes": [
+        884272384,
+        3459658463,
+        2597658330
+      ],
+      "tags": {
+        "dual_carriageway": "yes",
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "lanes": "1",
+        "name": "Aleja Majora Henryka Sucharskiego",
+        "official_name": "Aleje Majora Henryka Sucharskiego",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "unsigned_ref": "1601K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1126243619,
+      "nodes": [
+        5228163501,
+        7618341239,
+        5228163504,
+        5132609939
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "junction": "roundabout",
+        "lanes": "1",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Rondo Carla Mengera",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1601K"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1135621644,
+      "nodes": [
+        2597658330,
+        5228163500,
+        5132609940,
+        5228163501
+      ],
+      "tags": {
+        "highway": "tertiary",
+        "highway:category:pl": "3",
+        "junction": "roundabout",
+        "lanes": "1",
+        "maxspeed": "50",
+        "maxspeed:type": "PL:urban",
+        "name": "Rondo Carla Mengera",
+        "source:maxspeed": "PL:urban",
+        "surface": "asphalt",
+        "unsigned_ref": "1601K"
+      }
+    }
+  ]
+}

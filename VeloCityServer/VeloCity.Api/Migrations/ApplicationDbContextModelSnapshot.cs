@@ -131,6 +131,9 @@ namespace VeloCity.Api.Migrations
                     b.Property<int>("Direction")
                         .HasColumnType("integer");
 
+                    b.Property<int?>("ExternalVariantId")
+                        .HasColumnType("integer");
+
                     b.Property<bool>("IsActive")
                         .HasColumnType("boolean");
 
@@ -143,6 +146,10 @@ namespace VeloCity.Api.Migrations
                         .HasColumnType("character varying(150)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ExternalVariantId")
+                        .IsUnique()
+                        .HasFilter("\"ExternalVariantId\" IS NOT NULL");
 
                     b.HasIndex("LineId");
 
@@ -223,6 +230,9 @@ namespace VeloCity.Api.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("ExternalRunId")
+                        .HasColumnType("integer");
+
                     b.Property<int>("RouteId")
                         .HasColumnType("integer");
 
@@ -230,6 +240,10 @@ namespace VeloCity.Api.Migrations
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ExternalRunId")
+                        .IsUnique()
+                        .HasFilter("\"ExternalRunId\" IS NOT NULL");
 
                     b.HasIndex("RouteId");
 
@@ -335,6 +349,13 @@ namespace VeloCity.Api.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<long?>("OsmId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("OsmType")
+                        .HasMaxLength(10)
+                        .HasColumnType("character varying(10)");
+
                     b.Property<int>("ZoneId")
                         .HasColumnType("integer");
 
@@ -342,6 +363,10 @@ namespace VeloCity.Api.Migrations
 
                     b.HasIndex("ExternalId")
                         .IsUnique();
+
+                    b.HasIndex("OsmType", "OsmId")
+                        .IsUnique()
+                        .HasFilter("\"OsmId\" IS NOT NULL AND \"OsmType\" IS NOT NULL");
 
                     b.ToTable("Stops");
                 });

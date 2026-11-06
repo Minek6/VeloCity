@@ -10,6 +10,7 @@ using VeloCity.Api.Features.Stops.DTOs;
 using VeloCity.Api.Features.Stops.Queries.GetStop;
 using VeloCity.Api.Features.Stops.Queries.GetStops;
 using VeloCity.Api.Features.Stops.Queries.GetMapStops;
+using VeloCity.Api.Features.Stops.Queries.GetStopLines;
 using VeloCity.Api.Models.Enums;
 
 namespace VeloCity.Api.Controllers;
@@ -50,6 +51,19 @@ public class StopsController(IMediator mediator) : ControllerBase
             cancellationToken);
 
         return Ok(result);
+    }
+
+    [HttpGet("{id:int}/lines")]
+    public async Task<ActionResult<List<StopLineDto>>> GetStopLines(
+        int id,
+        CancellationToken ct)
+    {
+        var lines = await mediator.Send(
+            new GetStopLinesQuery(id),
+            ct
+        );
+
+        return Ok(lines);
     }
 
     // ADMIN create stop

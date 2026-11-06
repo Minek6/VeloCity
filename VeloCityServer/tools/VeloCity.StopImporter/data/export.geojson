@@ -1,0 +1,7695 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-11-05T06:47:20Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "node/541638700",
+      "properties": {
+        "@id": "node/541638700",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Batorego",
+        "name:kmal": "Nowy Sącz Aleja Batorego",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "00022",
+        "ref:kmal": "2404"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.699069,
+          49.6122052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/541638725",
+      "properties": {
+        "@id": "node/541638725",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Batorego",
+        "name:kmal": "Nowy Sącz Aleja Batorego",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "00021",
+        "ref:kmal": "2405",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6992855,
+          49.6126227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/543402678",
+      "properties": {
+        "@id": "node/543402678",
+        "bench": "yes",
+        "bus": "yes",
+        "departures_board": "realtime",
+        "highway": "bus_stop",
+        "name": "Rynek",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6917993,
+          49.6254207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/543419390",
+      "properties": {
+        "@id": "node/543419390",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Wolności",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.697465,
+          49.6161186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/543447778",
+      "properties": {
+        "@id": "node/543447778",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Łukasińskiego - Kotłownia",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7147055,
+          49.6091594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/548147208",
+      "properties": {
+        "@id": "node/548147208",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Rejtana",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu;Szwagropol",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303;Q59688724",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:wikidata": "Q11780303",
+        "public_transport": "platform",
+        "ref:kmal": "2414",
+        "request_stop": "yes",
+        "route_ref": "MLD – A22"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.707626,
+          49.6165208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/549474885",
+      "properties": {
+        "@id": "node/549474885",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Wolności",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6967188,
+          49.6167124
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/976458118",
+      "properties": {
+        "@id": "node/976458118",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Freislera - Gorzkowska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7228801,
+          49.605588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/976458122",
+      "properties": {
+        "@id": "node/976458122",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "1 Brygady - Freislera",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7207044,
+          49.6088325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/976458123",
+      "properties": {
+        "@id": "node/976458123",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Freislera - Traugutta",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7218597,
+          49.6075372
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/976458124",
+      "properties": {
+        "@id": "node/976458124",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Freislera - Traugutta",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7215441,
+          49.6081561
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1121743324",
+      "properties": {
+        "@id": "node/1121743324",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mała Poręba - Sołecka",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7083397,
+          49.5712931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1121758892",
+      "properties": {
+        "@id": "node/1121758892",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dąbrówki - Kapliczka",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6987549,
+          49.5914174
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1182460964",
+      "properties": {
+        "@id": "node/1182460964",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Broniewskiego",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7091042,
+          49.6263794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1511342321",
+      "properties": {
+        "@id": "node/1511342321",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Bulwar Narwiku - Most I",
+        "name:ru": "Набережная Нарвика",
+        "name:uk": "Набережна Нарвіка",
+        "network": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "network:short": "MPK Nowy Sącz",
+        "network:wikidata": "Q11780303",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "public_transport": "platform",
+        "ref": "1892",
+        "request_stop": "yes",
+        "route_ref": "26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6954925,
+          49.6245045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1832848074",
+      "properties": {
+        "@id": "node/1832848074",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "1 Brygady - Wiśniowieckiego",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7167648,
+          49.6093509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1834134336",
+      "properties": {
+        "@id": "node/1834134336",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "1 Brygady - Wiśniowieckiego",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7176855,
+          49.6089083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2445861292",
+      "properties": {
+        "@id": "node/2445861292",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Węgierska - Carbon",
+        "name:kmal": "Nowy Sącz Węgierska - Carbon",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "01012",
+        "ref:kmal": "3204"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6726472,
+          49.5843807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2445861296",
+      "properties": {
+        "@id": "node/2445861296",
+        "bench": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Węgierska - Galeria",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "ref": "01002"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6743578,
+          49.587157
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2445903271",
+      "properties": {
+        "@id": "node/2445903271",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Traugutta",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7123844,
+          49.6053046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2867957117",
+      "properties": {
+        "@id": "node/2867957117",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Węgierska - Przystań",
+        "name:kmal": "Nowy Sącz Węgierska - Przystań",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "01041",
+        "ref:kmal": "3207",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6611187,
+          49.570683
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2867957126",
+      "properties": {
+        "@id": "node/2867957126",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Węgierska - Dąbrówki",
+        "name:kmal": "Nowy Sącz Węgierska - Dąbrówki",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "00991",
+        "ref:kmal": "3199",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6781817,
+          49.5921048
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3035302650",
+      "properties": {
+        "@id": "node/3035302650",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Bulwar Narwiku - Most II",
+        "network": "Małopolskie Linie Dowozowe;Szwagropol",
+        "network:short": "MLD",
+        "network:wikidata": "Q134701178;Q59688724",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref": "1881",
+        "ref:kmal": "2399",
+        "request_stop": "yes",
+        "route_ref": "MLD – A22",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6951106,
+          49.6254682
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3165595579",
+      "properties": {
+        "@id": "node/3165595579",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Zielona - Stacja Paliw",
+        "name:network:kmal": "Nowy Sącz Zielona - Stacja Paliw",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:kmal": "6901",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "url:kmal": "https://kolejemalopolskie.kiedyprzyjedzie.pl/#/stops/2265151:2352067/departures",
+        "website": "https://www.mpk.nowysacz.pl/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6956625,
+          49.6029704
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3410330530",
+      "properties": {
+        "@id": "node/3410330530",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Paderewskiego - Tarnowska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.69302,
+          49.6309357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3416538169",
+      "properties": {
+        "@id": "node/3416538169",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Paderewskiego - Naściszowska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7041505,
+          49.6276299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3441084146",
+      "properties": {
+        "@id": "node/3441084146",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Piątkowska",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7492636,
+          49.6188628
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3445274602",
+      "properties": {
+        "@id": "node/3445274602",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7014883,
+          49.6189615
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3452437682",
+      "properties": {
+        "@id": "node/3452437682",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sucharskiego - Lidl",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7194235,
+          49.6249499
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3452441100",
+      "properties": {
+        "@id": "node/3452441100",
+        "bench": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Lwowska - Osiedle",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7158149,
+          49.6244335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3454350234",
+      "properties": {
+        "@id": "node/3454350234",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sucharskiego - Westerplatte",
+        "network": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "ref": "01682"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7183873,
+          49.6270167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3461679350",
+      "properties": {
+        "@id": "node/3461679350",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Długosza - Młyńska",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6971446,
+          49.6185901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3495659241",
+      "properties": {
+        "@id": "node/3495659241",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Piłsudskiego - Browarna",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7221458,
+          49.6137767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3500628347",
+      "properties": {
+        "@id": "node/3500628347",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Naściszowska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7022286,
+          49.6246473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3501152879",
+      "properties": {
+        "@id": "node/3501152879",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Węgierska - Dąbrówki",
+        "name:kmal": "Nowy Sącz Węgierska - Dąbrówki",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "00992",
+        "ref:kmal": "3200"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6792397,
+          49.5928192
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3541996375",
+      "properties": {
+        "@id": "node/3541996375",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Zawada Podlipie",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7339774,
+          49.5736694
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3589344620",
+      "properties": {
+        "@id": "node/3589344620",
+        "bus": "yes",
+        "departures_board": "yes",
+        "highway": "bus_stop",
+        "name": "Stramki",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7219205,
+          49.6044394
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3590185230",
+      "properties": {
+        "@id": "node/3590185230",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wyspiańskiego - MPK",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7010458,
+          49.6033156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3590633325",
+      "properties": {
+        "@id": "node/3590633325",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Rejtana",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu;Szwagropol",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303;Q59688724",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:wikidata": "Q11780303",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:kmal": "2409",
+        "request_stop": "yes",
+        "route_ref": "2;19;21;26;34;37;MLD – A22",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7047279,
+          49.6152688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3594157603",
+      "properties": {
+        "@id": "node/3594157603",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Tarnowska",
+        "name:network:kmal": "Nowy Sącz ul. Tarnowska",
+        "name:network:szwagropol": "Nowy Sącz ul. Tarnowska",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu;Szwagropol",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303;Q59688724",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:kmal": "2392",
+        "request_stop": "yes",
+        "route_ref": "5;31;MLD – A22",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "url:kmal": "https://kolejemalopolskie.kiedyprzyjedzie.pl/#/stops/959932:1015128/departures",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6915968,
+          49.6318437
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3598097261",
+      "properties": {
+        "@id": "node/3598097261",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Krakowska - Stacja Kolejowa",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6749648,
+          49.6296808
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3598836067",
+      "properties": {
+        "@id": "node/3598836067",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Tarnowska - Łubinka",
+        "network": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "network:short": "MPK Nowy Sącz",
+        "network:wikidata": "Q11780303",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "request_stop": "yes",
+        "route_ref": "5,31",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6934618,
+          49.639119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3603429915",
+      "properties": {
+        "@id": "node/3603429915",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Węgierska - Winna Góra",
+        "name:kmal": "Nowy Sącz Węgierska - Winna Góra",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "01031",
+        "ref:kmal": "3209"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.66324,
+          49.5761132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3603430949",
+      "properties": {
+        "@id": "node/3603430949",
+        "bench": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Węgierska - Galeria",
+        "name:kmal": "Nowy Sącz Węgierska - Galeria",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "01001",
+        "ref:kmal": "3201",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.673497,
+          49.5863262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3603437358",
+      "properties": {
+        "@id": "node/3603437358",
+        "bench": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Węgierska - Carbon",
+        "name:kmal": "Nowy Sącz Węgierska - Carbon",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "01011",
+        "ref:kmal": "3203",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6714545,
+          49.5830366
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3603437868",
+      "properties": {
+        "@id": "node/3603437868",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Węgierska - Szkoła",
+        "name:kmal": "Nowy Sącz Węgierska - Szkoła",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "01021",
+        "ref:kmal": "3205"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6668494,
+          49.5801367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3603470591",
+      "properties": {
+        "@id": "node/3603470591",
+        "bench": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Węgierska - Szkoła",
+        "name:kmal": "Nowy Sącz Węgierska - Szkoła",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "01022",
+        "ref:kmal": "3206"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6659365,
+          49.5791393
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3604319552",
+      "properties": {
+        "@id": "node/3604319552",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Węgierska - Piramowicza",
+        "name:kmal": "Nowy Sącz Węgierska - Piramowicza",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "00982",
+        "ref:kmal": "3198",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6850207,
+          49.5986447
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3604323822",
+      "properties": {
+        "@id": "node/3604323822",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Węgierska - Piramowicza",
+        "name:kmal": "Nowy Sącz Węgierska - Piramowicza",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "00981",
+        "ref:kmal": "3197",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6832712,
+          49.5972237
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3608463930",
+      "properties": {
+        "@id": "node/3608463930",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Hallera - Barska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7067714,
+          49.6304944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3608505109",
+      "properties": {
+        "@id": "node/3608505109",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sucharskiego - Batalianów Chłopskich",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7151019,
+          49.6279135
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3609076858",
+      "properties": {
+        "@id": "node/3609076858",
+        "bench": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Nadbrzeżna - Basen",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7145369,
+          49.62044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3609603530",
+      "properties": {
+        "@id": "node/3609603530",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "29 listopada - Szkoła",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7131291,
+          49.6033625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3609641392",
+      "properties": {
+        "@id": "node/3609641392",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "platform",
+        "name": "Grunwaldzka - Jana Pawła II",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7061219,
+          49.5915242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3610764010",
+      "properties": {
+        "@id": "node/3610764010",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Jana Pawła II",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7007961,
+          49.5959544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3614502687",
+      "properties": {
+        "@id": "node/3614502687",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Węgierska - Przystań",
+        "name:kmal": "Nowy Sącz Węgierska - Przystań",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "01042",
+        "ref:kmal": "3208"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6604124,
+          49.5696925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3615680256",
+      "properties": {
+        "@id": "node/3615680256",
+        "bench": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6959153,
+          49.613058
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3645097103",
+      "properties": {
+        "@id": "node/3645097103",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Graniczna",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7188515,
+          49.5985743
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3645097105",
+      "properties": {
+        "@id": "node/3645097105",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Graniczna",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7186101,
+          49.5985876
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3647466585",
+      "properties": {
+        "@id": "node/3647466585",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Brzeziny - Bielowicka",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7155968,
+          49.585391
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3663272741",
+      "properties": {
+        "@id": "node/3663272741",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Radziecka - Działki",
+        "network": "MPK",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6811361,
+          49.6069738
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3663272742",
+      "properties": {
+        "@id": "node/3663272742",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Radziecka - Działki",
+        "operator": "MPK",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6812104,
+          49.6070518
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3810582890",
+      "properties": {
+        "@id": "node/3810582890",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Marcinkowicka Szkoła",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6674636,
+          49.6334792
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3896729558",
+      "properties": {
+        "@id": "node/3896729558",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wincentego Pola",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6892013,
+          49.6167885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3944428693",
+      "properties": {
+        "@id": "node/3944428693",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dunajcowa - Most",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6821717,
+          49.6299052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3944463533",
+      "properties": {
+        "@id": "node/3944463533",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dunajcowa - Osiedle Helena Pętla",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6826424,
+          49.6344519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4017651136",
+      "properties": {
+        "@id": "node/4017651136",
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "yes",
+        "highway": "bus_stop",
+        "name": "Kręta",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7246699,
+          49.5816429
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4017966434",
+      "properties": {
+        "@id": "node/4017966434",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Broniewskiego",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7094159,
+          49.6265515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4018092961",
+      "properties": {
+        "@id": "node/4018092961",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Paderewskiego - Kochanowskiego",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7003928,
+          49.6291048
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4036281011",
+      "properties": {
+        "@id": "node/4036281011",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Prusa - Dąbrowskiej",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7334051,
+          49.5823868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4049187251",
+      "properties": {
+        "@id": "node/4049187251",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kusocińskiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7120306,
+          49.5980706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4049187252",
+      "properties": {
+        "@id": "node/4049187252",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kusocińskiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7123285,
+          49.5986153
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4069160099",
+      "properties": {
+        "@id": "node/4069160099",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Tarnowska - Łubinka",
+        "network": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "network:short": "MPK Nowy Sącz",
+        "network:wikidata": "Q11780303",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "request_stop": "yes",
+        "route_ref": "5,31",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6934684,
+          49.6384238
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4069160103",
+      "properties": {
+        "@id": "node/4069160103",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Tarnowska - Zabełcze",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu;Szwagropol",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303;Q59688724",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:kmal": "2390",
+        "request_stop": "yes",
+        "route_ref": "5;31;MLD – A22",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6904347,
+          49.6476082
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4071306590",
+      "properties": {
+        "@id": "node/4071306590",
+        "bench": "yes",
+        "bus": "yes",
+        "departures_board": "realtime",
+        "highway": "bus_stop",
+        "name": "Kazimierza Wielkiego",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6899196,
+          49.6260418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4072368452",
+      "properties": {
+        "@id": "node/4072368452",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kamienna - Stacja Kolejowa",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7433928,
+          49.5870038
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4072368454",
+      "properties": {
+        "@id": "node/4072368454",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kamienna - Stacja Kolejowa",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.743584,
+          49.5870521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4072368463",
+      "properties": {
+        "@id": "node/4072368463",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kamienna - Prusa",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7321307,
+          49.5905942
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4072368467",
+      "properties": {
+        "@id": "node/4072368467",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Piłsudskiego - Magazynowa",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7302381,
+          49.5984536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4072368469",
+      "properties": {
+        "@id": "node/4072368469",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Piłsudskiego",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7289933,
+          49.601631
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4072368473",
+      "properties": {
+        "@id": "node/4072368473",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Piłsudskiego - Hipermarket",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7289867,
+          49.6050128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4072368474",
+      "properties": {
+        "@id": "node/4072368474",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Piłsudskiego - Hipermarket",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7285035,
+          49.6052403
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4072368479",
+      "properties": {
+        "@id": "node/4072368479",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Piłsudskiego - I Brygady",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7261278,
+          49.6108596
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4072368480",
+      "properties": {
+        "@id": "node/4072368480",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Piłsudskiego - I Brygady",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7251025,
+          49.6110902
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4072368483",
+      "properties": {
+        "@id": "node/4072368483",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Piłsudskiego - Browarna",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7227999,
+          49.6129766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4072368487",
+      "properties": {
+        "@id": "node/4072368487",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Piłsudskiego - Auto Komis",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7202196,
+          49.6146883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4072368989",
+      "properties": {
+        "@id": "node/4072368989",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Piłsudskiego - Biały Klasztor",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7162715,
+          49.6169235
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4072527039",
+      "properties": {
+        "@id": "node/4072527039",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kamienna - Granica",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.748256,
+          49.5807178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4072527042",
+      "properties": {
+        "@id": "node/4072527042",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kamienna - Granica",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7477875,
+          49.5813349
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089522",
+      "properties": {
+        "@id": "node/4076089522",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Zawada Podlipie",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7342508,
+          49.5729248
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089527",
+      "properties": {
+        "@id": "node/4076089527",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Zawada Szkoła",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7301511,
+          49.5783791
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089528",
+      "properties": {
+        "@id": "node/4076089528",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Zawada Szkoła",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7287201,
+          49.5797583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089543",
+      "properties": {
+        "@id": "node/4076089543",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Zawada Szk. Muzyczna",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7263584,
+          49.5841719
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089544",
+      "properties": {
+        "@id": "node/4076089544",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Zawada Szk. Muzyczna",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7258267,
+          49.5850401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089551",
+      "properties": {
+        "@id": "node/4076089551",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Grunwaldzka - Graniczna",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7120046,
+          49.5910912
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089555",
+      "properties": {
+        "@id": "node/4076089555",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "platform",
+        "name": "Grunwaldzka - Jana Pawła II",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7063748,
+          49.5915882
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089557",
+      "properties": {
+        "@id": "node/4076089557",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Grunwaldzka",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7220898,
+          49.5927521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089560",
+      "properties": {
+        "@id": "node/4076089560",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Grunwaldzka",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7218028,
+          49.5935493
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089570",
+      "properties": {
+        "@id": "node/4076089570",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Asnyka",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6921641,
+          49.6058689
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089574",
+      "properties": {
+        "@id": "node/4076089574",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Radziecka - Wiadukt",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6918022,
+          49.6067888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089577",
+      "properties": {
+        "@id": "node/4076089577",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Radziecka - Barbackiego",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6863922,
+          49.6070951
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089581",
+      "properties": {
+        "@id": "node/4076089581",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Radziecka - Barbackiego",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6865096,
+          49.6071964
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089586",
+      "properties": {
+        "@id": "node/4076089586",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ogrodowa - Konstanty",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6809255,
+          49.6107562
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089589",
+      "properties": {
+        "@id": "node/4076089589",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ogrodowa",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6822931,
+          49.611738
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089591",
+      "properties": {
+        "@id": "node/4076089591",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Ogrodowa",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6836476,
+          49.6128442
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089601",
+      "properties": {
+        "@id": "node/4076089601",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ogrodowa - Park",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6867965,
+          49.6169004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089604",
+      "properties": {
+        "@id": "node/4076089604",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ogrodowa - Park",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6871318,
+          49.6174745
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089628",
+      "properties": {
+        "@id": "node/4076089628",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dunajcowa - Most",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6824512,
+          49.6302924
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4076089633",
+      "properties": {
+        "@id": "node/4076089633",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dunajcowa",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6776146,
+          49.639495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4636190859",
+      "properties": {
+        "@id": "node/4636190859",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sucharskiego - Lidl",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7190029,
+          49.624941
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4636190864",
+      "properties": {
+        "@id": "node/4636190864",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Cmentarz",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7211059,
+          49.6242842
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4636190868",
+      "properties": {
+        "@id": "node/4636190868",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Cmentarz",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7234053,
+          49.6240371
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4636190869",
+      "properties": {
+        "@id": "node/4636190869",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Murowaniec",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7289863,
+          49.6238919
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4636190870",
+      "properties": {
+        "@id": "node/4636190870",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Murowaniec",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7289438,
+          49.6240122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4636190872",
+      "properties": {
+        "@id": "node/4636190872",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Rozdzielnia Gazu",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7342413,
+          49.6232631
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4636190873",
+      "properties": {
+        "@id": "node/4636190873",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Rozdzielnia Gazu",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7348726,
+          49.623075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4636190875",
+      "properties": {
+        "@id": "node/4636190875",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Miasteczko Galicyjskie",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7414002,
+          49.6221319
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4636190876",
+      "properties": {
+        "@id": "node/4636190876",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Miasteczko Galicyjskie",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7413777,
+          49.6220087
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4636191501",
+      "properties": {
+        "@id": "node/4636191501",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Granica",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7523938,
+          49.6150369
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4640705332",
+      "properties": {
+        "@id": "node/4640705332",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Krakowska - Skrzyżowanie",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6697425,
+          49.6299681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4640705333",
+      "properties": {
+        "@id": "node/4640705333",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Krakowska Skrzyżowanie",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6681111,
+          49.6298871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4640705334",
+      "properties": {
+        "@id": "node/4640705334",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Krakowska - Stacja Kolejowa",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6737091,
+          49.6296089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4640705361",
+      "properties": {
+        "@id": "node/4640705361",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Krakowska - Helena",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6802778,
+          49.6293867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4640705369",
+      "properties": {
+        "@id": "node/4640705369",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Kilińskiego - Stadion",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:kmal": "2410",
+        "request_stop": "yes",
+        "route_ref": "MLD – A22",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7055694,
+          49.6198579
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4640705374",
+      "properties": {
+        "@id": "node/4640705374",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Prażmowskiego",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7180466,
+          49.6202314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4640705376",
+      "properties": {
+        "@id": "node/4640705376",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Prażmowskiego",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7175398,
+          49.6202082
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5817716112",
+      "properties": {
+        "@id": "node/5817716112",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "1 Brygady",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7241486,
+          49.6089351
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5817716113",
+      "properties": {
+        "@id": "node/5817716113",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "1 Brygady",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7239788,
+          49.6091401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6261839890",
+      "properties": {
+        "@id": "node/6261839890",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "29 listopada",
+        "public_transport": "platform",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.707356,
+          49.6008945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6261839892",
+      "properties": {
+        "@id": "node/6261839892",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "29 listopada",
+        "public_transport": "platform",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7076882,
+          49.6011525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6261843774",
+      "properties": {
+        "@id": "node/6261843774",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Graniczna",
+        "public_transport": "platform",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7151901,
+          49.5945491
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6261850034",
+      "properties": {
+        "@id": "node/6261850034",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Graniczna",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7150451,
+          49.5945392
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6261852044",
+      "properties": {
+        "@id": "node/6261852044",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "29 listopada - Szkoła",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7133028,
+          49.6037063
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6263346189",
+      "properties": {
+        "@id": "node/6263346189",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Długosza - Planty",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6954907,
+          49.6211242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6264893606",
+      "properties": {
+        "@id": "node/6264893606",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Konarskiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6935896,
+          49.6213804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6552567993",
+      "properties": {
+        "@id": "node/6552567993",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Kościuszki",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6916979,
+          49.6220684
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6552567994",
+      "properties": {
+        "@id": "node/6552567994",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Kochanowskiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6969873,
+          49.6248656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6938999863",
+      "properties": {
+        "@id": "node/6938999863",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "local_ref": "8",
+        "name": "MDA Nowy Sącz st. 8",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "request_stop": "no",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6986423,
+          49.6174337
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6938999864",
+      "properties": {
+        "@id": "node/6938999864",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "local_ref": "7",
+        "name": "MDA Nowy Sącz st. 7",
+        "name:KMAL": "Nowy Sącz MDA",
+        "network": "Małopolskie Linie Dowozowe",
+        "network:short": "MLD",
+        "network:wikidata": "Q134701178",
+        "operator": "Koleje Małopolskie",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:kmal": "2403",
+        "request_stop": "no",
+        "route_ref": "MLD – A22",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6985602,
+          49.617401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6938999865",
+      "properties": {
+        "@id": "node/6938999865",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "local_ref": "6",
+        "name": "MDA Nowy Sącz st. 6",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "request_stop": "no",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.698478,
+          49.6173684
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6938999866",
+      "properties": {
+        "@id": "node/6938999866",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "local_ref": "5",
+        "name": "MDA Nowy Sącz st. 5",
+        "name:KMAL": "Nowy Sącz MDA",
+        "network": "Małopolskie Linie Dowozowe",
+        "network:short": "MLD",
+        "network:wikidata": "Q134701178",
+        "operator": "Koleje Małopolskie",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:kmal": "2403",
+        "request_stop": "no",
+        "route_ref": "MLD – A21",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6983959,
+          49.6173357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6938999867",
+      "properties": {
+        "@id": "node/6938999867",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "local_ref": "4",
+        "name": "MDA Nowy Sącz st. 4",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "request_stop": "no",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6983137,
+          49.6173031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6938999868",
+      "properties": {
+        "@id": "node/6938999868",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "local_ref": "3",
+        "name": "MDA Nowy Sącz st. 3",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "request_stop": "no",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6982315,
+          49.6172705
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6938999870",
+      "properties": {
+        "@id": "node/6938999870",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "local_ref": "2",
+        "name": "MDA Nowy Sącz st. 2",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6981494,
+          49.6172378
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6938999872",
+      "properties": {
+        "@id": "node/6938999872",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "local_ref": "1",
+        "name": "MDA Nowy Sącz st. 1",
+        "network": "Szwagropol",
+        "network:wikidata": "Q59688724",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "request_stop": "no",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6980672,
+          49.6172052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6939011525",
+      "properties": {
+        "@id": "node/6939011525",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "local_ref": "10",
+        "name": "MDA Nowy Sącz st. 10",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.698532,
+          49.6170804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6939011526",
+      "properties": {
+        "@id": "node/6939011526",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "local_ref": "9",
+        "name": "MDA Nowy Sącz st. 9",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6984988,
+          49.6170673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7625139753",
+      "properties": {
+        "@id": "node/7625139753",
+        "highway": "bus_stop",
+        "name": "Witosa",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.694811,
+          49.6391096
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7876843913",
+      "properties": {
+        "@id": "node/7876843913",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Piłsudskiego - Auto Komis",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7196274,
+          49.6154835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7876843914",
+      "properties": {
+        "@id": "node/7876843914",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Królowej Jadwigi - Rondo Solidarności",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7137924,
+          49.6164597
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7876843915",
+      "properties": {
+        "@id": "node/7876843915",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Królowej Jadwigi - Rondo Solidarności",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.713923,
+          49.6169757
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8779188337",
+      "properties": {
+        "@id": "node/8779188337",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gorzkowska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7254268,
+          49.605416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8779188338",
+      "properties": {
+        "@id": "node/8779188338",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Gorzkowska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7258075,
+          49.605568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8779188339",
+      "properties": {
+        "@id": "node/8779188339",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Freislera - Gorzkowska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7231708,
+          49.6054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8922574261",
+      "properties": {
+        "@id": "node/8922574261",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Tarnowska - Zabełcze",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu;Szwagropol",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303;Q59688724",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:kmal": "2391",
+        "request_stop": "yes",
+        "route_ref": "5;31;MLD – A22",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.690749,
+          49.6470304
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8922610947",
+      "properties": {
+        "@id": "node/8922610947",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Tarnowska",
+        "name:network:kmal": "Nowy Sącz ul. Tarnowska",
+        "name:network:szwagropol": "Nowy Sącz ul. Tarnowska",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu;Szwagropol",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303;Q59688724",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:kmal": "2393",
+        "request_stop": "yes",
+        "route_ref": "5;31;MLD – A22",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "url:kmal": "https://kolejemalopolskie.kiedyprzyjedzie.pl/#/stops/959932:1015129/departures",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6926865,
+          49.6353366
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8922649181",
+      "properties": {
+        "@id": "node/8922649181",
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Bulwar Narwiku - Most",
+        "network": "Małopolskie Linie Dowozowe;Szwagropol;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "network:short": "MLD",
+        "network:wikidata": "Q134701178;Q59688724;Q11780303",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:kmal": "2398",
+        "request_stop": "yes",
+        "route_ref": "8;MLD – A22",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6948881,
+          49.6253728
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8922658553",
+      "properties": {
+        "@id": "node/8922658553",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Kilińskiego - Stadion",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:kmal": "2412",
+        "request_stop": "yes",
+        "route_ref": "MLD – A22",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7060852,
+          49.6196462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8986063524",
+      "properties": {
+        "@id": "node/8986063524",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ogrodowa - Park",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6870034,
+          49.6179256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8986063525",
+      "properties": {
+        "@id": "node/8986063525",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ogrodowa - Park",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6872957,
+          49.6182584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8987533926",
+      "properties": {
+        "@id": "node/8987533926",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Jagiellońska - Planty",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6937247,
+          49.6197878
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8987533958",
+      "properties": {
+        "@id": "node/8987533958",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dw. Aut. MPK st. 2",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7013704,
+          49.6072129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8987533959",
+      "properties": {
+        "@id": "node/8987533959",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dw. Aut. MPK st. 1",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7011899,
+          49.6071273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8987533960",
+      "properties": {
+        "@id": "node/8987533960",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7010754,
+          49.6071633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8987533961",
+      "properties": {
+        "@id": "node/8987533961",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.70092,
+          49.607183
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8987533963",
+      "properties": {
+        "@id": "node/8987533963",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Batorego - Dw. PKP",
+        "name:kmal": "Nowy Sącz Aleja Batorego - Dworzec PKP",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "00015",
+        "ref:kmal": "2406"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7016807,
+          49.6081222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9198967314",
+      "properties": {
+        "@id": "node/9198967314",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Góra",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7176882,
+          49.6443358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9198967315",
+      "properties": {
+        "@id": "node/9198967315",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Góra",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7175621,
+          49.6439016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9198967349",
+      "properties": {
+        "@id": "node/9198967349",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Granica",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.72294,
+          49.6524894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9198967398",
+      "properties": {
+        "@id": "node/9198967398",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Metrol",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7144722,
+          49.6374645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9198967399",
+      "properties": {
+        "@id": "node/9198967399",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Metrol",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7141101,
+          49.6370771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9458004570",
+      "properties": {
+        "@id": "node/9458004570",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Paderewskiego - Tarnowska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6923972,
+          49.6309019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10113477062",
+      "properties": {
+        "@id": "node/10113477062",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Marcinkowicka - Skrzyżowanie",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6673483,
+          49.6440105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10113486075",
+      "properties": {
+        "@id": "node/10113486075",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dunajcowa",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6777075,
+          49.6393229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10113503503",
+      "properties": {
+        "@id": "node/10113503503",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Jagodowa",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6748754,
+          49.6436456
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10113503504",
+      "properties": {
+        "@id": "node/10113503504",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Jagodowa",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6751685,
+          49.6436312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10113529944",
+      "properties": {
+        "@id": "node/10113529944",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Marcinkowicka - Osiedle",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6663278,
+          49.6374177
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10116365184",
+      "properties": {
+        "@id": "node/10116365184",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Rejtana - Śniadeckich",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.703334,
+          49.6148582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10116396836",
+      "properties": {
+        "@id": "node/10116396836",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wyspiańskiego - MPK",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7003905,
+          49.6035479
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10169066540",
+      "properties": {
+        "@id": "node/10169066540",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Szarych Szeregów",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7126716,
+          49.6243403
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10169108013",
+      "properties": {
+        "@id": "node/10169108013",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Galeria",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7088256,
+          49.6246183
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10169111426",
+      "properties": {
+        "@id": "node/10169111426",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Naściszowska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7036929,
+          49.6247628
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10169111427",
+      "properties": {
+        "@id": "node/10169111427",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Galeria",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7077644,
+          49.6244964
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10169112983",
+      "properties": {
+        "@id": "node/10169112983",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Osiedle",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7156339,
+          49.6242936
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10169121771",
+      "properties": {
+        "@id": "node/10169121771",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lwowska - Kochanowskiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6985967,
+          49.6249092
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10173629856",
+      "properties": {
+        "@id": "node/10173629856",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Prusa - Dąbrowskiej",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7333065,
+          49.582294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10173633471",
+      "properties": {
+        "@id": "node/10173633471",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Prusa - Wyczółkowskiego",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7327125,
+          49.5858402
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10173633472",
+      "properties": {
+        "@id": "node/10173633472",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Prusa - Wyczółkowskiego",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.732772,
+          49.5859402
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10173659123",
+      "properties": {
+        "@id": "node/10173659123",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Piłsudskiego - Magazynowa",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7299287,
+          49.5997679
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10173659278",
+      "properties": {
+        "@id": "node/10173659278",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Piłsudskiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7292213,
+          49.6028394
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10173669719",
+      "properties": {
+        "@id": "node/10173669719",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Piłsudskiego - Wiadukt",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7311509,
+          49.591274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10173669721",
+      "properties": {
+        "@id": "node/10173669721",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aleja Piłsudskiego - Wiadukt",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7292653,
+          49.5906979
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10173671663",
+      "properties": {
+        "@id": "node/10173671663",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Komorowskiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.732538,
+          49.5798066
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10173671666",
+      "properties": {
+        "@id": "node/10173671666",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Komorowskiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7336173,
+          49.5799661
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10173686176",
+      "properties": {
+        "@id": "node/10173686176",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Prusa - Kamienna",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7311861,
+          49.5892087
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10173686177",
+      "properties": {
+        "@id": "node/10173686177",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Prusa - Kamienna",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7307653,
+          49.58968
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10175941613",
+      "properties": {
+        "@id": "node/10175941613",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Paderewskiego - Kochanowskiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7001963,
+          49.62904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10175952776",
+      "properties": {
+        "@id": "node/10175952776",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Batalianów Chłopskich",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7139396,
+          49.6274218
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10175970109",
+      "properties": {
+        "@id": "node/10175970109",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Hallera - Osiedle",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7024401,
+          49.6319742
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10175970110",
+      "properties": {
+        "@id": "node/10175970110",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Hallera - Osiedle",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7022322,
+          49.6321349
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10175998318",
+      "properties": {
+        "@id": "node/10175998318",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Paderewskiego - Romera",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6953234,
+          49.6305009
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10175998320",
+      "properties": {
+        "@id": "node/10175998320",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Paderewskiego - Romera",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6958169,
+          49.6304862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10175998321",
+      "properties": {
+        "@id": "node/10175998321",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Paderewskiego - Romera",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6958004,
+          49.6304545
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10176005088",
+      "properties": {
+        "@id": "node/10176005088",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Paderewskiego - Naściszowska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.706149,
+          49.6270244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10176009105",
+      "properties": {
+        "@id": "node/10176009105",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Hallera - Barska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7072354,
+          49.6304591
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10176016373",
+      "properties": {
+        "@id": "node/10176016373",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sucharskiego - Batalianów Chłopskich",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7135555,
+          49.6281486
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10176017149",
+      "properties": {
+        "@id": "node/10176017149",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Zdrojowa - Roszkowice",
+        "public_transport": "platform",
+        "ref": "01342",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.70368,
+          49.641393
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10176019887",
+      "properties": {
+        "@id": "node/10176019887",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sucharskiego - Barska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7103232,
+          49.6292875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10176019890",
+      "properties": {
+        "@id": "node/10176019890",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sucharskiego - Barska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.710523,
+          49.6294604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10176020327",
+      "properties": {
+        "@id": "node/10176020327",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zdrojowa - Hallera",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7011617,
+          49.6335534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10176020328",
+      "properties": {
+        "@id": "node/10176020328",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zdrojowa - Hallera",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7011051,
+          49.6337562
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10176023604",
+      "properties": {
+        "@id": "node/10176023604",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zdrojowa - Basen",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7028798,
+          49.6357537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10176023605",
+      "properties": {
+        "@id": "node/10176023605",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zdrojowa - Basen",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7035346,
+          49.636748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10180878082",
+      "properties": {
+        "@id": "node/10180878082",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nadbrzeżna - Przedszkole",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7065705,
+          49.6220943
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10180878083",
+      "properties": {
+        "@id": "node/10180878083",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nadbrzeżna - Przedszkole",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7067435,
+          49.6219093
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10180878084",
+      "properties": {
+        "@id": "node/10180878084",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nadbrzeżna - Przedszkole",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7067806,
+          49.6219616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10180904259",
+      "properties": {
+        "@id": "node/10180904259",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sucharskiego - Westerplatte",
+        "network": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "ref": "01681"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7181919,
+          49.6267704
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10180923766",
+      "properties": {
+        "@id": "node/10180923766",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Królowej Jadwigi - Poniatowskiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7111876,
+          49.6141359
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10180923769",
+      "properties": {
+        "@id": "node/10180923769",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Królowej Jadwigi - Poniatowskiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7116678,
+          49.6142793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10180925056",
+      "properties": {
+        "@id": "node/10180925056",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nadbrzeżna - Basen",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.714804,
+          49.620558
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10180937531",
+      "properties": {
+        "@id": "node/10180937531",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Królowej Jadwigi - Wiśniowieckiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7085992,
+          49.6116478
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10180937534",
+      "properties": {
+        "@id": "node/10180937534",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Królowej Jadwigi - Wiśniowieckiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.708402,
+          49.6118106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10180937996",
+      "properties": {
+        "@id": "node/10180937996",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Kolejowa",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7076817,
+          49.6096977
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10180937999",
+      "properties": {
+        "@id": "node/10180937999",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Kolejowa",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7079397,
+          49.6096924
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10182372069",
+      "properties": {
+        "@id": "node/10182372069",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Starowiejska - Cmentarz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.682091,
+          49.6289037
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10182372070",
+      "properties": {
+        "@id": "node/10182372070",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Starowiejska - Cmentarz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6823741,
+          49.6287026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10182386382",
+      "properties": {
+        "@id": "node/10182386382",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Starowiejska - Witkacego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6765706,
+          49.6218663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10182396535",
+      "properties": {
+        "@id": "node/10182396535",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Starowiejska - Klonowa",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6804195,
+          49.6246868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10182396536",
+      "properties": {
+        "@id": "node/10182396536",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Starowiejska - Klonowa",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6805679,
+          49.6247145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10182496767",
+      "properties": {
+        "@id": "node/10182496767",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Magazynowa",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7273414,
+          49.5994891
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10182501318",
+      "properties": {
+        "@id": "node/10182501318",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wiśniowieckiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7261823,
+          49.6020471
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10182521489",
+      "properties": {
+        "@id": "node/10182521489",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Łukasińskiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7110114,
+          49.6093473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10182521490",
+      "properties": {
+        "@id": "node/10182521490",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Łukasińskiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7116692,
+          49.6091397
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10183362093",
+      "properties": {
+        "@id": "node/10183362093",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wyspiańskiego - Nowa Kolonia",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7034565,
+          49.6009136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10183362094",
+      "properties": {
+        "@id": "node/10183362094",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wyspiańskiego - Nowa Kolonia",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7034585,
+          49.6007344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10183377917",
+      "properties": {
+        "@id": "node/10183377917",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wyspiańskiego - Zielona",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6978583,
+          49.6039557
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10183377918",
+      "properties": {
+        "@id": "node/10183377918",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wyspiańskiego - Zielona",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.698207,
+          49.6041531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10183378237",
+      "properties": {
+        "@id": "node/10183378237",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mała Poręba - Szkoła",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7168787,
+          49.5688839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10183378238",
+      "properties": {
+        "@id": "node/10183378238",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mała Poręba - Szkoła",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7159392,
+          49.5691474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10183380477",
+      "properties": {
+        "@id": "node/10183380477",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mała Poręba - Ruczaj",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.696113,
+          49.571161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10183388112",
+      "properties": {
+        "@id": "node/10183388112",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mała Poręba - Aleksandrówka",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7289487,
+          49.5661203
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10183388113",
+      "properties": {
+        "@id": "node/10183388113",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mała Poręba - Aleksandrówka",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7292177,
+          49.5659138
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10183392673",
+      "properties": {
+        "@id": "node/10183392673",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Majdan",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6970078,
+          49.5675946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10183394838",
+      "properties": {
+        "@id": "node/10183394838",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mała Poręba - Sołecka",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.708306,
+          49.5713783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10185904007",
+      "properties": {
+        "@id": "node/10185904007",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Biegonicka - Kościół",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6691946,
+          49.5808008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10185904008",
+      "properties": {
+        "@id": "node/10185904008",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Biegonicka - Kościół",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6693841,
+          49.5804448
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10185910865",
+      "properties": {
+        "@id": "node/10185910865",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Biegonicka - Granica",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6750635,
+          49.5774153
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10185910866",
+      "properties": {
+        "@id": "node/10185910866",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Biegonicka - Granica",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6750374,
+          49.5772944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10186327161",
+      "properties": {
+        "@id": "node/10186327161",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Lwowska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7060384,
+          49.6257631
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10186331547",
+      "properties": {
+        "@id": "node/10186331547",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Szkoła",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7078709,
+          49.6279921
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10186331548",
+      "properties": {
+        "@id": "node/10186331548",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Szkoła",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7079624,
+          49.6277939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10186338500",
+      "properties": {
+        "@id": "node/10186338500",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Podgórska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7121195,
+          49.633783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10186338501",
+      "properties": {
+        "@id": "node/10186338501",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Podgórska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7125647,
+          49.6343319
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10186339297",
+      "properties": {
+        "@id": "node/10186339297",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Sucharskiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7097596,
+          49.6301681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10186339298",
+      "properties": {
+        "@id": "node/10186339298",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Sucharskiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7105553,
+          49.6310233
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10186344765",
+      "properties": {
+        "@id": "node/10186344765",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Kapliczki",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7199713,
+          49.6474377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10186344766",
+      "properties": {
+        "@id": "node/10186344766",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Kapliczki",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7204809,
+          49.6476826
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10188163372",
+      "properties": {
+        "@id": "node/10188163372",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Długoszowskiego - Skansen",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7315804,
+          49.6148614
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10188163373",
+      "properties": {
+        "@id": "node/10188163373",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Długoszowskiego - Skansen",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7319026,
+          49.6146186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10188174360",
+      "properties": {
+        "@id": "node/10188174360",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Falkowska - Działki",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7397941,
+          49.6108591
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10188174361",
+      "properties": {
+        "@id": "node/10188174361",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Falkowska - Działki",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.741085,
+          49.6100166
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10188195377",
+      "properties": {
+        "@id": "node/10188195377",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Długoszowskiego",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7256508,
+          49.6182678
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10188195378",
+      "properties": {
+        "@id": "node/10188195378",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Długoszowskiego",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7263463,
+          49.6178253
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10188202247",
+      "properties": {
+        "@id": "node/10188202247",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Falkowska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7419786,
+          49.6053755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10188202248",
+      "properties": {
+        "@id": "node/10188202248",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Falkowska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.741863,
+          49.6058008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10188207927",
+      "properties": {
+        "@id": "node/10188207927",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Falkowska - Sklep",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7428696,
+          49.5988723
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10228621510",
+      "properties": {
+        "@id": "node/10228621510",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Traugutta",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7130712,
+          49.6048937
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10228659474",
+      "properties": {
+        "@id": "node/10228659474",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Grunwaldzka - Graniczna",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7122589,
+          49.5909118
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10280707108",
+      "properties": {
+        "@id": "node/10280707108",
+        "bus": "yes",
+        "departures_board": "yes",
+        "highway": "bus_stop",
+        "name": "Wiśniowieckiego - Osiedle",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7191636,
+          49.6057461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10280711193",
+      "properties": {
+        "@id": "node/10280711193",
+        "bus": "yes",
+        "departures_board": "yes",
+        "highway": "bus_stop",
+        "name": "Stramki",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7224973,
+          49.6045838
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10280711195",
+      "properties": {
+        "@id": "node/10280711195",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Długosza - Młyńska",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6988007,
+          49.6176573
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10280715009",
+      "properties": {
+        "@id": "node/10280715009",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Wiśniowieckiego - Osiedle",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7190492,
+          49.6055116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10298705314",
+      "properties": {
+        "@id": "node/10298705314",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nadbrzeżna - Miasteczko Rowerowe",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7116324,
+          49.6210375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10300695417",
+      "properties": {
+        "@id": "node/10300695417",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dw. Aut. MPK st. 3",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7011522,
+          49.6070377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10300780760",
+      "properties": {
+        "@id": "node/10300780760",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Brzeziny - Grunwaldzka",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7137237,
+          49.5900097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10300780761",
+      "properties": {
+        "@id": "node/10300780761",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Brzeziny - Grunwaldzka",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7138624,
+          49.5898836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10300780762",
+      "properties": {
+        "@id": "node/10300780762",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Brzeziny - Bielowicka",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7154878,
+          49.5853767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10300780763",
+      "properties": {
+        "@id": "node/10300780763",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Brzeziny - Osiedlowa",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7183323,
+          49.5834376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10300780764",
+      "properties": {
+        "@id": "node/10300780764",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Brzeziny - Osiedlowa",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7186557,
+          49.5833458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10300780765",
+      "properties": {
+        "@id": "node/10300780765",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Pienińska",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.720467,
+          49.5809707
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10300780766",
+      "properties": {
+        "@id": "node/10300780766",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Pienińska",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7206461,
+          49.5809159
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10300780767",
+      "properties": {
+        "@id": "node/10300780767",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Juranda - Kręta",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7169105,
+          49.5783482
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10300780768",
+      "properties": {
+        "@id": "node/10300780768",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Juranda - Kręta",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7169871,
+          49.57715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10300780769",
+      "properties": {
+        "@id": "node/10300780769",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Juranda - Gorczańska",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7161437,
+          49.5729811
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10300780770",
+      "properties": {
+        "@id": "node/10300780770",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Juranda - Gorczańska",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.716876,
+          49.5737031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10300780771",
+      "properties": {
+        "@id": "node/10300780771",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Juranda - Mała Poręba",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7160585,
+          49.5696511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10300780772",
+      "properties": {
+        "@id": "node/10300780772",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Juranda - Mała Poręba",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7163936,
+          49.5693459
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10301058536",
+      "properties": {
+        "@id": "node/10301058536",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Tarnowska - Bugajski",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6922598,
+          49.6534237
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10301058537",
+      "properties": {
+        "@id": "node/10301058537",
+        "bench": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Tarnowska - Galeria Szubryt",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "public_transport": "platform",
+        "ref:kmal": "2388",
+        "request_stop": "yes",
+        "route_ref": "5;MLD – A22",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6894169,
+          49.6562113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10301058539",
+      "properties": {
+        "@id": "node/10301058539",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dw. Aut. MPK przyst. końcowy",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7011476,
+          49.606852
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10301254772",
+      "properties": {
+        "@id": "node/10301254772",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Os. Millenium",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7031647,
+          49.6136616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10301254773",
+      "properties": {
+        "@id": "node/10301254773",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nawojowska - Os. Millenium",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7037282,
+          49.613496
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10303154074",
+      "properties": {
+        "@id": "node/10303154074",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barbackiego - Osiedle",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6882188,
+          49.6105717
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10303154075",
+      "properties": {
+        "@id": "node/10303154075",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barbackiego - Osiedle",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6883236,
+          49.6110407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10303154076",
+      "properties": {
+        "@id": "node/10303154076",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Barbackiego - Przedszkole",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6894361,
+          49.6130159
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10303154077",
+      "properties": {
+        "@id": "node/10303154077",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Barbackiego - Przedszkole",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6895708,
+          49.6130498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10303154078",
+      "properties": {
+        "@id": "node/10303154078",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Żeglarska",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6895308,
+          49.621434
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10303154079",
+      "properties": {
+        "@id": "node/10303154079",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Zielona - Stacja Paliw",
+        "name:network:kmal": "Nowy Sącz Zielona - Stacja Paliw",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:kmal": "6902",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "url:kmal": "https://kolejemalopolskie.kiedyprzyjedzie.pl/#/stops/2265151:2352068/departures",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6951468,
+          49.6026937
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10303154080",
+      "properties": {
+        "@id": "node/10303154080",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Zielona - WSB",
+        "name:network:kmal": "Nowy Sącz Zielona - WSB",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:kmal": "6903",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "url:kmal": "https://kolejemalopolskie.kiedyprzyjedzie.pl/#/stops/2265152:2352069/departures",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.692169,
+          49.6009655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10303154081",
+      "properties": {
+        "@id": "node/10303154081",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Zielona - WSB",
+        "name:network:kmal": "Nowy Sącz Zielona - WSB",
+        "network": "Małopolskie Linie Dowozowe;Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "network:short": "MLD;MPK Nowy Sącz",
+        "network:wikidata": "Q134701178;Q11780303",
+        "operator": "Miejskie Przedsiębiorstwo Komunikacyjne w Nowym Sączu",
+        "operator:short": "MPK Nowy Sącz",
+        "operator:wikidata": "Q11780303",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:kmal": "6904",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "url:kmal": "https://kolejemalopolskie.kiedyprzyjedzie.pl/#/stops/2265152:2352070/departures",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6917844,
+          49.6005462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10303154082",
+      "properties": {
+        "@id": "node/10303154082",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zielona - Grunwaldzka",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6898347,
+          49.5991985
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10303154083",
+      "properties": {
+        "@id": "node/10303154083",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zielona - Grunwaldzka",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6894337,
+          49.5987995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10308452962",
+      "properties": {
+        "@id": "node/10308452962",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Węgierska - ZUS",
+        "name:kmal": "Nowy Sącz Węgierska - ZUS",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "00202",
+        "ref:kmal": "3196"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.690106,
+          49.6038294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10308460636",
+      "properties": {
+        "@id": "node/10308460636",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Węgierska - ZUS",
+        "name:kmal": "Nowy Sącz Węgierska - ZUS",
+        "network": "MPK Nowy Sącz;Małopolskie Linie Dojazdowe",
+        "operator": "MPK Nowy Sącz;Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "00201",
+        "ref:kmal": "3195"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6894962,
+          49.6034862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10308464121",
+      "properties": {
+        "@id": "node/10308464121",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Asnyka",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6946656,
+          49.6049482
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10308469922",
+      "properties": {
+        "@id": "node/10308469922",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Radziecka",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6894024,
+          49.6071595
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10308470922",
+      "properties": {
+        "@id": "node/10308470922",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sienkiewicza - ZUS",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6957844,
+          49.6069513
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10308480998",
+      "properties": {
+        "@id": "node/10308480998",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Sienkiewicza - Szujskiego",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6951244,
+          49.6085156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10308483141",
+      "properties": {
+        "@id": "node/10308483141",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Szujskiego",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6938004,
+          49.6105038
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10308483251",
+      "properties": {
+        "@id": "node/10308483251",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "yes",
+        "highway": "bus_stop",
+        "name": "Kunegundy",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.692684,
+          49.6091827
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10308486052",
+      "properties": {
+        "@id": "node/10308486052",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Waryńskiego - Kolejowa",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6953082,
+          49.6053795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10308486414",
+      "properties": {
+        "@id": "node/10308486414",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Waryńskiego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6939739,
+          49.60857
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10310876852",
+      "properties": {
+        "@id": "node/10310876852",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zyndrama",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7002403,
+          49.5900939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10310876853",
+      "properties": {
+        "@id": "node/10310876853",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zyndrama",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7005058,
+          49.5896201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10310876856",
+      "properties": {
+        "@id": "node/10310876856",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dąbrówki - Osiedle",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6918357,
+          49.5912332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10310876857",
+      "properties": {
+        "@id": "node/10310876857",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dąbrówki - Osiedle",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6917801,
+          49.5911316
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10310877498",
+      "properties": {
+        "@id": "node/10310877498",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bohaterów Orła Białego - Działki",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6983238,
+          49.5841551
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10310877499",
+      "properties": {
+        "@id": "node/10310877499",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bohaterów Orła Białego - Działki",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6982024,
+          49.584062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10310902274",
+      "properties": {
+        "@id": "node/10310902274",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dąbrówki - Kapliczka",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6987565,
+          49.5913207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10311011666",
+      "properties": {
+        "@id": "node/10311011666",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dąbrówki",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6837146,
+          49.5933215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10311011667",
+      "properties": {
+        "@id": "node/10311011667",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dąbrówki",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6836686,
+          49.5932527
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10311151899",
+      "properties": {
+        "@id": "node/10311151899",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Bohaterów Orła Białego - Pętla",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7020121,
+          49.5788629
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10311154348",
+      "properties": {
+        "@id": "node/10311154348",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zyndrama - Ostra",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6982588,
+          49.5864547
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10311154349",
+      "properties": {
+        "@id": "node/10311154349",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zyndrama - Ostra",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6978126,
+          49.5864151
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10311203061",
+      "properties": {
+        "@id": "node/10311203061",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dąbrówki - Kościół",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6874499,
+          49.591803
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10311203063",
+      "properties": {
+        "@id": "node/10311203063",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Dąbrówki - Kościół",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6875292,
+          49.5918689
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10312905044",
+      "properties": {
+        "@id": "node/10312905044",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ruchu Ludowego - Pętla",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7127937,
+          49.5604152
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10312960525",
+      "properties": {
+        "@id": "node/10312960525",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Stadnickich",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7158903,
+          49.5663077
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10312960526",
+      "properties": {
+        "@id": "node/10312960526",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Stadnickich",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7159228,
+          49.5662128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10312963542",
+      "properties": {
+        "@id": "node/10312963542",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ruchu Ludowego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7145792,
+          49.5636196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10312963543",
+      "properties": {
+        "@id": "node/10312963543",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ruchu Ludowego",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7147965,
+          49.5637804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10542689813",
+      "properties": {
+        "@id": "node/10542689813",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Konstanty",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6873213,
+          49.6100207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10542689816",
+      "properties": {
+        "@id": "node/10542689816",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Konstanty",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6865948,
+          49.6101659
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10577234340",
+      "properties": {
+        "@id": "node/10577234340",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "29 listopada - Przychodnia",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7123956,
+          49.6015816
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10577248341",
+      "properties": {
+        "@id": "node/10577248341",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "29 listopada - Przychodnia",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7128341,
+          49.6013512
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10577248342",
+      "properties": {
+        "@id": "node/10577248342",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "29 listopada - Osiedle",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7151586,
+          49.5993688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10577248343",
+      "properties": {
+        "@id": "node/10577248343",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "29 listopada - Osiedle",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7147948,
+          49.5995256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10580118224",
+      "properties": {
+        "@id": "node/10580118224",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Grunwaldzka - Zielona",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6899021,
+          49.5981086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10580118225",
+      "properties": {
+        "@id": "node/10580118225",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Grunwaldzka - Zielona",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6905237,
+          49.5978775
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10580118226",
+      "properties": {
+        "@id": "node/10580118226",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Grunwaldzka",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6937544,
+          49.5962617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10580118227",
+      "properties": {
+        "@id": "node/10580118227",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Grunwaldzka",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6942781,
+          49.5959151
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10580118228",
+      "properties": {
+        "@id": "node/10580118228",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Smolika - Sąd",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6947145,
+          49.5962985
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10580118229",
+      "properties": {
+        "@id": "node/10580118229",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Smolika - Sąd",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6946353,
+          49.5963878
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10580118230",
+      "properties": {
+        "@id": "node/10580118230",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Grottgera",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6984324,
+          49.5967211
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10580118231",
+      "properties": {
+        "@id": "node/10580118231",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Grottgera",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6989076,
+          49.5963144
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10580118232",
+      "properties": {
+        "@id": "node/10580118232",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Grunwaldzka -Zyndrama",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7009169,
+          49.5925435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10580118233",
+      "properties": {
+        "@id": "node/10580118233",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Grunwaldzka -Zyndrama",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.700697,
+          49.5926826
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10580118234",
+      "properties": {
+        "@id": "node/10580118234",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Jana Pawła II - Zielona",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6970422,
+          49.6026908
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10580118235",
+      "properties": {
+        "@id": "node/10580118235",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Jana Pawła II - Zielona",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6976226,
+          49.6019983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10580118236",
+      "properties": {
+        "@id": "node/10580118236",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Jana Pawła II - Zawiszy Czarnego",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "ref": "00932",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6999393,
+          49.5991557
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10580118237",
+      "properties": {
+        "@id": "node/10580118237",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Jana Pawła II - Zawiszy Czarnego",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "ref": "00931"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6991717,
+          49.5997633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10580118238",
+      "properties": {
+        "@id": "node/10580118238",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Jana Pawła II",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.700918,
+          49.5961047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10582102266",
+      "properties": {
+        "@id": "node/10582102266",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Myśliwska - Brzozowa",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6934545,
+          49.6492067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10582102267",
+      "properties": {
+        "@id": "node/10582102267",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Myśliwska - Brzozowa",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6935453,
+          49.6493013
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10582102268",
+      "properties": {
+        "@id": "node/10582102268",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Brzozowa - Gaj Osiedle",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.69631,
+          49.6496545
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10582102269",
+      "properties": {
+        "@id": "node/10582102269",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Brzozowa - Gaj Osiedle",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6964026,
+          49.6496033
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10582102270",
+      "properties": {
+        "@id": "node/10582102270",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zabełecka - Gaj",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7029488,
+          49.6504378
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10582102271",
+      "properties": {
+        "@id": "node/10582102271",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zabełecka - Gaj I",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7083075,
+          49.6527864
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10582102272",
+      "properties": {
+        "@id": "node/10582102272",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zabełecka - Gaj II",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7153159,
+          49.6561172
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10582102273",
+      "properties": {
+        "@id": "node/10582102273",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zdrojowa - Gaj",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7163204,
+          49.6523401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10582102274",
+      "properties": {
+        "@id": "node/10582102274",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Zdrojowa- Gaj Pętla",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7150652,
+          49.6486825
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10586073128",
+      "properties": {
+        "@id": "node/10586073128",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Barska - Granica",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7228685,
+          49.6521319
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10744132624",
+      "properties": {
+        "@id": "node/10744132624",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Podbielowska",
+        "network": "MPK Nowy Sąćz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7079039,
+          49.5743317
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10744132625",
+      "properties": {
+        "@id": "node/10744132625",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Podbielowska",
+        "network": "MPK Nowy Sąćz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7079326,
+          49.5740643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10839486075",
+      "properties": {
+        "@id": "node/10839486075",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Ogrodowa - Konstanty",
+        "network": "MPK Nowy Sącz",
+        "operator": "MPK Nowy Sącz",
+        "public_transport": "platform",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6810099,
+          49.6098042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10843765215",
+      "properties": {
+        "@id": "node/10843765215",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "local_ref": "11",
+        "name": "MDA Nowy Sącz st. 11",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6985651,
+          49.6170936
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10843765216",
+      "properties": {
+        "@id": "node/10843765216",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "local_ref": "12",
+        "name": "MDA Nowy Sącz st. 12",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.698681,
+          49.6171397
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10843765217",
+      "properties": {
+        "@id": "node/10843765217",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "local_ref": "13",
+        "name": "MDA Nowy Sącz st. 13",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6987141,
+          49.6171528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10843765218",
+      "properties": {
+        "@id": "node/10843765218",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "local_ref": "14",
+        "name": "MDA Nowy Sącz st. 14",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6987472,
+          49.617166
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10843765219",
+      "properties": {
+        "@id": "node/10843765219",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "local_ref": "15",
+        "name": "MDA Nowy Sącz st. 15",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6988797,
+          49.6172186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10843765220",
+      "properties": {
+        "@id": "node/10843765220",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "local_ref": "16",
+        "name": "MDA Nowy Sącz st. 16",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6989128,
+          49.6172318
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11113915948",
+      "properties": {
+        "@id": "node/11113915948",
+        "bench": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Tarnowska - Galeria Szubryt",
+        "network": "Małopolskie Linie Dowozowe",
+        "network:short": "MLD",
+        "network:wikidata": "Q134701178",
+        "public_transport": "platform",
+        "ref:kmal": "2389",
+        "request_stop": "yes",
+        "route_ref": "MLD – A22",
+        "shelter": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6899134,
+          49.6559493
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12863347475",
+      "properties": {
+        "@id": "node/12863347475",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Nowy Sącz Dworzec MPK ul. Kolejowa",
+        "network": "Małopolskie Linie Dowozowe",
+        "operator": "Koleje Małopolskie",
+        "public_transport": "platform",
+        "ref": "3202"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7008274,
+          49.6072891
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13357698049",
+      "properties": {
+        "@id": "node/13357698049",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.7015867,
+          49.5988409
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13357698065",
+      "properties": {
+        "@id": "node/13357698065",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.6998122,
+          49.5982453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13458641449",
+      "properties": {
+        "@id": "node/13458641449",
+        "bench": "no",
+        "bin": "no",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Nowy Sącz ul. Bulwar Narwiku - Kopernika",
+        "network": "Małopolskie Linie Dowozowe;Szwagropol",
+        "network:short": "MLD",
+        "network:wikidata": "Q134701178;Q59688724",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:kmal": "2401",
+        "request_stop": "yes",
+        "route_ref": "MLD – A22",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.69726,
+          49.6222163
+        ]
+      }
+    }
+  ]
+}
