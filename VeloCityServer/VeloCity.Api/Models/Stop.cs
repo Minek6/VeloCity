@@ -4,6 +4,8 @@ public class Stop
 {
     public int Id { get; set; }
     public int ExternalId { get; set; }
+    public int? ExternalMpkStopId { get; set; }
+    public string? ExternalMpkStopNumber { get; set; }
     public long? OsmId { get; set; }
     public string? OsmType { get; set; }
     public string Name { get; set; } = string.Empty;

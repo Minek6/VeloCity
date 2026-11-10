@@ -1,16 +1,17 @@
-
+using System.Globalization;
+using VeloCity.RouteImporter.Models;
 using System.Text.Json;
 
 namespace VeloCity.RouteImporter.Readers;
 
 public static class MpkApiReader
 {
-    public static async Task ReadAsync(string filePath)
+    public static async Task<List<MpkStop>> ReadAsync(string filePath)
     {
         if (!File.Exists(filePath))
         {
             Console.WriteLine($"ERROR: File not found: {filePath}");
-            return;
+            return new List<MpkStop>();
         }
 
         using var document = JsonDocument.Parse(
@@ -91,7 +92,86 @@ foreach (var variant in variants)
 
         Console.WriteLine($"Total runs: {totalRuns}");
 
+Console.WriteLine();
+Console.WriteLine("=== MPK stops ===");
+
+var stopRecords = variants
+    .SelectMany(v => v.GetProperty("runs").EnumerateArray())
+    .SelectMany(r => r.GetProperty("stops").EnumerateArray())
+    .Where(s => s.TryGetProperty("stop_order", out _))
+    .ToList();
+
+var uniqueStops = stopRecords
+    .GroupBy(s => s.GetProperty("id").GetInt32())
+    .Select(g => g.First())
+    .OrderBy(s => s.GetProperty("id").GetInt32())
+    .ToList();
+
+var mpkStops = uniqueStops.Select(s => new MpkStop(
+    s.GetProperty("id").GetInt32(),
+    s.GetProperty("number").GetString() ?? "",
+    s.GetProperty("name").GetString() ?? "",
+    double.Parse(
+        s.GetProperty("latitude").GetString()!,
+        CultureInfo.InvariantCulture),
+    double.Parse(
+        s.GetProperty("longitude").GetString()!,
+        CultureInfo.InvariantCulture)
+)).ToList();
+
+Console.WriteLine($"Stop occurrences: {stopRecords.Count}");
+Console.WriteLine($"Unique MPK stop IDs: {uniqueStops.Count}");
+
+Console.WriteLine();
+Console.WriteLine("=== Sample MPK stops ===");
+
+foreach (var stop in uniqueStops.Take(5))
+{
+    Console.WriteLine(stop.GetRawText());
+}
         
+Console.WriteLine();
+Console.WriteLine("=== MPK stop number validation ===");
+
+var duplicateNumbers = uniqueStops
+    .GroupBy(s => s.GetProperty("number").GetString())
+    .Where(g => g.Count() > 1)
+    .ToList();
+
+Console.WriteLine(
+    $"Unique stop numbers: {uniqueStops.Select(s => s.GetProperty("number").GetString()).Distinct().Count()}");
+
+Console.WriteLine(
+    $"Duplicate stop numbers: {duplicateNumbers.Count}");
+
+foreach (var group in duplicateNumbers)
+{
+    Console.WriteLine($"Number: {group.Key}");
+
+    foreach (var stop in group)
+    {
+        Console.WriteLine(
+            $"  ID: {stop.GetProperty("id").GetInt32()}, " +
+            $"Name: {stop.GetProperty("name").GetString()}");
+    }
+}
+
+Console.WriteLine();
+Console.WriteLine("=== All unique MPK stops ===");
+
+foreach (var stop in uniqueStops
+    .OrderBy(s => s.GetProperty("number").GetString()))
+{
+    var id = stop.GetProperty("id").GetInt32();
+    var number = stop.GetProperty("number").GetString();
+    var name = stop.GetProperty("name").GetString();
+    var latitude = stop.GetProperty("latitude").GetString();
+    var longitude = stop.GetProperty("longitude").GetString();
+
+    Console.WriteLine(
+        $"{number} | ID: {id} | {name} | {latitude}, {longitude}");
+}
+
 Console.WriteLine();
 Console.WriteLine("=== Run stop times ===");
 
@@ -170,7 +250,89 @@ foreach (var variant in variants)
 Console.WriteLine($"Valid runs: {validRuns}");
 Console.WriteLine($"Invalid runs: {invalidRuns}");
 
+        Console.WriteLine();
+Console.WriteLine("=== MPK 29 Listopada stop usage ===");
+
+var selectedNumbers = new HashSet<string>
+{
+    "00781",
+    "00782",
+    "00783"
+};
+
+foreach (var variant in variants)
+{
+    var variantId = variant.GetProperty("id").GetInt32();
+    var variantName = variant.GetProperty("name").GetString();
+    var direction = variant.GetProperty("direction").GetInt32();
+
+    foreach (var run in variant.GetProperty("runs").EnumerateArray())
+    {
+        var matchingStops = run.GetProperty("stops")
+            .EnumerateArray()
+            .Where(s =>
+                s.TryGetProperty("stop_order", out _) &&
+                selectedNumbers.Contains(
+                    s.GetProperty("number").GetString() ?? ""))
+            .ToList();
+
+        foreach (var stop in matchingStops)
+        {
+            Console.WriteLine(
+                $"MPK {stop.GetProperty("number").GetString()} | " +
+                $"Variant: {variantId} | " +
+                $"Direction: {direction} | " +
+                $"Run: {run.GetProperty("id").GetInt32()} | " +
+                $"Order: {stop.GetProperty("stop_order").GetInt32()}");
+        }
+    }
+}
+
+        Console.WriteLine();
+Console.WriteLine("=== Special run 172731 ===");
+
+var specialVariant = variants.First(v =>
+    v.GetProperty("id").GetInt32() == 43702);
+
+var specialRun = specialVariant
+    .GetProperty("runs")
+    .EnumerateArray()
+    .First(r => r.GetProperty("id").GetInt32() == 172731);
+
+foreach (var stop in specialRun
+    .GetProperty("stops")
+    .EnumerateArray()
+    .Where(s => s.TryGetProperty("stop_order", out _))
+    .OrderBy(s => s.GetProperty("stop_order").GetInt32()))
+{
+    Console.WriteLine(
+        $"{stop.GetProperty("stop_order").GetInt32()}. " +
+        $"MPK {stop.GetProperty("number").GetString()} | " +
+        $"{stop.GetProperty("name").GetString()} | " +
+        $"{stop.GetProperty("latitude").GetString()}, " +
+        $"{stop.GetProperty("longitude").GetString()}");
+}
+
+        Console.WriteLine();
+Console.WriteLine("=== MPK 00781 / 00782 / 00783 details ===");
+
+foreach (var number in new[] { "00781", "00782", "00783" })
+{
+    var stop = uniqueStops.First(s =>
+        s.GetProperty("number").GetString() == number);
+
+    Console.WriteLine();
+    Console.WriteLine($"Stop number: {number}");
+    Console.WriteLine($"MPK ID: {stop.GetProperty("id")}");
+    Console.WriteLine($"Origin ID: {stop.GetProperty("origin_id")}");
+    Console.WriteLine($"Name: {stop.GetProperty("name")}");
+    Console.WriteLine($"Street: {stop.GetProperty("street")}");
+    Console.WriteLine($"Latitude: {stop.GetProperty("latitude")}");
+    Console.WriteLine($"Longitude: {stop.GetProperty("longitude")}");
+}
 
         Console.WriteLine("READ-ONLY: No database changes.");
+
+        return mpkStops;
     }
 }

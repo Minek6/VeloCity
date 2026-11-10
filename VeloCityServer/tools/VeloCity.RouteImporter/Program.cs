@@ -1,5 +1,7 @@
 ﻿using VeloCity.RouteImporter.Readers;
 using System.Text.Json;
+using VeloCity.RouteImporter.Matching;
+using VeloCity.RouteImporter.Database;
 
 Console.WriteLine("=== VeloCity Route Importer ===");
 
@@ -18,13 +20,400 @@ if (args.Length > 0 &&
     return;
 }
 
+Console.WriteLine("=== Stop matching test ===");
+
+double distance = StopMatcher.CalculateDistanceMeters(
+    49.6035, 20.7004,       // MPK 00761
+    49.6035479, 20.7003905 // OSM / VeloCity ID 178
+);
+
+Console.WriteLine("=== VeloCity database stops ===");
+
+var veloCityStops = await StopRepository.ReadStopsAsync();
+
+await StopRepository.CheckMpkAssignmentsAsync();
+
+Console.WriteLine();
+
+Console.WriteLine(
+    $"MPK 00761 -> VeloCity 178: {distance:F2} m");
 
 if (args.Length > 0 &&
     args[0].EndsWith(
         "line6.json",
         StringComparison.OrdinalIgnoreCase))
 {
-    await MpkApiReader.ReadAsync(Path.GetFullPath(args[0]));
+    var mpkStops = await MpkApiReader.ReadAsync(
+        Path.GetFullPath(args[0]));
+
+    Console.WriteLine();
+    Console.WriteLine("=== MPK stops returned ===");
+    Console.WriteLine($"Count: {mpkStops.Count}");
+
+    using var matchesDocument = JsonDocument.Parse(
+    await File.ReadAllTextAsync(
+        Path.Combine("data", "approved_stop_matches.json")));
+
+var approvedMatches =
+    matchesDocument.RootElement.Deserialize<
+        VeloCity.RouteImporter.Models.ApprovedStopMatches>()
+    ?? throw new InvalidOperationException(
+        "Nie można odczytać powiązań MPK.");
+
+Console.WriteLine();
+Console.WriteLine("=== Approved stop matches validation ===");
+
+var errors = new List<string>();
+
+if (approvedMatches.Line != "6")
+    errors.Add("Nieprawidłowy numer linii.");
+
+if (approvedMatches.TimetableId != 86)
+    errors.Add("Nieprawidłowy identyfikator rozkładu.");
+
+var mpkNumbers = mpkStops
+    .Select(s => s.Number)
+    .ToHashSet();
+
+var veloCityIds = veloCityStops
+    .Select(s => s.Id)
+    .ToHashSet();
+
+foreach (var match in approvedMatches.Matches)
+{
+    if (!mpkNumbers.Contains(match.MpkNumber))
+        errors.Add($"Nieznany numer MPK: {match.MpkNumber}");
+
+    if (!veloCityIds.Contains(match.VeloCityStopId))
+        errors.Add($"Nieznany ID VeloCity: {match.VeloCityStopId}");
+}
+
+foreach (var group in approvedMatches.Matches
+    .GroupBy(m => m.MpkNumber)
+    .Where(g => g.Count() > 1))
+{
+    errors.Add($"Powtórzony numer MPK: {group.Key}");
+}
+
+foreach (var group in approvedMatches.Matches
+    .GroupBy(m => m.VeloCityStopId)
+    .Where(g => g.Count() > 1))
+{
+    errors.Add($"Powtórzony ID VeloCity: {group.Key}");
+}
+
+Console.WriteLine($"Matches: {approvedMatches.Matches.Count}");
+Console.WriteLine($"Errors: {errors.Count}");
+
+foreach (var error in errors)
+{
+    Console.WriteLine($"ERROR: {error}");
+}
+
+Console.WriteLine(
+    errors.Count == 0
+        ? "VALIDATION OK"
+        : "VALIDATION FAILED");
+
+        Console.WriteLine();
+Console.WriteLine("=== Approved matches geographic validation ===");
+
+int geographicErrors = 0;
+int geographicWarnings = 0;
+
+foreach (var match in approvedMatches.Matches)
+{
+    var mpk = mpkStops.Single(s =>
+        s.Number == match.MpkNumber);
+
+    var veloCity = veloCityStops.Single(s =>
+        s.Id == match.VeloCityStopId);
+
+    var distanceMeters = StopMatcher.CalculateDistanceMeters(
+        mpk.Latitude,
+        mpk.Longitude,
+        veloCity.Latitude,
+        veloCity.Longitude);
+
+    var status = StopMatcher.ClassifyMatch(
+        mpk.Name,
+        veloCity.Name,
+        distanceMeters);
+
+    if (distanceMeters > 50)
+    {
+        geographicErrors++;
+
+        Console.WriteLine(
+            $"ERROR: MPK {mpk.Number} -> " +
+            $"VeloCity {veloCity.Id} | " +
+            $"{distanceMeters:F1} m");
+    }
+    else if (status != "PEWNE")
+    {
+        geographicWarnings++;
+
+        Console.WriteLine(
+            $"WARNING: MPK {mpk.Number} -> " +
+            $"VeloCity {veloCity.Id} | " +
+            $"{distanceMeters:F1} m | " +
+            $"{mpk.Name} <> {veloCity.Name}");
+    }
+}
+
+Console.WriteLine();
+Console.WriteLine($"Geographic errors: {geographicErrors}");
+Console.WriteLine($"Geographic warnings: {geographicWarnings}");
+
+if (args.Contains("--commit"))
+{
+    if (errors.Count == 0 &&
+        geographicErrors == 0 &&
+        geographicWarnings == 0)
+    {
+        Console.WriteLine();
+        Console.WriteLine("=== MPK assignments IMPORT ===");
+
+        await StopRepository.ImportMpkAssignmentsAsync(
+            approvedMatches.Matches,
+            mpkStops,
+            dryRun: false);
+    }
+    else
+    {
+        Console.WriteLine(
+            "IMPORT BLOCKED: Validation errors or warnings.");
+    }
+}
+
+    Console.WriteLine();
+Console.WriteLine("=== MPK -> VeloCity matching report ===");
+
+foreach (var mpkStop in mpkStops.OrderBy(s => s.Number))
+{
+    var candidates = veloCityStops
+        .Where(s => s.Id > 3) // Pomijamy 3 przystanki testowe
+        .Select(s => new
+        {
+            Stop = s,
+            Distance = StopMatcher.CalculateDistanceMeters(
+                mpkStop.Latitude,
+                mpkStop.Longitude,
+                s.Latitude,
+                s.Longitude)
+        })
+        .OrderBy(s => s.Distance)
+        .Take(3)
+        .ToList();
+
+    Console.WriteLine();
+    Console.WriteLine(
+        $"MPK {mpkStop.Number} | {mpkStop.Name}");
+
+    foreach (var candidate in candidates)
+{
+    var status = StopMatcher.ClassifyMatch(
+        mpkStop.Name,
+        candidate.Stop.Name,
+        candidate.Distance);
+
+    Console.WriteLine(
+        $"  VeloCity ID: {candidate.Stop.Id} | " +
+        $"{candidate.Stop.Name} | " +
+        $"{candidate.Distance:F1} m | " +
+        $"Status: {status}");
+}
+}
+
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("=== Best MPK stop matches ===");
+
+foreach (var mpk in mpkStops.OrderBy(s => s.Number))
+{
+    var candidates = veloCityStops
+        .Where(s => s.Id > 3)
+        .Select(s => new
+        {
+            Stop = s,
+            Distance = StopMatcher.CalculateDistanceMeters(
+                mpk.Latitude,
+                mpk.Longitude,
+                s.Latitude,
+                s.Longitude)
+        })
+        .Select(x => new
+        {
+            x.Stop,
+            x.Distance,
+            Status = StopMatcher.ClassifyMatch(
+                mpk.Name,
+                x.Stop.Name,
+                x.Distance)
+        })
+        .Where(x => x.Status != "NIEDOPASOWANE")
+        .OrderByDescending(x =>
+            string.Equals(
+                mpk.Name.Trim(),
+                x.Stop.Name.Trim(),
+                StringComparison.OrdinalIgnoreCase))
+        .ThenBy(x => x.Status == "PEWNE" ? 0 : 1)
+        .ThenBy(x => x.Distance)
+        .ToList();
+
+    if (candidates.Count == 0)
+    {
+        Console.WriteLine(
+            $"MPK {mpk.Number} -> BRAK DOPASOWANIA");
+        continue;
+    }
+
+    var best = candidates[0];
+
+    var ambiguous = candidates
+        .Skip(1)
+        .Any(x => x.Status == best.Status &&
+                  Math.Abs(x.Distance - best.Distance) <= 10);
+
+    var result = ambiguous
+        ? "NIEJEDNOZNACZNE"
+        : best.Status;
+
+    Console.WriteLine(
+        $"MPK {mpk.Number} -> " +
+        $"VeloCity {best.Stop.Id} | " +
+        $"{best.Stop.Name} | " +
+        $"{best.Distance:F1} m | " +
+        $"{result}");
+}
+Console.WriteLine("=== Stop matching conflicts ===");
+
+var nearestMatches = mpkStops
+    .Select(mpk => new
+    {
+        Mpk = mpk,
+        Candidate = veloCityStops
+            .Where(s => s.Id > 3)
+            .Select(s => new
+            {
+                Stop = s,
+                Distance = StopMatcher.CalculateDistanceMeters(
+                    mpk.Latitude,
+                    mpk.Longitude,
+                    s.Latitude,
+                    s.Longitude)
+            })
+            .Select(x => new
+            {
+                x.Stop,
+                x.Distance,
+                Status = StopMatcher.ClassifyMatch(
+                    mpk.Name,
+                    x.Stop.Name,
+                    x.Distance)
+            })
+            .Where(x => x.Status != "NIEDOPASOWANE")
+            .OrderByDescending(x =>
+                string.Equals(
+                    mpk.Name.Trim(),
+                    x.Stop.Name.Trim(),
+                    StringComparison.OrdinalIgnoreCase))
+            .ThenBy(x => x.Status == "PEWNE" ? 0 : 1)
+            .ThenBy(x => x.Distance)
+            .FirstOrDefault()
+    })
+    .Where(x => x.Candidate != null)
+    .ToList();
+
+var conflicts = nearestMatches
+    .GroupBy(x => x.Candidate.Stop.Id)
+    .Where(g => g.Count() > 1)
+    .ToList();
+
+foreach (var conflict in conflicts)
+{
+    Console.WriteLine();
+    Console.WriteLine(
+        $"CONFLICT: VeloCity ID {conflict.Key}");
+
+    foreach (var match in conflict)
+    {
+        Console.WriteLine(
+            $"  MPK {match.Mpk.Number} | " +
+            $"{match.Mpk.Name} | " +
+            $"{match.Candidate.Distance:F1} m");
+    }
+}
+
+Console.WriteLine();
+Console.WriteLine($"Conflicting VeloCity stops: {conflicts.Count}");
+
+    Console.WriteLine();
+Console.WriteLine("=== Safe matching summary ===");
+
+var conflictedIds = conflicts
+    .Select(c => c.Key)
+    .ToHashSet();
+
+int safeCount = 0;
+int reviewCount = 0;
+int unmatchedCount = 0;
+
+foreach (var match in nearestMatches.OrderBy(m => m.Mpk.Number))
+{
+    var candidate = match.Candidate!;
+
+    var status = StopMatcher.ClassifyMatch(
+        match.Mpk.Name,
+        candidate.Stop.Name,
+        candidate.Distance);
+
+    var alternativeCandidates = veloCityStops
+    .Where(s => s.Id > 3 && s.Id != candidate.Stop.Id)
+    .Select(s => new
+    {
+        Stop = s,
+        Distance = StopMatcher.CalculateDistanceMeters(
+            match.Mpk.Latitude,
+            match.Mpk.Longitude,
+            s.Latitude,
+            s.Longitude)
+    })
+    .Where(x =>
+        StopMatcher.ClassifyMatch(
+            match.Mpk.Name,
+            x.Stop.Name,
+            x.Distance) == status &&
+        Math.Abs(x.Distance - candidate.Distance) <= 10)
+    .ToList();
+
+bool ambiguous = alternativeCandidates.Count > 0;
+
+    if (status == "PEWNE" &&
+    !ambiguous &&
+    !conflictedIds.Contains(candidate.Stop.Id))
+    {
+        safeCount++;
+        Console.WriteLine(
+            $"READY: MPK {match.Mpk.Number} -> " +
+            $"VeloCity {candidate.Stop.Id}");
+    }
+    else
+    {
+        reviewCount++;
+        Console.WriteLine(
+            $"REVIEW: MPK {match.Mpk.Number} -> " +
+            $"VeloCity {candidate.Stop.Id}");
+    }
+}
+
+unmatchedCount = mpkStops.Count - nearestMatches.Count;
+
+Console.WriteLine();
+Console.WriteLine($"Ready: {safeCount}");
+Console.WriteLine($"Review: {reviewCount}");
+Console.WriteLine($"Unmatched: {unmatchedCount}");
+
     return;
 }
 
@@ -343,6 +732,7 @@ foreach (var officialName in officialStops)
         );
     }
 }
+
 
 
 Console.WriteLine();

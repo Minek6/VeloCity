@@ -1,0 +1,27 @@
+{
+  "line": "6",
+  "timetableId": 86,
+  "matches": [
+    { "mpkNumber": "00013", "veloCityStopId": 273 },
+    { "mpkNumber": "00111", "veloCityStopId": 290 },
+    { "mpkNumber": "00121", "veloCityStopId": 222 },
+    { "mpkNumber": "00331", "veloCityStopId": 159 },
+    { "mpkNumber": "00362", "veloCityStopId": 9 },
+    { "mpkNumber": "00601", "veloCityStopId": 23 },
+    { "mpkNumber": "00602", "veloCityStopId": 266 },
+    { "mpkNumber": "00751", "veloCityStopId": 235 },
+    { "mpkNumber": "00761", "veloCityStopId": 178 },
+    { "mpkNumber": "00762", "veloCityStopId": 40 },
+    { "mpkNumber": "00771", "veloCityStopId": 234 },
+    { "mpkNumber": "00772", "veloCityStopId": 233 },
+    { "mpkNumber": "00782", "veloCityStopId": 131 },
+    { "mpkNumber": "00791", "veloCityStopId": 134 },
+    { "mpkNumber": "00792", "veloCityStopId": 55 },
+    { "mpkNumber": "01192", "veloCityStopId": 248 },
+    { "mpkNumber": "01682", "veloCityStopId": 33 },
+    { "mpkNumber": "01702", "veloCityStopId": 208 },
+    { "mpkNumber": "02041", "veloCityStopId": 333 },
+    { "mpkNumber": "02052", "veloCityStopId": 335 },
+    { "mpkNumber": "02101", "veloCityStopId": 177 }
+  ]
+}

@@ -336,6 +336,13 @@ namespace VeloCity.Api.Migrations
                     b.Property<int>("ExternalId")
                         .HasColumnType("integer");
 
+                    b.Property<int?>("ExternalMpkStopId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("ExternalMpkStopNumber")
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
+
                     b.Property<bool>("IsActive")
                         .HasColumnType("boolean");
 
@@ -363,6 +370,12 @@ namespace VeloCity.Api.Migrations
 
                     b.HasIndex("ExternalId")
                         .IsUnique();
+
+                    b.HasIndex("ExternalMpkStopId")
+                        .IsUnique()
+                        .HasFilter("\"ExternalMpkStopId\" IS NOT NULL");
+
+                    b.HasIndex("ExternalMpkStopNumber");
 
                     b.HasIndex("OsmType", "OsmId")
                         .IsUnique()

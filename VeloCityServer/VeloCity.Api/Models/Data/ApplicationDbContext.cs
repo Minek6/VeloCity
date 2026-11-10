@@ -57,6 +57,17 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
             })
             .IsUnique()
             .HasFilter("\"OsmId\" IS NOT NULL AND \"OsmType\" IS NOT NULL");
+
+            // Identyfikator przystanku w systemie MPK
+            entity.HasIndex(s => s.ExternalMpkStopId)
+                .IsUnique()
+                .HasFilter("\"ExternalMpkStopId\" IS NOT NULL");
+
+            // Oficjalny numer przystanku MPK, np. 00761
+            entity.Property(s => s.ExternalMpkStopNumber)
+                .HasMaxLength(20);
+
+            entity.HasIndex(s => s.ExternalMpkStopNumber);
         });
 
         modelBuilder.Entity<User>()
