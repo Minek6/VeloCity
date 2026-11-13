@@ -1,0 +1,53 @@
+
+{
+  "line": "6",
+  "timetableId": 86,
+  "matches": [
+    {
+      "mpkNumber": "00014",
+      "veloCityStopId": 289,
+      "status": "PENDING_REVIEW"
+    },
+    {
+      "mpkNumber": "00781",
+      "veloCityStopId": 130,
+      "status": "PENDING_REVIEW"
+    },
+    {
+      "mpkNumber": "00783",
+      "veloCityStopId": null,
+      "status": "UNRESOLVED"
+    },
+    {
+      "mpkNumber": "00802",
+      "veloCityStopId": null,
+      "status": "UNRESOLVED"
+    },
+    {
+      "mpkNumber": "01202",
+      "veloCityStopId": null,
+      "candidateStopIds": [249, 250],
+      "status": "AMBIGUOUS"
+    },
+    {
+      "mpkNumber": "01692",
+      "veloCityStopId": 53,
+      "status": "PENDING_REVIEW"
+    },
+    {
+      "mpkNumber": "02042",
+      "veloCityStopId": 334,
+      "status": "PENDING_REVIEW"
+    },
+    {
+      "mpkNumber": "02051",
+      "veloCityStopId": 336,
+      "status": "PENDING_REVIEW"
+    },
+    {
+      "mpkNumber": "02062",
+      "veloCityStopId": 73,
+      "status": "PENDING_REVIEW"
+    }
+  ]
+}

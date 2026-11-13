@@ -43,8 +43,60 @@ if (args.Length > 0 &&
         "line6.json",
         StringComparison.OrdinalIgnoreCase))
 {
-    var mpkStops = await MpkApiReader.ReadAsync(
-        Path.GetFullPath(args[0]));
+    var lineData = await MpkApiReader.ReadAsync(
+    Path.GetFullPath(args[0]));
+
+    var mpkStops = lineData.Stops;
+    var mpkVariants = lineData.Variants;
+
+    Console.WriteLine();
+Console.WriteLine("=== Route database validation ===");
+
+await RouteRepository.CheckRoutesAsync(lineData.LineName);
+
+    Console.WriteLine();
+Console.WriteLine("=== MPK line data validation ===");
+
+Console.WriteLine($"Line: {lineData.LineName}");
+Console.WriteLine($"Timetable ID: {lineData.TimetableId}");
+Console.WriteLine($"Stops: {mpkStops.Count}");
+Console.WriteLine($"Variants: {mpkVariants.Count}");
+
+var variantsWithRuns = mpkVariants
+    .Where(v => v.RunsCount > 0)
+    .ToList();
+
+Console.WriteLine($"Variants with runs: {variantsWithRuns.Count}");
+
+// Osobny tryb importowania wariantów tras (nie uruchamia importu przystanków).
+if (args.Contains("--routes") || args.Contains("--commit-routes"))
+{
+    bool commitRoutes = args.Contains("--commit-routes");
+    if (lineData.LineName != "6" || lineData.TimetableId != 86)
+        throw new InvalidOperationException("Ten etap obsługuje wyłącznie historyczny zestaw MPK: linia 6, rozkład 86.");
+
+    Console.WriteLine(commitRoutes
+        ? "=== ROUTES IMPORT: COMMIT ==="
+        : "=== ROUTES IMPORT: DRY-RUN ===");
+
+    await RouteRepository.ImportRoutesAsync(
+        lineData.LineName,
+        mpkVariants,
+        dryRun: !commitRoutes);
+
+    Console.WriteLine();
+    await RouteRepository.CheckRoutesAsync(lineData.LineName);
+    return;
+}
+
+foreach (var variant in variantsWithRuns)
+{
+    Console.WriteLine(
+        $"Variant {variant.Id} | " +
+        $"{variant.Name} | " +
+        $"Direction: {variant.Direction} | " +
+        $"Runs: {variant.RunsCount}");
+}
 
     Console.WriteLine();
     Console.WriteLine("=== MPK stops returned ===");
@@ -413,6 +465,187 @@ Console.WriteLine();
 Console.WriteLine($"Ready: {safeCount}");
 Console.WriteLine($"Review: {reviewCount}");
 Console.WriteLine($"Unmatched: {unmatchedCount}");
+
+    Console.WriteLine();
+Console.WriteLine("=== Route stop coverage ===");
+
+using var routeDocument = JsonDocument.Parse(
+    await File.ReadAllTextAsync(Path.GetFullPath(args[0])));
+
+var stopMappings =
+    await StopRepository.GetMpkStopMappingsAsync();
+
+var mappedNumbers = stopMappings.Keys.ToHashSet();
+
+Console.WriteLine(
+    $"MPK mappings loaded from database: {stopMappings.Count}");
+
+foreach (var variant in routeDocument.RootElement
+    .GetProperty("variants")
+    .EnumerateArray())
+{
+    var runs = variant.GetProperty("runs");
+
+    if (runs.GetArrayLength() == 0)
+        continue;
+
+    var variantId = variant.GetProperty("id").GetInt32();
+
+    var sequences = runs.EnumerateArray()
+        .Select(run => run.GetProperty("stops")
+            .EnumerateArray()
+            .Where(stop => stop.TryGetProperty("stop_order", out _))
+            .OrderBy(stop => stop.GetProperty("stop_order").GetInt32())
+            .Select(stop => stop.GetProperty("number").GetString() ?? "")
+            .ToArray())
+        .ToList();
+
+    var numbers = sequences
+        .SelectMany(sequence => sequence)
+        .Distinct()
+        .ToList();
+
+    var missing = numbers
+        .Where(number => !mappedNumbers.Contains(number))
+        .ToList();
+
+    var differentSequences = sequences
+        .Select(sequence => string.Join(",", sequence))
+        .Distinct()
+        .Count();
+
+    Console.WriteLine(
+        $"Variant {variantId} | " +
+        $"Runs: {runs.GetArrayLength()} | " +
+        $"Stops: {numbers.Count} | " +
+        $"Missing: {missing.Count} | " +
+        $"Sequences: {differentSequences}");
+
+    if (missing.Count > 0)
+    {
+        Console.WriteLine(
+            $"  Missing MPK numbers: {string.Join(", ", missing)}");
+    }
+}
+
+
+Console.WriteLine();
+Console.WriteLine("=== Route stops export ===");
+
+var routeStopsExport = routeDocument.RootElement
+    .GetProperty("variants")
+    .EnumerateArray()
+    .Where(v => v.GetProperty("runs").GetArrayLength() > 0)
+    .Select(variant =>
+    {
+        var firstRun = variant.GetProperty("runs")[0];
+
+        var stops = firstRun.GetProperty("stops")
+            .EnumerateArray()
+            .Where(s => s.TryGetProperty("stop_order", out _))
+            .OrderBy(s => s.GetProperty("stop_order").GetInt32())
+            .Select(s =>
+            {
+                var number = s.GetProperty("number").GetString() ?? "";
+
+                return new
+                {
+                    Sequence = s.GetProperty("stop_order").GetInt32(),
+                    MpkNumber = number,
+                    Name = s.GetProperty("name").GetString(),
+                    VeloCityStopId = stopMappings.TryGetValue(
+                        number, out var stopId)
+                        ? (int?)stopId
+                        : null
+                };
+            })
+            .ToList();
+
+        return new
+        {
+            ExternalVariantId = variant.GetProperty("id").GetInt32(),
+            Name = variant.GetProperty("name").GetString(),
+            Direction = variant.GetProperty("direction").GetInt32(),
+            Stops = stops
+        };
+    })
+    .ToList();
+
+var exportPath = Path.Combine(
+    "data", "route_stops_preview.json");
+
+await File.WriteAllTextAsync(
+    exportPath,
+    JsonSerializer.Serialize(
+        routeStopsExport,
+        new JsonSerializerOptions
+        {
+            WriteIndented = true
+        }));
+
+Console.WriteLine($"Exported variants: {routeStopsExport.Count}");
+Console.WriteLine(
+    $"Total stop positions: {routeStopsExport.Sum(v => v.Stops.Count)}");
+
+Console.WriteLine(
+    $"Unresolved positions: {routeStopsExport.Sum(v => v.Stops.Count(s => s.VeloCityStopId == null))}");
+
+Console.WriteLine($"Saved to: {exportPath}");
+Console.WriteLine("READ-ONLY: No database changes.");
+
+Console.WriteLine();
+Console.WriteLine("=== RouteStops import validation ===");
+
+var routeStopsJson = await File.ReadAllTextAsync(exportPath);
+
+var routeStopsData = JsonSerializer.Deserialize<
+    List<VeloCity.RouteImporter.Models.RouteStopsImport>>(
+        routeStopsJson,
+        new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        })
+    ?? throw new InvalidOperationException(
+        "Nie można odczytać danych RouteStops.");
+
+var completeRoutes = routeStopsData
+    .Where(r => r.Stops.Count > 0 &&
+                r.Stops.All(s => s.VeloCityStopId.HasValue))
+    .ToList();
+
+var incompleteRoutes = routeStopsData
+    .Except(completeRoutes)
+    .ToList();
+
+foreach (var incompleteRoute in incompleteRoutes)
+{
+    var missingNumbers = incompleteRoute.Stops
+        .Where(s => !s.VeloCityStopId.HasValue)
+        .Select(s => s.MpkNumber);
+
+    Console.WriteLine(
+        $"BLOCKED: Variant {incompleteRoute.ExternalVariantId} | " +
+        $"Missing: {string.Join(", ", missingNumbers)}");
+}
+
+Console.WriteLine();
+Console.WriteLine($"Complete routes: {completeRoutes.Count}");
+Console.WriteLine($"Incomplete routes: {incompleteRoutes.Count}");
+Console.WriteLine($"Total routes: {routeStopsData.Count}");
+
+    Console.WriteLine();
+Console.WriteLine("=== RouteStops import ===");
+
+await RouteStopRepository.ImportAsync(
+    routeStopsData,
+    dryRun: !args.Contains("--commit-route-stops"));
+
+Console.WriteLine();
+Console.WriteLine("=== ScheduledTrips import ===");
+
+await ScheduledTripRepository.ImportAsync(
+    args[0],
+    commit: args.Contains("--commit-schedules"));
 
     return;
 }

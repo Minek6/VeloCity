@@ -18,7 +18,8 @@ import { translateApiError } from '../utils/errorTranslator';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'PurchaseTicket'>;
 
-const PurchaseTicketScreen = ({ navigation }: Props) => {
+const PurchaseTicketScreen = ({navigation, route}: Props) => {
+  const selectedConnection = route.params?.connection;
   const [ticketTypes, setTicketTypes] = useState<TicketTypeDto[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [purchasingId, setPurchasingId] = useState<number | null>(null);
@@ -48,7 +49,18 @@ const PurchaseTicketScreen = ({ navigation }: Props) => {
         { 
           text: 'Kupuję', 
           style: 'default',
-          onPress: () => executePurchase({ ticketTypeId: ticket.id }) 
+          onPress: () =>
+            executePurchase({
+              ticketTypeId: ticket.id,
+              ...(selectedConnection
+                ? {
+                    scheduledTripId: selectedConnection.scheduledTripId,
+                    serviceDate: selectedConnection.serviceDate,
+                    startStopId: selectedConnection.fromStopId,
+                    endStopId: selectedConnection.toStopId,
+                  }
+                : {}),
+            })
         },
       ]
     );
@@ -111,6 +123,38 @@ const PurchaseTicketScreen = ({ navigation }: Props) => {
         <Text style={styles.headerTitle}>Wybierz bilet</Text>
         <View style={{ width: 40 }} />
       </View>
+
+      {selectedConnection && (
+        <View style={styles.connectionCard}>
+          <Text style={styles.connectionLabel}>
+            WYBRANE POŁĄCZENIE
+          </Text>
+
+          <Text style={styles.connectionLine}>
+            Linia {selectedConnection.lineNumber}
+          </Text>
+
+          <Text style={styles.connectionHours}>
+            {selectedConnection.departureTime}
+            {'  →  '}
+            {selectedConnection.arrivalTime}
+          </Text>
+
+          <Text style={styles.connectionRoute}>
+            {selectedConnection.fromStopName}
+            {'\n↓\n'}
+            {selectedConnection.toStopName}
+          </Text>
+
+          <Text style={styles.connectionDuration}>
+            Czas przejazdu: {selectedConnection.durationMinutes} min
+          </Text>
+
+          <Text style={styles.demoNotice}>
+            Rozkład demonstracyjny · MPK 86
+          </Text>
+        </View>
+      )}
 
       {error && (
         <View style={styles.errorContainer}>
@@ -244,6 +288,48 @@ const styles = StyleSheet.create({
     color: '#666',
     marginTop: 40,
     fontSize: 16,
+  },
+  connectionCard: {
+    backgroundColor: '#EBF1F8',
+    padding: 16,
+    margin: 16,
+    marginBottom: 0,
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: '#CAD9EA',
+  },
+  connectionLabel: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: '#64748B',
+    marginBottom: 8,
+  },
+  connectionLine: {
+    fontSize: 17,
+    fontWeight: '700',
+    color: '#346699',
+  },
+  connectionHours: {
+    fontSize: 24,
+    fontWeight: '800',
+    color: '#172033',
+    marginVertical: 8,
+  },
+  connectionRoute: {
+    fontSize: 14,
+    color: '#334155',
+    lineHeight: 22,
+  },
+  connectionDuration: {
+    fontSize: 13,
+    color: '#64748B',
+    marginTop: 8,
+  },
+  demoNotice: {
+    fontSize: 12,
+    color: '#64748B',
+    marginTop: 10,
+    fontStyle: 'italic',
   },
 });
 

@@ -1,3 +1,4 @@
+
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using VeloCity.Api.Common.Exceptions;
@@ -9,32 +10,26 @@ namespace VeloCity.Api.Features.Tickets.Queries.GetMyActiveTickets;
 
 public class GetMyActiveTicketsHandler(
     ApplicationDbContext context,
-    IUserContext userContext) : IRequestHandler<GetMyActiveTicketsQuery, List<TicketDto>>
+    IUserContext userContext)
+    : IRequestHandler<GetMyActiveTicketsQuery, List<TicketDto>>
 {
-    public async Task<List<TicketDto>> Handle(GetMyActiveTicketsQuery request, CancellationToken ct)
+    public async Task<List<TicketDto>> Handle(
+        GetMyActiveTicketsQuery request,
+        CancellationToken ct)
     {
         var userId = userContext.Id
-                     ?? throw new AppException("Unauthorized access.", 401);
+            ?? throw new AppException("Unauthorized access.", 401);
 
         var now = DateTime.UtcNow;
 
         return await context.Tickets
             .AsNoTracking()
-            .Include(t => t.TicketType)
             .Where(t =>
                 t.UserId == userId &&
-                t.IsValidated == true &&
+                t.IsValidated &&
                 (t.ValidTo == null || t.ValidTo > now))
             .OrderBy(t => t.ValidTo)
-            .Select(t => new TicketDto(
-                t.Id,
-                t.TicketType.Name,
-                t.Price,
-                t.PurchasedAt,
-                t.ValidFrom,
-                t.ValidTo,
-                t.VehicleId,
-                t.IsValidated))
+            .ToTicketDto(context)
             .ToListAsync(ct);
     }
 }

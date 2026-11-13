@@ -13,6 +13,8 @@ public class Ticket
     public int UserId { get; set; }
     public int? StartStopId { get; set; }
     public int? EndStopId { get; set; }
+    public int? ScheduledTripId { get; set; }
+    public DateOnly? ServiceDate { get; set; }
     public virtual User User { get; set; } = null!;
     public int? VehicleId { get; set; }
     public virtual Vehicle Vehicle { get; set; } = null!;

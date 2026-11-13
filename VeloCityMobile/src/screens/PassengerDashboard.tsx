@@ -10,6 +10,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/types';
 import { Vehicle } from '../types';
 import QRCode from 'react-native-qrcode-svg';
+import TicketConnectionDetails from '../components/TicketConnectionDetails';
 
 interface PassengerDashboardProps {
   navigation: NativeStackNavigationProp<RootStackParamList>; 
@@ -149,6 +150,8 @@ const handleActivateTicket = async () => {
                     {ticket.ticketTypeName}
                   </Text>
 
+                  <TicketConnectionDetails ticket={ticket} />
+
                   <Text style={styles.ticketTime}>
                     Status: Nieaktywowany
                   </Text>
@@ -191,6 +194,8 @@ const handleActivateTicket = async () => {
                   <Text style={styles.ticketLine}>
                     {ticket.ticketTypeName}
                   </Text>
+
+                  <TicketConnectionDetails ticket={ticket} />
 
                   {ticket.vehicleId !== null && ticket.vehicleId !== undefined ? (
                     <Text style={styles.ticketType}>

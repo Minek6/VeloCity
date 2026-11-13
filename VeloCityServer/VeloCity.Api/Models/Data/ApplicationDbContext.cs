@@ -193,6 +193,19 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
         modelBuilder.Entity<Payment>()
             .HasCheckConstraint("CK_Payment_PaymentMethod", "\"PaymentMethod\" IN (1, 2, 3)");
 
+        modelBuilder.Entity<Ticket>(entity =>
+        {
+            entity.HasOne<ScheduledTrip>()
+                .WithMany()
+                .HasForeignKey(t => t.ScheduledTripId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasIndex(t => t.ScheduledTripId);
+
+            entity.Property(t => t.ServiceDate)
+                .HasColumnType("date");
+        });
+
         SeedUserData(modelBuilder);
         SeedEconomicData(modelBuilder);
         SeedVehiclesData(modelBuilder);

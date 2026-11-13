@@ -11,6 +11,7 @@ using VeloCity.Api.Infrastructure.Behaviors;
 using VeloCity.Api.Infrastructure.Identity;
 using VeloCity.Api.Infrastructure.Middleware;
 using VeloCity.Api.Models.Data;
+using VeloCity.Api.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -126,5 +127,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+DemoConnectionEndpoints.Map(app);
 
 app.Run();

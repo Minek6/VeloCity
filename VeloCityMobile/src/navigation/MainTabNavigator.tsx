@@ -1,13 +1,35 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon, { IoniconsIconName } from '@react-native-vector-icons/ionicons';
+import { useNavigation } from '@react-navigation/native';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import type { RootStackParamList } from './types';
+import { getBaseUrl } from '../api/config';
 import DashboardScreen from '../screens/DashboardScreen';
 import RoutesScreen from '../screens/RoutesScreen';
 import WalletTabNavigator from '../navigation/WalletTabNavigator'; 
 import ProfileScreen from '../screens/ProfileScreen';
 import MapScreen from '../screens/MapScreen';
+import ConnectionSearchScreen from '../screens/ConnectionSearchScreen';
 
 const Tab = createBottomTabNavigator();
+
+type RootNavigation = NativeStackNavigationProp<RootStackParamList>;
+
+function ConnectionSearchTab(): React.JSX.Element {
+  const navigation = useNavigation<RootNavigation>();
+
+  return (
+    <ConnectionSearchScreen
+      apiBaseUrl={getBaseUrl()}
+      onSelectConnection={(connection) => {
+        navigation.navigate('PurchaseTicket', {
+          connection,
+        });
+      }}
+    />
+  );
+}
 
 const MainTabNavigator = () => {
   return (
@@ -36,8 +58,8 @@ const MainTabNavigator = () => {
       />
       <Tab.Screen
         name="Routes"
-        component={RoutesScreen}
-        options={{ title: 'Trasy' }}
+        component={ConnectionSearchTab}
+        options={{ title: 'Połączenia' }}
       />
           
       <Tab.Screen

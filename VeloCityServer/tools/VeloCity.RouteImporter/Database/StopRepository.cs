@@ -196,4 +196,49 @@ public static class StopRepository
             throw;
         }
     }
+
+
+public static async Task<Dictionary<string, int>>
+    GetMpkStopMappingsAsync()
+{
+    var connectionString =
+        Environment.GetEnvironmentVariable("VELOCITY_DB_CONNECTION")
+        ?? throw new InvalidOperationException(
+            "Brak zmiennej VELOCITY_DB_CONNECTION.");
+
+    await using var connection =
+        new NpgsqlConnection(connectionString);
+
+    await connection.OpenAsync();
+
+    const string sql = """
+        SELECT "Id", "ExternalMpkStopNumber"
+        FROM "Stops"
+        WHERE "ExternalMpkStopNumber" IS NOT NULL
+          AND "ExternalMpkStopId" IS NOT NULL;
+        """;
+
+    await using var command =
+        new NpgsqlCommand(sql, connection);
+
+    await using var reader =
+        await command.ExecuteReaderAsync();
+
+    var mappings = new Dictionary<string, int>();
+
+    while (await reader.ReadAsync())
+    {
+        var stopId = reader.GetInt32(0);
+        var mpkNumber = reader.GetString(1);
+
+        if (!mappings.TryAdd(mpkNumber, stopId))
+        {
+            throw new InvalidOperationException(
+                $"Duplikat numeru MPK: {mpkNumber}");
+        }
+    }
+
+    return mappings;
+}
+
 }

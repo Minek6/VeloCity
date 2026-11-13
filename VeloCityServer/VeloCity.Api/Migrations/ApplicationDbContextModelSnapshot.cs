@@ -404,6 +404,12 @@ namespace VeloCity.Api.Migrations
                     b.Property<DateTime>("PurchasedAt")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<int?>("ScheduledTripId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateOnly?>("ServiceDate")
+                        .HasColumnType("date");
+
                     b.Property<int?>("StartStopId")
                         .HasColumnType("integer");
 
@@ -423,6 +429,8 @@ namespace VeloCity.Api.Migrations
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ScheduledTripId");
 
                     b.HasIndex("TicketTypeId");
 
@@ -1057,6 +1065,11 @@ namespace VeloCity.Api.Migrations
 
             modelBuilder.Entity("VeloCity.Api.Models.Ticket", b =>
                 {
+                    b.HasOne("VeloCity.Api.Models.ScheduledTrip", null)
+                        .WithMany()
+                        .HasForeignKey("ScheduledTripId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
                     b.HasOne("VeloCity.Api.Models.TicketType", "TicketType")
                         .WithMany()
                         .HasForeignKey("TicketTypeId")

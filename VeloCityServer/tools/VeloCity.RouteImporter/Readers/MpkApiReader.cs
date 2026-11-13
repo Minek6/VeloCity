@@ -6,12 +6,12 @@ namespace VeloCity.RouteImporter.Readers;
 
 public static class MpkApiReader
 {
-    public static async Task<List<MpkStop>> ReadAsync(string filePath)
+    public static async Task<MpkLineData> ReadAsync(string filePath)
     {
         if (!File.Exists(filePath))
         {
             Console.WriteLine($"ERROR: File not found: {filePath}");
-            return new List<MpkStop>();
+            return new MpkLineData();
         }
 
         using var document = JsonDocument.Parse(
@@ -24,6 +24,15 @@ public static class MpkApiReader
 
         var variants = root.GetProperty("variants")
             .EnumerateArray()
+            .ToList();
+
+        var mpkVariants = variants
+            .Select(v => new MpkRouteVariant(
+                v.GetProperty("id").GetInt32(),
+                v.GetProperty("name").GetString() ?? "",
+                v.GetProperty("direction").GetInt32(),
+                v.GetProperty("runs").GetArrayLength()
+            ))
             .ToList();
 
         Console.WriteLine("=== MPK API Reader ===");
@@ -331,8 +340,58 @@ foreach (var number in new[] { "00781", "00782", "00783" })
     Console.WriteLine($"Longitude: {stop.GetProperty("longitude")}");
 }
 
+    Console.WriteLine();
+Console.WriteLine("=== Unresolved MPK stop details ===");
+
+var unresolvedNumbers = new HashSet<string>
+{
+    "00783", "00802", "01202",
+    "02042", "02051", "02062"
+};
+
+foreach (var stop in uniqueStops
+    .Where(s => unresolvedNumbers.Contains(
+        s.GetProperty("number").GetString() ?? "")))
+{
+    Console.WriteLine();
+    Console.WriteLine(stop.GetRawText());
+}
+
+    Console.WriteLine();
+Console.WriteLine("=== MPK route directions validation ===");
+
+foreach (var variantId in new[] { 43708, 43709 })
+{
+    var variant = variants.Single(v =>
+        v.GetProperty("id").GetInt32() == variantId);
+
+    var run = variant.GetProperty("runs")[0];
+
+    Console.WriteLine();
+    Console.WriteLine(
+        $"Variant {variantId} | " +
+        $"Direction: {variant.GetProperty("direction").GetInt32()}");
+
+    foreach (var stop in run.GetProperty("stops")
+        .EnumerateArray()
+        .Where(s => s.TryGetProperty("stop_order", out _))
+        .OrderBy(s => s.GetProperty("stop_order").GetInt32()))
+    {
+        Console.WriteLine(
+            $"{stop.GetProperty("stop_order").GetInt32()}. " +
+            $"MPK {stop.GetProperty("number").GetString()} | " +
+            $"{stop.GetProperty("name").GetString()}");
+    }
+}
+
         Console.WriteLine("READ-ONLY: No database changes.");
 
-        return mpkStops;
+        return new MpkLineData
+        {
+            LineName = lineName ?? "",
+            TimetableId = timetableId,
+            Stops = mpkStops,
+            Variants = mpkVariants
+        };
     }
 }

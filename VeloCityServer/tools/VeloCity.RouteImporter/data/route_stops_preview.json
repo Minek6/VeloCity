@@ -1,0 +1,324 @@
+[
+  {
+    "ExternalVariantId": 43702,
+    "Name": "29 Listopada",
+    "Direction": 0,
+    "Stops": [
+      {
+        "Sequence": 0,
+        "MpkNumber": "01682",
+        "Name": "Sucharskiego - Westerplatte",
+        "VeloCityStopId": 33
+      },
+      {
+        "Sequence": 1,
+        "MpkNumber": "01692",
+        "Name": "Sucharskiego - Batalion\u00F3w Ch\u0142opskich",
+        "VeloCityStopId": 53
+      },
+      {
+        "Sequence": 2,
+        "MpkNumber": "01702",
+        "Name": "Sucharskiego - Barska",
+        "VeloCityStopId": 208
+      },
+      {
+        "Sequence": 3,
+        "MpkNumber": "01202",
+        "Name": "Barska - Szko\u0142a",
+        "VeloCityStopId": 249
+      },
+      {
+        "Sequence": 4,
+        "MpkNumber": "01192",
+        "Name": "Barska - Lwowska",
+        "VeloCityStopId": 248
+      },
+      {
+        "Sequence": 5,
+        "MpkNumber": "00331",
+        "Name": "Kili\u0144skiego - Stadion",
+        "VeloCityStopId": 159
+      },
+      {
+        "Sequence": 6,
+        "MpkNumber": "00362",
+        "Name": "Rejtana",
+        "VeloCityStopId": 9
+      },
+      {
+        "Sequence": 7,
+        "MpkNumber": "02101",
+        "Name": "Rejtana-\u015Aniadeckich",
+        "VeloCityStopId": 177
+      },
+      {
+        "Sequence": 8,
+        "MpkNumber": "00111",
+        "Name": "Nawojowska - Os. Millenium",
+        "VeloCityStopId": 290
+      },
+      {
+        "Sequence": 9,
+        "MpkNumber": "00121",
+        "Name": "Nawojowska - Kolejowa",
+        "VeloCityStopId": 222
+      },
+      {
+        "Sequence": 10,
+        "MpkNumber": "00013",
+        "Name": "Dw. Aut. MPK st. 3",
+        "VeloCityStopId": 273
+      },
+      {
+        "Sequence": 11,
+        "MpkNumber": "00751",
+        "Name": "Wyspia\u0144skiego - Zielona",
+        "VeloCityStopId": 235
+      },
+      {
+        "Sequence": 12,
+        "MpkNumber": "00761",
+        "Name": "Wyspia\u0144skiego - MPK",
+        "VeloCityStopId": 178
+      },
+      {
+        "Sequence": 13,
+        "MpkNumber": "00771",
+        "Name": "Wyspia\u0144skiego - Nowa Kolonia",
+        "VeloCityStopId": 234
+      },
+      {
+        "Sequence": 14,
+        "MpkNumber": "00783",
+        "Name": "29 Listopada",
+        "VeloCityStopId": 374
+      }
+    ]
+  },
+  {
+    "ExternalVariantId": 43707,
+    "Name": "Wyspia\u0144skiego z Sucharskiego",
+    "Direction": 0,
+    "Stops": [
+      {
+        "Sequence": 0,
+        "MpkNumber": "01682",
+        "Name": "Sucharskiego - Westerplatte",
+        "VeloCityStopId": 33
+      },
+      {
+        "Sequence": 1,
+        "MpkNumber": "01692",
+        "Name": "Sucharskiego - Batalion\u00F3w Ch\u0142opskich",
+        "VeloCityStopId": 53
+      },
+      {
+        "Sequence": 2,
+        "MpkNumber": "01702",
+        "Name": "Sucharskiego - Barska",
+        "VeloCityStopId": 208
+      },
+      {
+        "Sequence": 3,
+        "MpkNumber": "01202",
+        "Name": "Barska - Szko\u0142a",
+        "VeloCityStopId": 249
+      },
+      {
+        "Sequence": 4,
+        "MpkNumber": "01192",
+        "Name": "Barska - Lwowska",
+        "VeloCityStopId": 248
+      },
+      {
+        "Sequence": 5,
+        "MpkNumber": "00331",
+        "Name": "Kili\u0144skiego - Stadion",
+        "VeloCityStopId": 159
+      },
+      {
+        "Sequence": 6,
+        "MpkNumber": "00362",
+        "Name": "Rejtana",
+        "VeloCityStopId": 9
+      },
+      {
+        "Sequence": 7,
+        "MpkNumber": "02101",
+        "Name": "Rejtana-\u015Aniadeckich",
+        "VeloCityStopId": 177
+      },
+      {
+        "Sequence": 8,
+        "MpkNumber": "00111",
+        "Name": "Nawojowska - Os. Millenium",
+        "VeloCityStopId": 290
+      },
+      {
+        "Sequence": 9,
+        "MpkNumber": "00121",
+        "Name": "Nawojowska - Kolejowa",
+        "VeloCityStopId": 222
+      },
+      {
+        "Sequence": 10,
+        "MpkNumber": "00013",
+        "Name": "Dw. Aut. MPK st. 3",
+        "VeloCityStopId": 273
+      },
+      {
+        "Sequence": 11,
+        "MpkNumber": "00601",
+        "Name": "Nawojowska - Traugutta",
+        "VeloCityStopId": 23
+      },
+      {
+        "Sequence": 12,
+        "MpkNumber": "00792",
+        "Name": "29 Listopada - Szko\u0142a",
+        "VeloCityStopId": 55
+      },
+      {
+        "Sequence": 13,
+        "MpkNumber": "00782",
+        "Name": "29 Listopada",
+        "VeloCityStopId": 131
+      },
+      {
+        "Sequence": 14,
+        "MpkNumber": "00772",
+        "Name": "Wyspia\u0144skiego - Nowa Kolonia",
+        "VeloCityStopId": 233
+      },
+      {
+        "Sequence": 15,
+        "MpkNumber": "00762",
+        "Name": "Wyspia\u0144skiego - MPK",
+        "VeloCityStopId": 40
+      }
+    ]
+  },
+  {
+    "ExternalVariantId": 43708,
+    "Name": "6/0T Dworzec MPK p: 29 Listopada os",
+    "Direction": 1,
+    "Stops": [
+      {
+        "Sequence": 0,
+        "MpkNumber": "00761",
+        "Name": "Wyspia\u0144skiego - MPK",
+        "VeloCityStopId": 178
+      },
+      {
+        "Sequence": 1,
+        "MpkNumber": "00771",
+        "Name": "Wyspia\u0144skiego - Nowa Kolonia",
+        "VeloCityStopId": 234
+      },
+      {
+        "Sequence": 2,
+        "MpkNumber": "00781",
+        "Name": "29 Listopada",
+        "VeloCityStopId": 130
+      },
+      {
+        "Sequence": 3,
+        "MpkNumber": "02062",
+        "Name": "29 Listopada - Kusoci\u0144skiego ",
+        "VeloCityStopId": 73
+      },
+      {
+        "Sequence": 4,
+        "MpkNumber": "02052",
+        "Name": "29 Listopada - Osiedle",
+        "VeloCityStopId": 335
+      },
+      {
+        "Sequence": 5,
+        "MpkNumber": "02042",
+        "Name": "29 Listopada - Przychodnia",
+        "VeloCityStopId": 334
+      },
+      {
+        "Sequence": 6,
+        "MpkNumber": "00791",
+        "Name": "29 Listopada - Szko\u0142a",
+        "VeloCityStopId": 134
+      },
+      {
+        "Sequence": 7,
+        "MpkNumber": "00602",
+        "Name": "Nawojowska - Traugutta",
+        "VeloCityStopId": 266
+      },
+      {
+        "Sequence": 8,
+        "MpkNumber": "00014",
+        "Name": "Dw. Aut. MPK przyst. ko\u0144cowy",
+        "VeloCityStopId": 289
+      }
+    ]
+  },
+  {
+    "ExternalVariantId": 43709,
+    "Name": "6/0P Wyspia\u0144skiego p: 29 Listopada os",
+    "Direction": 0,
+    "Stops": [
+      {
+        "Sequence": 0,
+        "MpkNumber": "00013",
+        "Name": "Dw. Aut. MPK st. 3",
+        "VeloCityStopId": 273
+      },
+      {
+        "Sequence": 1,
+        "MpkNumber": "00601",
+        "Name": "Nawojowska - Traugutta",
+        "VeloCityStopId": 23
+      },
+      {
+        "Sequence": 2,
+        "MpkNumber": "00792",
+        "Name": "29 Listopada - Szko\u0142a",
+        "VeloCityStopId": 55
+      },
+      {
+        "Sequence": 3,
+        "MpkNumber": "02041",
+        "Name": "29 Listopada - Przychodnia",
+        "VeloCityStopId": 333
+      },
+      {
+        "Sequence": 4,
+        "MpkNumber": "02051",
+        "Name": "29 Listopada - Osiedle",
+        "VeloCityStopId": 336
+      },
+      {
+        "Sequence": 5,
+        "MpkNumber": "00802",
+        "Name": "Kusoci\u0144skiego",
+        "VeloCityStopId": 375
+      },
+      {
+        "Sequence": 6,
+        "MpkNumber": "00782",
+        "Name": "29 Listopada",
+        "VeloCityStopId": 131
+      },
+      {
+        "Sequence": 7,
+        "MpkNumber": "00772",
+        "Name": "Wyspia\u0144skiego - Nowa Kolonia",
+        "VeloCityStopId": 233
+      },
+      {
+        "Sequence": 8,
+        "MpkNumber": "00762",
+        "Name": "Wyspia\u0144skiego - MPK",
+        "VeloCityStopId": 40
+      }
+    ]
+  }
+]

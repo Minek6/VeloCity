@@ -7,6 +7,16 @@ export interface TicketDto {
   validTo: string | null;
   vehicleId: number | null;
   isValidated: boolean;
+  scheduledTripId?: number | null;
+  externalRunId?: number | null;
+  serviceDate?: string | null;
+  startStopId?: number | null;
+  startStopName?: string | null;
+  endStopId?: number | null;
+  endStopName?: string | null;
+  lineNumber?: string | null;
+  departureTime?: string | null;
+  arrivalTime?: string | null;
 }
 
 export interface TicketTypeDto {
@@ -19,6 +29,10 @@ export interface TicketTypeDto {
 
 export interface PurchaseTicketCommand {
   ticketTypeId: number;
+  scheduledTripId?: number;
+  serviceDate?: string;
+  startStopId?: number;
+  endStopId?: number;
 }
 
 export interface ValidateTicketCommand {

@@ -1,6 +1,6 @@
 import { Platform } from 'react-native';
 
-const getBaseUrl = (): string => {
+export const getBaseUrl = (): string => {
   if (__DEV__) {
     // Development
     if (Platform.OS === 'android') {
