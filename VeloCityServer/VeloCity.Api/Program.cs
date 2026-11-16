@@ -7,6 +7,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using VeloCity.Api.Common.Interfaces;
 using VeloCity.Api.Common.Services.Currency;
+using VeloCity.Api.Common.Services.Qr;
 using VeloCity.Api.Infrastructure.Behaviors;
 using VeloCity.Api.Infrastructure.Identity;
 using VeloCity.Api.Infrastructure.Middleware;
@@ -110,6 +111,7 @@ builder.Services.AddProblemDetails();
 
 builder.Services.AddScoped<ICurrencyService, CurrencyService>();
 builder.Services.AddHttpClient<ICurrencyService, CurrencyService>();
+builder.Services.AddSingleton<TicketQrService>();
 
 WebApplication app = builder.Build();
 

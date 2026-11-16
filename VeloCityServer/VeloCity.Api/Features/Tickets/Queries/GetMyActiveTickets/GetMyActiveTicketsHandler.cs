@@ -27,7 +27,11 @@ public class GetMyActiveTicketsHandler(
             .Where(t =>
                 t.UserId == userId &&
                 t.IsValidated &&
-                (t.ValidTo == null || t.ValidTo > now))
+                t.ValidFrom != null && 
+                t.ValidFrom <= now &&
+                t.ValidTo != null && 
+                t.ValidTo > now
+                )
             .OrderBy(t => t.ValidTo)
             .ToTicketDto(context)
             .ToListAsync(ct);

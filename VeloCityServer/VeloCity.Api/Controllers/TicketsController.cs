@@ -14,7 +14,12 @@ using VeloCity.Api.Features.Tickets.Queries.GetMyActiveTickets;
 using VeloCity.Api.Features.Tickets.Queries.GetMyTicketsHistory;
 using VeloCity.Api.Features.Tickets.Queries.GetTicketType;
 using VeloCity.Api.Features.Tickets.Queries.VerifyTicket;
+using VeloCity.Api.Common.Services.Qr;
 using VeloCity.Api.Models.Enums;
+using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
+using VeloCity.Api.Common.Services;
+using VeloCity.Api.Models.Data;
 
 namespace VeloCity.Api.Controllers;
 
@@ -151,5 +156,119 @@ public class TicketsController(
         var response = await mediator.Send(query);
         return Ok(response);
     }
+
+
+    [Authorize]
+    [HttpGet("{ticketId:int}/qr")]
+    public async Task<IActionResult> GetTicketQr(
+        int ticketId,
+        [FromServices] ApplicationDbContext context,
+        [FromServices] TicketQrService qrService,
+        CancellationToken ct)
+    {
+        if (!int.TryParse(
+            User.FindFirstValue(ClaimTypes.NameIdentifier),
+            out var userId))
+        {
+            return Unauthorized();
+        }
+
+        var now = DateTime.UtcNow;
+
+        var ticket = await context.Tickets
+            .AsNoTracking()
+            .FirstOrDefaultAsync(t =>
+                t.Id == ticketId &&
+                t.UserId == userId, ct);
+
+        if (ticket is null)
+            return NotFound();
+
+        if (!ticket.IsValidated ||
+            ticket.ValidFrom is null ||
+            ticket.ValidFrom > now ||
+            ticket.ValidTo is null ||
+            ticket.ValidTo <= now)
+        {
+            return BadRequest(new
+            {
+                message = "Ticket is not currently valid."
+            });
+        }
+
+        return Ok(new
+        {
+            token = qrService.Generate(ticket.Id)
+        });
+    }
+
+
+
+public record VerifyQrRequest(string Token);
+
+    [Authorize(Roles = "Admin,Controller,Driver")]
+    [HttpPost("verify-qr")]
+    public async Task<IActionResult> VerifyQr(
+        [FromBody] VerifyQrRequest request,
+        [FromServices] ApplicationDbContext context,
+        [FromServices] TicketQrService qrService,
+        CancellationToken ct)
+    {
+        if (request is null ||
+            !qrService.TryVerify(request.Token, out var ticketId))
+        {
+            return Ok(new
+            {
+                isValid = false,
+                status = "InvalidQr"
+            });
+        }
+
+        var ticket = await context.Tickets
+            .AsNoTracking()
+            .FirstOrDefaultAsync(t => t.Id == ticketId, ct);
+
+        if (ticket is null)
+        {
+            return Ok(new
+            {
+                isValid = false,
+                status = "NotFound"
+            });
+        }
+
+        var now = DateTime.UtcNow;
+
+        if (!ticket.IsValidated ||
+            ticket.ValidFrom is null)
+        {
+            return Ok(new
+            {
+                isValid = false,
+                status = "NotActivated"
+            });
+        }
+
+        if (ticket.ValidFrom > now ||
+            ticket.ValidTo is null ||
+            ticket.ValidTo <= now)
+        {
+            return Ok(new
+            {
+                isValid = false,
+                status = "Expired"
+            });
+        }
+
+        return Ok(new
+        {
+            isValid = true,
+            status = "Valid",
+            ticketId = ticket.Id,
+            validFrom = ticket.ValidFrom,
+            validTo = ticket.ValidTo
+        });
+    }
+
     #endregion
 }

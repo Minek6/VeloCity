@@ -22,6 +22,7 @@ import type {
   PaginatedList, 
   TicketVerificationResponse,
   MapStopDto,
+  VerifyQrResponse
 } from '../types';
 
 class ApiService {
@@ -204,6 +205,22 @@ class ApiService {
   async deleteTicket(id: number): Promise<void> {
     return await this.request<void>(`/tickets/types/${id}`, { method: 'DELETE' });
   }
+
+  async getTicketQr(ticketId: number): Promise<{ token: string }> {
+    return await this.request<{ token: string }>(
+      `/tickets/${ticketId}/qr`
+    );
+  }
+
+async verifyTicketQr(token: string): Promise<VerifyQrResponse> {
+  return await this.request<VerifyQrResponse>(
+    '/tickets/verify-qr',
+    {
+      method: 'POST',
+      body: JSON.stringify({ token }),
+    }
+  );
+}
 
   // --- POJAZDY ---
   async getVehicles(): Promise<Vehicle[]> {

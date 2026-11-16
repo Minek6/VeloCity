@@ -27,6 +27,7 @@ const PassengerDashboard = ({ navigation }: PassengerDashboardProps) => {
   const [selectedVehicleId, setSelectedVehicleId] = useState<number | null>(null);
   const [showVehiclePicker, setShowVehiclePicker] = useState(false);
   const [isActivating, setIsActivating] = useState(false);
+  const [qrTokens, setQrTokens] = useState<Record<number, string>>({});
 
   const isFocused = useIsFocused();
 
@@ -56,6 +57,71 @@ const PassengerDashboard = ({ navigation }: PassengerDashboardProps) => {
 
     if(isFocused) fetchDashboardData();
   }, [isFocused]);
+
+
+useEffect(() => {
+  if (!isFocused || activeTicket.length === 0) {
+    setQrTokens({});
+    return;
+  }
+
+  let cancelled = false;
+
+  const refreshQrTokens = async () => {
+    const now = Date.now();
+
+    const validTickets = activeTicket.filter(ticket =>
+      ticket.isValidated &&
+      ticket.validFrom &&
+      ticket.validTo &&
+      new Date(ticket.validFrom).getTime() <= now &&
+      new Date(ticket.validTo).getTime() > now
+    );
+
+    const results = await Promise.all(
+      validTickets.map(async ticket => {
+        try {
+          const response = await apiService.getTicketQr(ticket.id);
+
+          return {
+            id: ticket.id,
+            token: response.token,
+          };
+        } catch (error) {
+          console.error(
+            `Błąd pobierania QR dla biletu ${ticket.id}:`,
+            error
+          );
+          return null;
+        }
+      })
+    );
+
+    if (cancelled) return;
+
+    const tokens: Record<number, string> = {};
+
+    results.forEach(result => {
+      if (result) {
+        tokens[result.id] = result.token;
+      }
+    });
+
+    setQrTokens(tokens);
+  };
+
+  void refreshQrTokens();
+
+  const interval = setInterval(() => {
+    void refreshQrTokens();
+  }, 40000);
+
+  return () => {
+    cancelled = true;
+    clearInterval(interval);
+  };
+}, [isFocused, activeTicket]);
+
 
 const handleActivateTicket = async () => {
   if (selectedTicketId === null || selectedVehicleId === null) {
@@ -208,17 +274,40 @@ const handleActivateTicket = async () => {
                   )}
 
                   {ticket.isValidated ? (
-                    <View>
-                      <Text style={styles.ticketTime}>
-                        Status: Bilet aktywowany
-                      </Text>
+                  <View>
+                    <Text style={styles.ticketTime}>
+                      Status: Bilet aktywowany
+                    </Text>
 
-                      <Text style={styles.ticketTime}>
-                        {ticket.validTo
-                          ? `Ważny do: ${new Date(ticket.validTo).toLocaleString('pl-PL')}`
-                          : 'Brak określonej daty końcowej'}
-                      </Text>
-                    </View>
+                    <Text style={styles.ticketTime}>
+                      Aktywowano:{' '}
+                      {ticket.validFrom
+                        ? new Date(ticket.validFrom).toLocaleString('pl-PL', {
+                        timeZone: 'Europe/Warsaw',
+                        day: '2-digit',
+                        month: '2-digit',
+                        year: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit',
+                      })
+                        : 'Brak danych'}
+                    </Text>
+
+                    <Text style={styles.ticketTime}>
+                      {ticket.validTo
+                        ? `Ważny do: ${new Date(ticket.validTo).toLocaleString('pl-PL', {
+                        timeZone: 'Europe/Warsaw',
+                        day: '2-digit',
+                        month: '2-digit',
+                        year: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit',
+                      })}`
+                        : 'Koniec ważności nieustalony'}
+                    </Text>
+                  </View>
                   ) : (
                     <View>
                       <Text style={styles.ticketTime}>
@@ -254,29 +343,48 @@ const handleActivateTicket = async () => {
                     )}
                   </View>
 
-                  <View style={{ alignItems: 'center', marginTop: 20, marginBottom: 20 }}>
-                    <Text
-                      style={{
-                        fontSize: 16,
-                        fontWeight: 'bold',
-                        marginBottom: 12,
-                        color: '#1A1C1E',
-                      }}
-                    >
-                      Kod QR biletu
-                    </Text>
+                  {ticket.isValidated &&
+                    ticket.validTo &&
+                    new Date(ticket.validTo).getTime() > Date.now() && (
+                      <View
+                        style={{
+                          alignItems: 'center',
+                          marginTop: 20,
+                          marginBottom: 20,
+                        }}>
+                        <Text
+                          style={{
+                            fontSize: 16,
+                            fontWeight: 'bold',
+                            marginBottom: 12,
+                            color: '#1A1C1E',
+                          }}>
+                          Kod QR biletu (demo)
+                        </Text>
 
-                    <QRCode
-                      value={`velocity:ticket:${ticket.id}`}
-                      size={180}
-                      backgroundColor="white"
-                      color="black"
-                    />
+                        {qrTokens[ticket.id] ? (
+                          <QRCode
+                            value={qrTokens[ticket.id]}
+                            size={180}
+                            backgroundColor="white"
+                            color="black"
+                          />
+                        ) : (
+                          <Text style={styles.ticketTime}>
+                            Kod QR niedostępny lub trwa jego odświeżanie.
+                          </Text>
+                        )}
 
-                    <Text style={{ marginTop: 10, fontSize: 12, color: '#666' }}>
-                      Pokaż kod kierowcy podczas kontroli
-                    </Text>
-                  </View>
+                        <Text
+                          style={{
+                            marginTop: 10,
+                            fontSize: 12,
+                            color: '#666',
+                          }}>
+                          Demonstracyjny kod — wymaga weryfikacji w systemie
+                        </Text>
+                      </View>
+                    )}
                 </View>
               ))
             ) : (

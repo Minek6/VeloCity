@@ -232,7 +232,7 @@ const DriverDashboard = ({ navigation }: any) => {
               style={styles.cameraPreview}
               
               scanBarcode={true}
-              onReadCode={(event) => {
+              onReadCode={async event => {
                 const qrValue = event.nativeEvent.codeStringValue;
 
                 if (!qrValue || isProcessingQr.current) {
@@ -242,19 +242,66 @@ const DriverDashboard = ({ navigation }: any) => {
                 isProcessingQr.current = true;
                 setIsScannerOpen(false);
 
-                Alert.alert(
-                  'Zeskanowano kod QR',
-                  `Odczytana wartość: ${qrValue}`,
-                  [
-                    {
+                try {
+                  const result = await apiService.verifyTicketQr(qrValue);
+
+                  if (result.isValid) {
+                    Alert.alert(
+                      '✅ Bilet ważny',
+                      `Numer biletu: ${result.ticketId}\n` +
+                      `Ważny od: ${
+                        result.validFrom
+                          ? new Date(result.validFrom).toLocaleString('pl-PL')
+                          : 'Brak danych'
+                      }\n` +
+                      `Ważny do: ${
+                        result.validTo
+                          ? new Date(result.validTo).toLocaleString('pl-PL')
+                          : 'Brak danych'
+                      }`,
+                      [{
+                        text: 'OK',
+                        onPress: () => {
+                          isProcessingQr.current = false;
+                        },
+                      }]
+                    );
+                  } else {
+                    const messages: Record<string, string> = {
+                      InvalidQr: 'Nieprawidłowy lub wygasły kod QR.',
+                      NotFound: 'Nie znaleziono biletu.',
+                      NotActivated: 'Bilet nie został aktywowany.',
+                      Expired: 'Okres ważności biletu zakończył się.',
+                    };
+
+                    Alert.alert(
+                      '❌ Bilet nieważny',
+                      messages[result.status] ??
+                        'Nie można potwierdzić ważności biletu.',
+                      [{
+                        text: 'OK',
+                        onPress: () => {
+                          isProcessingQr.current = false;
+                        },
+                      }]
+                    );
+                  }
+                } catch (error) {
+                  console.error('Błąd weryfikacji QR:', error);
+
+                  Alert.alert(
+                    'Błąd kontroli biletu',
+                    'Nie udało się połączyć z serwerem lub nie masz uprawnień do kontroli.',
+                    [{
                       text: 'OK',
                       onPress: () => {
                         isProcessingQr.current = false;
                       },
-                    },
-                  ],
-                );
+                    }]
+                  );
+                }
               }}
+
             />
 
             <TouchableOpacity

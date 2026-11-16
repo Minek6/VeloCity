@@ -71,6 +71,16 @@ const PurchaseTicketScreen = ({navigation, route}: Props) => {
     setPurchasingId(command.ticketTypeId);
     setError(null);
     try {
+      console.log(
+        '[PURCHASE] Selected connection:',
+        selectedConnection,
+      );
+
+      console.log(
+        '[PURCHASE] Request payload:',
+        JSON.stringify(command, null, 2),
+      );
+
       await apiService.purchaseTicket(command);
       
       Alert.alert(

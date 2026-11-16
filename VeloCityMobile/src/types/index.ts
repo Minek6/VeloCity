@@ -4,3 +4,4 @@ export * from './ticket';
 export * from './line';
 export * from './vehicle';
 export * from './map';
+export * from './ticketQr';
