@@ -4,9 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 using VeloCity.Api.Features.Vehicles.Commands.CreateVehicle;
 using VeloCity.Api.Features.Vehicles.Commands.DeleteVehicle;
 using VeloCity.Api.Features.Vehicles.Commands.UpdateVehicle;
+using VeloCity.Api.Features.Vehicles.Commands.ActivateVehicle;
 using VeloCity.Api.Features.Vehicles.DTOs;
 using VeloCity.Api.Features.Vehicles.Queries.GetVehicleById;
 using VeloCity.Api.Features.Vehicles.Queries.GetVehicles;
+using VeloCity.Api.Features.Vehicles.Queries.GetAllVehicles;
 using VeloCity.Api.Models.Enums;
 
 namespace VeloCity.Api.Controllers;
@@ -36,13 +38,27 @@ public class VehiclesController(IMediator mediator) : ControllerBase
         return Ok(vehicle);
     }
 
-    // ADMIN ONLY: get all vehicles
+    //get all active vehicles 
     [Authorize]
-    [HttpGet]
+    [HttpGet("active")]
     [ProducesResponseType(typeof(IEnumerable<VehicleDto>), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetAll()
     {
         var vehicles = await mediator.Send(new GetVehiclesQuery());
+        return Ok(vehicles);
+    }
+
+    // ADMIN ONLY: get all vehicles, including inactive
+    [Authorize(Roles = nameof(UserRole.Admin))]
+    [HttpGet("all")]
+    [ProducesResponseType(
+        typeof(IEnumerable<VehicleDto>),
+        StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetAllAdmin()
+    {
+        var vehicles = await mediator.Send(
+            new GetAllVehiclesQuery());
+
         return Ok(vehicles);
     }
 
@@ -69,6 +85,18 @@ public class VehiclesController(IMediator mediator) : ControllerBase
     public async Task<IActionResult> Delete(int id)
     {
         await mediator.Send(new DeleteVehicleCommand(id));
+        return NoContent();
+    }
+
+    // ADMIN ONLY: activate inactive vehicle
+    [Authorize(Roles = nameof(UserRole.Admin))]
+    [HttpPut("{id:int}/activate")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> Activate(int id)
+    {
+        await mediator.Send(new ActivateVehicleCommand(id));
         return NoContent();
     }
 }

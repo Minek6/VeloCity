@@ -5,6 +5,10 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Antiforgery;
 using VeloCity.Admin.Models;
+using VeloCity.Admin.Authentication;
+using Microsoft.Extensions.Caching.Memory;
+using VeloCity.Admin.Services;
+using VeloCity.Admin.ViewModels;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,6 +52,20 @@ builder.Services.AddAuthorization(options =>
 
 builder.Services.AddCascadingAuthenticationState();
 
+builder.Services.AddMemoryCache();
+builder.Services.AddSingleton<ITicketStore, MemoryTicketStore>();
+
+builder.Services
+    .AddOptions<CookieAuthenticationOptions>(
+        CookieAuthenticationDefaults.AuthenticationScheme)
+    .Configure<ITicketStore>((options, store) =>
+    {
+        options.SessionStore = store;
+    });
+
+builder.Services.AddScoped<VehiclesApiService>();
+builder.Services.AddScoped<VehiclesViewModel>();
+
 var app = builder.Build();
 
 
@@ -82,6 +100,16 @@ app.MapPost("/auth/logout", async (
     catch (AntiforgeryValidationException)
     {
         return Results.BadRequest("Invalid form token.");
+    }
+
+    var sessionId = http.User
+        .FindFirst("AdminSessionId")?.Value;
+
+    if (!string.IsNullOrEmpty(sessionId))
+    {
+        http.RequestServices
+            .GetRequiredService<IMemoryCache>()
+            .Remove($"admin-api-token:{sessionId}");
     }
 
     await http.SignOutAsync(
@@ -144,21 +172,50 @@ app.MapPost("/auth/login", async (
             return Results.Redirect("/login?error=2");
         }
 
+        var sessionId = Guid.NewGuid().ToString("N");
+
+        var cache = http.RequestServices
+            .GetRequiredService<IMemoryCache>();
+
+        cache.Set(
+            $"admin-api-token:{sessionId}",
+            login.Token,
+            TimeSpan.FromHours(2));
+
         var claims = new List<Claim>
         {
             new(ClaimTypes.Name, login.Name),
-            new(ClaimTypes.Role, login.Role)
+            new(ClaimTypes.Role, login.Role),
+            new("AdminSessionId", sessionId)
         };
 
         var identity = new ClaimsIdentity(
             claims,
             CookieAuthenticationDefaults.AuthenticationScheme);
 
+        
         var principal = new ClaimsPrincipal(identity);
+
+        var properties = new AuthenticationProperties
+        {
+            IsPersistent = false,
+            ExpiresUtc = DateTimeOffset.UtcNow.AddHours(2)
+        };
+
+        properties.StoreTokens(
+        [
+            new AuthenticationToken
+            {
+                Name = "access_token",
+                Value = login.Token
+            }
+        ]);
 
         await http.SignInAsync(
             CookieAuthenticationDefaults.AuthenticationScheme,
-            principal);
+            principal,
+            properties);
+
 
         return Results.Redirect("/");
     }
@@ -168,6 +225,49 @@ app.MapPost("/auth/login", async (
     }
 })
 .AllowAnonymous();
+
+
+app.MapGet("/admin-api/test", async (
+    HttpContext http,
+    IHttpClientFactory httpClientFactory) =>
+{
+    var token = await http.GetTokenAsync(
+        CookieAuthenticationDefaults.AuthenticationScheme,
+        "access_token");
+
+    if (string.IsNullOrWhiteSpace(token))
+    {
+        return Results.Unauthorized();
+    }
+
+    var client = httpClientFactory.CreateClient("VeloCityApi");
+
+    using var request = new HttpRequestMessage(
+        HttpMethod.Get,
+        "Users/profile");
+
+    request.Headers.Authorization =
+        new System.Net.Http.Headers.AuthenticationHeaderValue(
+            "Bearer",
+            token);
+
+    using var response = await client.SendAsync(request);
+
+    if (!response.IsSuccessStatusCode)
+    {
+        return Results.Problem(
+            "Nie udało się pobrać profilu z VeloCity.Api.",
+            statusCode: (int)response.StatusCode);
+    }
+
+    // Nie zwracamy tutaj pełnego profilu ani JWT.
+    return Results.Ok(new
+    {
+        success = true,
+        message = "VeloCity.Admin połączył się z VeloCity.Api."
+    });
+})
+.RequireAuthorization("AdminOnly");
 
 
 app.Run();

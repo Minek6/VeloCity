@@ -13,7 +13,7 @@ public class GetVehiclesHandler(
     {
         return await context.Vehicles
             .AsNoTracking()
-            .Where(v => v.IsActive)
+            .Where(v => v.IsActive) //ACTIVE VEHICLES ONLY
             .Select(v => new VehicleDto(
                 v.Id,
                 v.SideNumber,
