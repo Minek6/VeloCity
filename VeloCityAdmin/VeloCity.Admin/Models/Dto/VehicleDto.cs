@@ -1,4 +1,4 @@
-namespace VeloCity.Admin.Models;
+namespace VeloCity.Admin.Models.Dto;
 
 public sealed class VehicleDto
 {

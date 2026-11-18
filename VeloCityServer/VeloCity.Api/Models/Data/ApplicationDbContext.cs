@@ -20,6 +20,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<ServiceCalendarException> ServiceCalendarExceptions=> Set<ServiceCalendarException>();
     public DbSet<ScheduledTrip> ScheduledTrips => Set<ScheduledTrip>();
     public DbSet<ScheduledStopTime> ScheduledStopTimes => Set<ScheduledStopTime>();
+    public DbSet<BalanceAdjustment> BalanceAdjustments => Set<BalanceAdjustment>();
 
 
 
@@ -38,6 +39,43 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
         modelBuilder.Entity<Payment>()
             .Property(p => p.Amount)
             .HasPrecision(18, 2);
+
+        modelBuilder.Entity<BalanceAdjustment>(entity =>
+        {
+            entity.HasKey(x => x.Id);
+
+            entity.Property(x => x.Amount)
+                .HasPrecision(18, 2);
+
+            entity.Property(x => x.BalanceBefore)
+                .HasPrecision(18, 2);
+
+            entity.Property(x => x.BalanceAfter)
+                .HasPrecision(18, 2);
+
+            entity.Property(x => x.Reason)
+                .HasMaxLength(500)
+                .IsRequired();
+
+            entity.Property(x => x.CreatedAt)
+                .IsRequired();
+
+            entity.HasOne(x => x.User)
+                .WithMany()
+                .HasForeignKey(x => x.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasOne(x => x.Admin)
+                .WithMany()
+                .HasForeignKey(x => x.AdminId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasIndex(x => new
+            {
+                x.UserId,
+                x.CreatedAt
+            });
+        });
         
         modelBuilder.Entity<Stop>(entity =>
         {

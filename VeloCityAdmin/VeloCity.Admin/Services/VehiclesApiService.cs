@@ -1,53 +1,15 @@
-using System.Net.Http.Headers;
 using System.Net.Http.Json;
-using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.Extensions.Caching.Memory;
+using VeloCity.Admin.Models.Dto;
 using VeloCity.Admin.Models;
 
 namespace VeloCity.Admin.Services;
 
 public sealed class VehiclesApiService(
-    IHttpClientFactory httpClientFactory,
-    AuthenticationStateProvider authenticationStateProvider,
-    IMemoryCache cache)
+    AdminApiClientFactory apiClientFactory)
 {
-    private async Task<HttpClient> CreateAuthorizedClientAsync()
-    {
-        var authState = await authenticationStateProvider
-            .GetAuthenticationStateAsync();
-
-        var user = authState.User;
-
-        if (user.Identity?.IsAuthenticated != true ||
-            !user.IsInRole("Admin"))
-        {
-            throw new UnauthorizedAccessException(
-                "Administrator is not authenticated.");
-        }
-
-        var sessionId = user.FindFirst("AdminSessionId")?.Value;
-
-        if (string.IsNullOrWhiteSpace(sessionId) ||
-            !cache.TryGetValue(
-                $"admin-api-token:{sessionId}",
-                out string? token) ||
-            string.IsNullOrWhiteSpace(token))
-        {
-            throw new UnauthorizedAccessException(
-                "API session expired. Please sign in again.");
-        }
-
-        var client = httpClientFactory.CreateClient("VeloCityApi");
-
-        client.DefaultRequestHeaders.Authorization =
-            new AuthenticationHeaderValue("Bearer", token);
-
-        return client;
-    }
-
     public async Task<List<VehicleDto>> GetAllAsync()
     {
-        using var client = await CreateAuthorizedClientAsync();
+        using var client = await apiClientFactory.CreateAsync();
 
         return await client.GetFromJsonAsync<List<VehicleDto>>(
             "Vehicles/all") ?? [];
@@ -55,7 +17,7 @@ public sealed class VehiclesApiService(
 
     public async Task<VehicleDto?> GetByIdAsync(int id)
     {
-        using var client = await CreateAuthorizedClientAsync();
+        using var client = await apiClientFactory.CreateAsync();
 
         return await client.GetFromJsonAsync<VehicleDto>(
             $"Vehicles/{id}");
@@ -65,7 +27,7 @@ public sealed class VehiclesApiService(
     public async Task<VehicleDto> CreateAsync(
         VehicleFormModel model)
     {
-        using var client = await CreateAuthorizedClientAsync();
+        using var client = await apiClientFactory.CreateAsync();
 
         using var response = await client.PostAsJsonAsync(
             "Vehicles",
@@ -85,7 +47,7 @@ public sealed class VehiclesApiService(
 
     public async Task UpdateAsync(VehicleFormModel model)
     {
-        using var client = await CreateAuthorizedClientAsync();
+        using var client = await apiClientFactory.CreateAsync();
 
         using var response = await client.PutAsJsonAsync(
             $"Vehicles/{model.Id}",
@@ -95,13 +57,21 @@ public sealed class VehiclesApiService(
                 SideNumber = model.SideNumber.Trim(),
                 Model = model.Model.Trim()
             });
+        
+        if (!response.IsSuccessStatusCode)
+        {
+            var error = await response.Content.ReadAsStringAsync();
 
-        response.EnsureSuccessStatusCode();
+            throw new HttpRequestException(
+                $"API error {(int)response.StatusCode}: {error}",
+                null,
+                response.StatusCode);
+        }
     }
 
     public async Task DeactivateAsync(int id)
     {
-        using var client = await CreateAuthorizedClientAsync();
+        using var client = await apiClientFactory.CreateAsync();
 
         using var response = await client.DeleteAsync(
             $"Vehicles/{id}");
@@ -111,7 +81,7 @@ public sealed class VehiclesApiService(
 
     public async Task ActivateAsync(int id)
     {
-        using var client = await CreateAuthorizedClientAsync();
+        using var client = await apiClientFactory.CreateAsync();
 
         using var response = await client.PutAsync(
             $"Vehicles/{id}/activate",

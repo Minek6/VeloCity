@@ -13,6 +13,9 @@ using VeloCity.Api.Features.Users.Commands.UpdateUserStatus;
 using VeloCity.Api.Features.Users.Queries.GetProfile;
 using VeloCity.Api.Features.Users.Queries.GetUserDetails;
 using VeloCity.Api.Features.Users.Queries.GetUsers;
+using VeloCity.Api.Features.Users.Commands.AdminUpdateUserProfile;
+using VeloCity.Api.Features.Users.Commands.AdjustUserBalance;
+using VeloCity.Api.Features.Users.Commands.AdminCreateUser;
 using VeloCity.Api.Models.Enums;
 
 namespace VeloCity.Api.Controllers;
@@ -87,6 +90,29 @@ public class UsersController(
         return Ok(updatedProfile);
     }
 
+    [Authorize(Roles = nameof(UserRole.Admin))]
+    [HttpPut("{id:int}/profile")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    public async Task<IActionResult> AdminUpdateProfile(
+        int id,
+        [FromBody] AdminUpdateProfileRequest request)
+    {
+        await mediator.Send(
+            new AdminUpdateUserProfileCommand(
+                id,
+                request.Name,
+                request.Surname,
+                request.Email));
+
+        return NoContent();
+    }
+
+    public record AdminUpdateProfileRequest(
+        string Name,
+        string Surname,
+        string Email);
+
+
     // update my password
     [Authorize]
     [HttpPut("me/password")]
@@ -142,4 +168,49 @@ public class UsersController(
         await mediator.Send(command);
         return NoContent();
     }
+
+    // ADMIN ONLY: adjust user balance
+    [Authorize(Roles = nameof(UserRole.Admin))]
+    [HttpPost("{id:int}/balance-adjustments")]
+    [ProducesResponseType(
+        typeof(BalanceAdjustmentDto),
+        StatusCodes.Status200OK)]
+    public async Task<IActionResult> AdjustBalance(
+        int id,
+        [FromBody] AdjustBalanceRequest request)
+    {
+        var result = await mediator.Send(
+            new AdjustUserBalanceCommand(
+                id,
+                request.Amount,
+                request.Reason));
+
+        return Ok(result);
+    }
+
+    // ADMIN ONLY: create user with selected role
+    [Authorize(Roles = nameof(UserRole.Admin))]
+    [HttpPost("admin")]
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> AdminCreateUser(
+        [FromBody] AdminCreateUserCommand command)
+    {
+        var userId = await mediator.Send(command);
+
+        return CreatedAtAction(
+            nameof(GetUserDetails),
+            new { id = userId },
+            new
+            {
+                id = userId,
+                message = "User created successfully."
+            });
+    }
+
 }
+
+public record AdjustBalanceRequest(
+    decimal Amount,
+    string Reason
+);

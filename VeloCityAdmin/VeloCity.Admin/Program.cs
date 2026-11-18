@@ -65,6 +65,9 @@ builder.Services
 
 builder.Services.AddScoped<VehiclesApiService>();
 builder.Services.AddScoped<VehiclesViewModel>();
+builder.Services.AddScoped<AdminApiClientFactory>();
+builder.Services.AddScoped<UsersApiService>();
+builder.Services.AddScoped<UsersViewModel>();
 
 var app = builder.Build();
 

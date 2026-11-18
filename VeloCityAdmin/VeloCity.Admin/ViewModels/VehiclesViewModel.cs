@@ -1,4 +1,5 @@
 
+using VeloCity.Admin.Models.Dto;
 using VeloCity.Admin.Models;
 using VeloCity.Admin.Services;
 
@@ -24,6 +25,10 @@ public sealed class VehiclesViewModel(
     public int TotalVehicles => Vehicles.Count;
     public int ActiveVehicles => Vehicles.Count(v => v.IsActive);
     public int InactiveVehicles => Vehicles.Count(v => !v.IsActive);
+
+    public string SearchTerm { get; set; } = string.Empty;
+    public string StatusFilter { get; set; } = "all";
+    public string SortBy { get; set; } = "side-asc";
 
     public async Task LoadAsync()
     {
@@ -109,7 +114,7 @@ public sealed class VehiclesViewModel(
         catch (HttpRequestException ex)
         {
             ErrorMessage =
-                $"Nie udało się zapisać pojazdu. Status API: {ex.StatusCode?.ToString() ?? "brak odpowiedzi"}.";
+                $"Nie udało się zapisać pojazdu. {ex.Message}";
         }
         catch (Exception)
         {
@@ -197,5 +202,59 @@ public sealed class VehiclesViewModel(
         {
             IsActivating = false;
         }
+    }
+
+    public List<VehicleDto> FilteredVehicles
+    {
+        get
+        {
+            IEnumerable<VehicleDto> query = Vehicles;
+
+            if (!string.IsNullOrWhiteSpace(SearchTerm))
+            {
+                var search = SearchTerm.Trim();
+
+                query = query.Where(v =>
+                    v.SideNumber.Contains(
+                        search, StringComparison.OrdinalIgnoreCase)
+                    ||
+                    v.Model.Contains(
+                        search, StringComparison.OrdinalIgnoreCase));
+            }
+
+            query = StatusFilter switch
+            {
+                "active" => query.Where(v => v.IsActive),
+                "inactive" => query.Where(v => !v.IsActive),
+                _ => query
+            };
+
+            query = SortBy switch
+            {
+                "side-desc" => query.OrderByDescending(
+                    v => v.SideNumber, StringComparer.OrdinalIgnoreCase),
+
+                "model-asc" => query.OrderBy(
+                    v => v.Model, StringComparer.OrdinalIgnoreCase),
+
+                "model-desc" => query.OrderByDescending(
+                    v => v.Model, StringComparer.OrdinalIgnoreCase),
+
+                "id-asc" => query.OrderBy(v => v.Id),
+                "id-desc" => query.OrderByDescending(v => v.Id),
+
+                _ => query.OrderBy(
+                    v => v.SideNumber, StringComparer.OrdinalIgnoreCase)
+            };
+
+            return query.ToList();
+        }
+    }
+
+    public void ClearFilters()
+    {
+        SearchTerm = string.Empty;
+        StatusFilter = "all";
+        SortBy = "side-asc";
     }
 }
