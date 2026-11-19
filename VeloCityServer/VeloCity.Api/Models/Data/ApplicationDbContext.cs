@@ -21,7 +21,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<ScheduledTrip> ScheduledTrips => Set<ScheduledTrip>();
     public DbSet<ScheduledStopTime> ScheduledStopTimes => Set<ScheduledStopTime>();
     public DbSet<BalanceAdjustment> BalanceAdjustments => Set<BalanceAdjustment>();
-
+    public DbSet<TicketValidityAdjustment> TicketValidityAdjustments => Set<TicketValidityAdjustment>();
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -192,6 +192,27 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
             entity.HasIndex(st => st.ExternalRunId)
                 .IsUnique()
                 .HasFilter("\"ExternalRunId\" IS NOT NULL");
+        });
+
+        modelBuilder.Entity<TicketValidityAdjustment>(entity =>
+        {
+            entity.HasKey(x => x.Id);
+
+            entity.Property(x => x.Reason)
+                .HasMaxLength(500)
+                .IsRequired();
+
+            entity.HasOne(x => x.Ticket)
+                .WithMany()
+                .HasForeignKey(x => x.TicketId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasOne(x => x.Admin)
+                .WithMany()
+                .HasForeignKey(x => x.AdminId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasIndex(x => new { x.TicketId, x.CreatedAt });
         });
 
         modelBuilder.Entity<RouteStop>(entity =>

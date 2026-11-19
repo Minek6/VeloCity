@@ -9,6 +9,9 @@ using VeloCity.Admin.Authentication;
 using Microsoft.Extensions.Caching.Memory;
 using VeloCity.Admin.Services;
 using VeloCity.Admin.ViewModels;
+using System.Net;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,6 +42,12 @@ builder.Services
         options.LoginPath = "/login";
         options.AccessDeniedPath = "/access-denied";
 
+        options.Events.OnRedirectToLogin = context =>
+        {
+            context.Response.Redirect("/login");
+            return Task.CompletedTask;
+        };
+
         options.ExpireTimeSpan = TimeSpan.FromHours(2);
         options.SlidingExpiration = true;
     });
@@ -68,6 +77,10 @@ builder.Services.AddScoped<VehiclesViewModel>();
 builder.Services.AddScoped<AdminApiClientFactory>();
 builder.Services.AddScoped<UsersApiService>();
 builder.Services.AddScoped<UsersViewModel>();
+builder.Services.AddScoped<TicketTypesApiService>();
+builder.Services.AddScoped<TicketTypesViewModel>();
+builder.Services.AddScoped<TicketsApiService>();
+builder.Services.AddScoped<TicketsViewModel>();
 
 var app = builder.Build();
 
@@ -79,8 +92,33 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 app.UseHttpsRedirection();
+
+app.UseStatusCodePages(
+    (StatusCodeContext context) =>
+    {
+        var http = context.HttpContext;
+
+        if (http.Response.StatusCode != 404)
+            return Task.CompletedTask;
+
+        // Nie przekierowujemy ponownie strony NotFound.
+        if (http.Request.Path.Equals(
+            "/NotFound",
+            StringComparison.OrdinalIgnoreCase))
+        {
+            return Task.CompletedTask;
+        }
+
+        var destination =
+            http.User.Identity?.IsAuthenticated == true
+                ? "/NotFound"
+                : "/login";
+
+        http.Response.Redirect(destination);
+
+        return Task.CompletedTask;
+    });
 
 app.UseAuthentication();
 app.UseAuthorization();
@@ -162,6 +200,17 @@ app.MapPost("/auth/login", async (
 
         if (!response.IsSuccessStatusCode)
         {
+            if (response.StatusCode == HttpStatusCode.Forbidden)
+            {
+                var error = await response.Content
+                    .ReadFromJsonAsync<ProblemDetails>();
+
+                if (error?.Detail == "Konto użytkownika jest nieaktywne.")
+                {
+                    return Results.Redirect("/login?error=4");
+                }
+            }
+
             return Results.Redirect("/login?error=1");
         }
 

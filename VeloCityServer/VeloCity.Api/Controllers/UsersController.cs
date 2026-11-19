@@ -90,6 +90,7 @@ public class UsersController(
         return Ok(updatedProfile);
     }
 
+    // ADMIN ONLY: update user profile
     [Authorize(Roles = nameof(UserRole.Admin))]
     [HttpPut("{id:int}/profile")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]

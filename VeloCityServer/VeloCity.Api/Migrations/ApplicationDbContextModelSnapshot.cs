@@ -713,6 +713,43 @@ namespace VeloCity.Api.Migrations
                         });
                 });
 
+            modelBuilder.Entity("VeloCity.Api.Models.TicketValidityAdjustment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AdminId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("NewValidTo")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("PreviousValidTo")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Reason")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<int>("TicketId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AdminId");
+
+                    b.HasIndex("TicketId", "CreatedAt");
+
+                    b.ToTable("TicketValidityAdjustments");
+                });
+
             modelBuilder.Entity("VeloCity.Api.Models.Timetable", b =>
                 {
                     b.Property<int>("Id")
@@ -1153,6 +1190,25 @@ namespace VeloCity.Api.Migrations
                     b.Navigation("User");
 
                     b.Navigation("Vehicle");
+                });
+
+            modelBuilder.Entity("VeloCity.Api.Models.TicketValidityAdjustment", b =>
+                {
+                    b.HasOne("VeloCity.Api.Models.User", "Admin")
+                        .WithMany()
+                        .HasForeignKey("AdminId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("VeloCity.Api.Models.Ticket", "Ticket")
+                        .WithMany()
+                        .HasForeignKey("TicketId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Admin");
+
+                    b.Navigation("Ticket");
                 });
 
             modelBuilder.Entity("VeloCity.Api.Models.Timetable", b =>

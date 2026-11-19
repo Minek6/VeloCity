@@ -14,6 +14,10 @@ using VeloCity.Api.Features.Tickets.Queries.GetMyActiveTickets;
 using VeloCity.Api.Features.Tickets.Queries.GetMyTicketsHistory;
 using VeloCity.Api.Features.Tickets.Queries.GetTicketType;
 using VeloCity.Api.Features.Tickets.Queries.VerifyTicket;
+using VeloCity.Api.Features.Tickets.Queries.GetAdminTicketTypes;
+using VeloCity.Api.Features.Tickets.Commands.ActivateTicketType;
+using VeloCity.Api.Features.Tickets.Commands.UpdateTicketValidity;
+using VeloCity.Api.Features.Tickets.Queries.GetTicketValidityAdjustments;
 using VeloCity.Api.Common.Services.Qr;
 using VeloCity.Api.Models.Enums;
 using System.Security.Claims;
@@ -30,13 +34,27 @@ public class TicketsController(
     IMediator mediator) : ControllerBase
 {
     #region TicketTypes
-    // get all tickets types
+    // get all active tickets types
     [Authorize]
     [HttpGet("types")]
     [ProducesResponseType(typeof(List<TicketTypeDto>), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetActiveTicketTypes()
     {
         var response = await mediator.Send(new GetActiveTicketTypesQuery());
+        return Ok(response);
+    }
+
+    // ADMIN ONLY: get all ticket types, including inactive
+    [Authorize(Roles = nameof(UserRole.Admin))]
+    [HttpGet("types/admin")]
+    [ProducesResponseType(
+        typeof(List<AdminTicketTypeDto>),
+        StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetAdminTicketTypes()
+    {
+        var response = await mediator.Send(
+            new GetAdminTicketTypesQuery());
+
         return Ok(response);
     }
 
@@ -51,7 +69,7 @@ public class TicketsController(
         return Ok(response);
     }
 
-    // ADMIN ONLY: delete ticket type
+    // ADMIN ONLY: delete ticket type (deactivate)
     [Authorize(Roles = nameof(UserRole.Admin))]
     [HttpDelete("types/{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -87,6 +105,20 @@ public class TicketsController(
         await mediator.Send(command);
         return NoContent();
     }
+
+    // ADMIN ONLY: activate ticket type
+    [Authorize(Roles = nameof(UserRole.Admin))]
+    [HttpPatch("types/{id:int}/activate")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> ActivateTicketType(int id)
+    {
+        await mediator.Send(new ActivateTicketTypeCommand(id));
+
+        return NoContent();
+    }
+
     #endregion
 
     #region Tickets
@@ -135,6 +167,22 @@ public class TicketsController(
         return Ok(response);
     }
 
+    // ADMIN ONLY: ticket validity adjustment history
+    [Authorize(Roles = nameof(UserRole.Admin))]
+    [HttpGet("{id:int}/validity-adjustments")]
+    [ProducesResponseType(
+        typeof(List<TicketValidityAdjustmentDto>),
+        StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> GetTicketValidityAdjustments(int id)
+    {
+        var result = await mediator.Send(
+            new GetTicketValidityAdjustmentsQuery(id));
+
+        return Ok(result);
+    }
+
+
     // For inspector ticket verify - in this system inspector == driver
     [Authorize(Roles = nameof(UserRole.Driver))]
     [HttpGet("{id}/verify")]
@@ -150,13 +198,31 @@ public class TicketsController(
     // ADMIN get all tickets Paginated
     [Authorize(Roles = nameof(UserRole.Admin))]
     [HttpGet]
-    [ProducesResponseType(typeof(PaginatedList<TicketDto>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(PaginatedList<AdminTicketDto>), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetAllTickets([FromQuery] GetAllTicketsQuery query)
     {
         var response = await mediator.Send(query);
         return Ok(response);
     }
 
+    // ADMIN ONLY: adjust ticket expiration
+    [Authorize(Roles = nameof(UserRole.Admin))]
+    [HttpPut("{id:int}/validity")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status409Conflict)]
+    public async Task<IActionResult> UpdateTicketValidity(
+        int id,
+        [FromBody] UpdateTicketValidityCommand command)
+    {
+        if (id != command.TicketId)
+            return BadRequest("ID mismatch.");
+
+        await mediator.Send(command);
+
+        return NoContent();
+    }
 
     [Authorize]
     [HttpGet("{ticketId:int}/qr")]

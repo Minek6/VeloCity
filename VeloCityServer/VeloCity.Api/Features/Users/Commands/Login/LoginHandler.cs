@@ -5,6 +5,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using VeloCity.Api.Models.Data;
+using VeloCity.Api.Common.Exceptions;
 
 namespace VeloCity.Api.Features.Users.Commands.Login;
 
@@ -17,7 +18,7 @@ public class LoginHandler(
         CancellationToken ct)
     {
         // Get user from db
-        var user = await context.Users.Where(u => u.IsActive == true)
+        var user = await context.Users
             .FirstOrDefaultAsync(u => u.Email == request.Email,
             ct);
 
@@ -25,6 +26,9 @@ public class LoginHandler(
             !BCrypt.Net.BCrypt.Verify(request.Password,
                 user.PasswordHash))
             return null;
+
+        if(!user.IsActive)
+            throw new AppException("Konto użytkownika jest nieaktywne.", 403);
 
         var tokenHandler = new JwtSecurityTokenHandler();
         var key = Encoding.UTF8.GetBytes(config["Jwt:Key"]!);
