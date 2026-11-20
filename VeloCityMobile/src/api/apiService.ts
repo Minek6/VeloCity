@@ -224,7 +224,7 @@ async verifyTicketQr(token: string): Promise<VerifyQrResponse> {
 
   // --- POJAZDY ---
   async getVehicles(): Promise<Vehicle[]> {
-    return await this.request<Vehicle[]>('/vehicles', { method: 'GET' });
+    return await this.request<Vehicle[]>('/vehicles/active', { method: 'GET' });
   }
 
   async createVehicle(data: VehicleCommand): Promise<Vehicle> {

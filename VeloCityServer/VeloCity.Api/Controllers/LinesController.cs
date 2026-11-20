@@ -11,6 +11,7 @@ using VeloCity.Api.Features.Lines.Commands.UpdateSequence;
 using VeloCity.Api.Features.Lines.DTOs;
 using VeloCity.Api.Features.Lines.Queries.GetLineDetails;
 using VeloCity.Api.Features.Lines.Queries.GetLines;
+using VeloCity.Api.Features.Lines.Commands.ActivateLine;
 using VeloCity.Api.Models;
 using VeloCity.Api.Models.Enums;
 
@@ -25,16 +26,37 @@ public class LinesController(IMediator mediator)
     [HttpGet]
     [ProducesResponseType(typeof(PaginatedList<LineDto>), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetLines(
+        CancellationToken ct,
         [FromQuery] string? searchTerm,
         [FromQuery] bool isDescending,
         [FromQuery] int pageNumber,
         [FromQuery] int pageSize,
-        CancellationToken ct)
+        [FromQuery] bool includeInactive = false,
+        [FromQuery] bool? isActive = null)
     {
-        var query = new GetLinesQuery(searchTerm, isDescending, pageNumber, pageSize);
+        
+        if (includeInactive &&
+            !User.IsInRole(nameof(UserRole.Admin)))
+        {
+            return User.Identity?.IsAuthenticated == true
+                ? Forbid()
+                : Unauthorized();
+        }
+
+        var query = new GetLinesQuery(
+            searchTerm,
+            isDescending,
+            pageNumber,
+            pageSize,
+            includeInactive,
+            isActive);
+
         var response = await mediator.Send(query, ct);
+
         return Ok(response);
+
     }
+
     // no auth, get line details by id
     [HttpGet("{id}")]
     [ProducesResponseType(typeof(LineDetailsDto), StatusCodes.Status200OK)]
@@ -116,4 +138,18 @@ public class LinesController(IMediator mediator)
 
         return NoContent();
     }
+
+    //ADMIN ONLY: activate line
+    [Authorize(Roles = nameof(UserRole.Admin))]
+    [HttpPut("{id:int}/activate")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    public async Task<IActionResult> ActivateLine(
+        int id,
+        CancellationToken ct)
+    {
+        await mediator.Send(new ActivateLineCommand(id), ct);
+
+        return NoContent();
+    }
+
 }

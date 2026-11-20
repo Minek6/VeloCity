@@ -81,6 +81,15 @@ builder.Services.AddScoped<TicketTypesApiService>();
 builder.Services.AddScoped<TicketTypesViewModel>();
 builder.Services.AddScoped<TicketsApiService>();
 builder.Services.AddScoped<TicketsViewModel>();
+builder.Services.AddScoped<DashboardApiService>();
+builder.Services.AddScoped<DashboardViewModel>();
+builder.Services.AddScoped<ReportsViewModel>();
+builder.Services.AddScoped<StopsApiService>();
+builder.Services.AddScoped<StopsViewModel>();
+builder.Services.AddScoped<LinesApiService>();
+builder.Services.AddScoped<LinesViewModel>();
+builder.Services.AddScoped<RoutesViewModel>();
+
 
 var app = builder.Build();
 

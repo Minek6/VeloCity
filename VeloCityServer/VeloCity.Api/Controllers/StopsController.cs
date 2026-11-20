@@ -11,6 +11,7 @@ using VeloCity.Api.Features.Stops.Queries.GetStop;
 using VeloCity.Api.Features.Stops.Queries.GetStops;
 using VeloCity.Api.Features.Stops.Queries.GetMapStops;
 using VeloCity.Api.Features.Stops.Queries.GetStopLines;
+using VeloCity.Api.Features.Stops.Commands.ActivateStop;
 using VeloCity.Api.Models.Enums;
 
 namespace VeloCity.Api.Controllers;
@@ -21,10 +22,23 @@ public class StopsController(IMediator mediator) : ControllerBase
 {
     // no auth get stops list paginated
     [HttpGet]
-    [ProducesResponseType(typeof(PaginatedList<StopDto>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetStops([FromQuery] GetStopsQuery query)
+    [ProducesResponseType(
+        typeof(PaginatedList<StopDto>),
+        StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetStops(
+        [FromQuery] GetStopsQuery query,
+        CancellationToken ct)
     {
-        var result = await mediator.Send(query);
+        if (query.IncludeInactive &&
+            !User.IsInRole(nameof(UserRole.Admin)))
+        {
+            return User.Identity?.IsAuthenticated == true
+                ? Forbid()
+                : Unauthorized();
+        }
+
+        var result = await mediator.Send(query, ct);
+
         return Ok(result);
     }
 
@@ -94,6 +108,18 @@ public class StopsController(IMediator mediator) : ControllerBase
     public async Task<IActionResult> DeleteStop(int id)
     {
         await mediator.Send(new DeleteStopCommand(id));
+        return NoContent();
+    }
+
+    [Authorize(Roles = nameof(UserRole.Admin))]
+    [HttpPut("{id:int}/activate")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    public async Task<IActionResult> ActivateStop(
+        int id,
+        CancellationToken ct)
+    {
+        await mediator.Send(new ActivateStopCommand(id), ct);
+
         return NoContent();
     }
 

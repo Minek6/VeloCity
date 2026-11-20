@@ -10,8 +10,19 @@ public class GetStopsHandler(ApplicationDbContext context) : IRequestHandler<Get
 {
     public async Task<PaginatedList<StopDto>> Handle(GetStopsQuery request, CancellationToken ct)
     {
+        
         var query = context.Stops.AsNoTracking().AsQueryable();
-        query = query.Where(s => s.IsActive);
+
+        if (!request.IncludeInactive)
+        {
+            query = query.Where(s => s.IsActive);
+        }
+        else if (request.IsActive.HasValue)
+        {
+            query = query.Where(
+                s => s.IsActive == request.IsActive.Value);
+        }
+
         if (!string.IsNullOrWhiteSpace(request.SearchTerm))
         {
             query = query.Where(s => s.Name.ToLower().Contains(request.SearchTerm.ToLower()));

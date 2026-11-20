@@ -8,5 +8,7 @@ public record GetLinesQuery(
     string? SearchTerm,
     bool IsDescending,
     int PageNumber,
-    int PageSize
+    int PageSize,
+    bool IncludeInactive = false,
+    bool? IsActive = null
 ) : IRequest<PaginatedList<LineDto>>;

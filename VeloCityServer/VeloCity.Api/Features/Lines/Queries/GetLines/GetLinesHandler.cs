@@ -6,25 +6,54 @@ using VeloCity.Api.Models.Data;
 
 namespace VeloCity.Api.Features.Lines.Queries.GetLines;
 
-public class GetLinesHandler(ApplicationDbContext context) : IRequestHandler<GetLinesQuery, PaginatedList<LineDto>>
+public class GetLinesHandler(ApplicationDbContext context)
+    : IRequestHandler<GetLinesQuery, PaginatedList<LineDto>>
 {
-    public async Task<PaginatedList<LineDto>> Handle(GetLinesQuery request, CancellationToken ct)
+    public async Task<PaginatedList<LineDto>> Handle(
+        GetLinesQuery request,
+        CancellationToken ct)
     {
         var query = context.Lines.AsNoTracking().AsQueryable();
 
-        query = query.Where(l => l.IsActive);
-
-        if (!string.IsNullOrWhiteSpace(request.SearchTerm))
+        // Filtrowanie statusu
+        if (!request.IncludeInactive)
         {
-            query = query.Where(l => l.Name.Contains(request.SearchTerm, StringComparison.OrdinalIgnoreCase));
+            query = query.Where(l => l.IsActive);
+        }
+        else if (request.IsActive.HasValue)
+        {
+            query = query.Where(
+                l => l.IsActive == request.IsActive.Value);
         }
 
+        // Wyszukiwanie po nazwie
+        if (!string.IsNullOrWhiteSpace(request.SearchTerm))
+        {
+            var search = request.SearchTerm.Trim();
+
+            query = query.Where(l =>
+                EF.Functions.ILike(
+                    l.Name,
+                    $"%{search}%"));
+        }
+
+        // Sortowanie
         query = request.IsDescending
             ? query.OrderByDescending(l => l.Name)
             : query.OrderBy(l => l.Name);
 
-        var dtoQuery = query.Select(l => new LineDto(l.Id, l.Name, l.IsActive));
+        // Mapowanie DTO
+        var dtoQuery = query.Select(l =>
+            new LineDto(
+                l.Id,
+                l.Name,
+                l.IsActive));
 
-        return await PaginatedList<LineDto>.CreateAsync(dtoQuery, request.PageNumber, request.PageSize, ct);
+        // Paginacja
+        return await PaginatedList<LineDto>.CreateAsync(
+            dtoQuery,
+            request.PageNumber,
+            request.PageSize,
+            ct);
     }
 }
